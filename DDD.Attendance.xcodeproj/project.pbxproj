@@ -28,6 +28,13 @@
 		BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3F4231BE67A001BB684 /* AccountView.swift */; };
 		BCE1B3F7231BE689001BB684 /* AccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3F6231BE689001BB684 /* AccountView.xib */; };
 		BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3FA231BE6E9001BB684 /* QRCodeController.swift */; };
+		BCE1B3FE231BF127001BB684 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3FD231BF127001BB684 /* AccountModel.swift */; };
+		BCE1B400231BFDFA001BB684 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3FF231BFDFA001BB684 /* Environment.swift */; };
+		BCE1B402231BFEC5001BB684 /* Medium+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B401231BFEC5001BB684 /* Medium+API.swift */; };
+		BCE1B405231BFEE2001BB684 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B404231BFEE2001BB684 /* Endpoint.swift */; };
+		BCE1B407231BFF06001BB684 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B406231BFF06001BB684 /* HTTPMethod.swift */; };
+		BCE1B409231C00C4001BB684 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B408231C00C4001BB684 /* Request.swift */; };
+		BCE1B40C231C0311001BB684 /* Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B40B231C0311001BB684 /* Medium.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +61,13 @@
 		BCE1B3F4231BE67A001BB684 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		BCE1B3F6231BE689001BB684 /* AccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountView.xib; sourceTree = "<group>"; };
 		BCE1B3FA231BE6E9001BB684 /* QRCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
+		BCE1B3FD231BF127001BB684 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		BCE1B3FF231BFDFA001BB684 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		BCE1B401231BFEC5001BB684 /* Medium+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medium+API.swift"; sourceTree = "<group>"; };
+		BCE1B404231BFEE2001BB684 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		BCE1B406231BFF06001BB684 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BCE1B408231C00C4001BB684 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		BCE1B40B231C0311001BB684 /* Medium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medium.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +133,7 @@
 		BCE1B3D0231BB793001BB684 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BCE1B3FC231BF119001BB684 /* Model */,
 				BCE1B3DF231BD934001BB684 /* View */,
 				BCE1B3D1231BB79D001BB684 /* Home.storyboard */,
 				BCE1B3D3231BB7BC001BB684 /* HomeViewController.swift */,
@@ -151,7 +166,9 @@
 		BCE1B3E0231BD93B001BB684 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				BCE1B403231BFED6001BB684 /* Common */,
 				BCE1B3E3231BDBB3001BB684 /* API */,
+				BCE1B40A231C0303001BB684 /* Model */,
 				BCE1B3E1231BD947001BB684 /* Remote.swift */,
 			);
 			path = Remote;
@@ -160,6 +177,7 @@
 		BCE1B3E3231BDBB3001BB684 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				BCE1B401231BFEC5001BB684 /* Medium+API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -178,6 +196,33 @@
 				BCE1B3FA231BE6E9001BB684 /* QRCodeController.swift */,
 			);
 			path = QRCode;
+			sourceTree = "<group>";
+		};
+		BCE1B3FC231BF119001BB684 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCE1B3FD231BF127001BB684 /* AccountModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCE1B403231BFED6001BB684 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BCE1B3FF231BFDFA001BB684 /* Environment.swift */,
+				BCE1B404231BFEE2001BB684 /* Endpoint.swift */,
+				BCE1B406231BFF06001BB684 /* HTTPMethod.swift */,
+				BCE1B408231C00C4001BB684 /* Request.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BCE1B40A231C0303001BB684 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCE1B40B231C0311001BB684 /* Medium.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,13 +327,20 @@
 				BCE1B3BD231BB68D001BB684 /* ViewController.swift in Sources */,
 				BCE1B3E2231BD947001BB684 /* Remote.swift in Sources */,
 				BCE1B3ED231BE383001BB684 /* BaseDataSource.swift in Sources */,
+				BCE1B400231BFDFA001BB684 /* Environment.swift in Sources */,
 				BCE1B3F3231BE57F001BB684 /* HomeViewModel.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
+				BCE1B402231BFEC5001BB684 /* Medium+API.swift in Sources */,
+				BCE1B3FE231BF127001BB684 /* AccountModel.swift in Sources */,
 				BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */,
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
+				BCE1B405231BFEE2001BB684 /* Endpoint.swift in Sources */,
 				BCE1B3E5231BE069001BB684 /* BaseView.swift in Sources */,
+				BCE1B407231BFF06001BB684 /* HTTPMethod.swift in Sources */,
 				BCE1B3CF231BB75E001BB684 /* BaseViewController.swift in Sources */,
+				BCE1B40C231C0311001BB684 /* Medium.swift in Sources */,
 				BCE1B3F1231BE576001BB684 /* HomeDataSource.swift in Sources */,
+				BCE1B409231C00C4001BB684 /* Request.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
 			);

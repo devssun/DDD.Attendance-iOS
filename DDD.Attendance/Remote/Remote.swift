@@ -8,7 +8,9 @@
 
 import Alamofire
 
-class Remote {
+class Remote<E: Endpoint> {
+    
+    typealias ResultCompletion = Result<Data, Error>
     
     let session: Session
     
@@ -16,7 +18,14 @@ class Remote {
         self.session = session
     }
     
-    func request(completion: @escaping () -> Void) {
-//        AF.request(URLRequestConvertible)
+    func request(from endpoint: E, completion: @escaping (ResultCompletion) -> Void) {
+        guard let urlRequest = Request<E>.build(from: endpoint) else {
+            debugPrint("Invalid URLRequest")
+            return
+        }
+        
+        AF.request(urlRequest).responseData { responseData in
+            completion(responseData.result)
+        }
     }
 }

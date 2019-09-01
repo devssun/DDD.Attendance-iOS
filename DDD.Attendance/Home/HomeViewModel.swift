@@ -6,6 +6,7 @@
 //  Copyright © 2019 DDD. All rights reserved.
 //
 
+import UIKit
 import ReactiveSwift
 
 protocol HomeViewModelInputs {
@@ -15,7 +16,7 @@ protocol HomeViewModelInputs {
 
 protocol HomeViewModelOutputs {
     
-    var setupAccountView: Signal<String, Never> { get }
+    var configureAccountView: Signal<AccountModel, Never> { get }
 }
 
 protocol HomeViewModelTypes {
@@ -27,7 +28,7 @@ protocol HomeViewModelTypes {
 
 class HomeViewModel {
     
-    private let userDataProperty = MutableProperty<String?>(nil)
+    private let accountModelProperty = MutableProperty<AccountModel?>(nil)
 }
 
 extension HomeViewModel: HomeViewModelTypes {
@@ -40,13 +41,16 @@ extension HomeViewModel: HomeViewModelTypes {
 extension HomeViewModel: HomeViewModelInputs {
     
     func generateQRCode(by userID: String) {
-        userDataProperty.value = userID
+        accountModelProperty.value = AccountModel(userID: userID,
+                                                  period: "DDD.3기",
+                                                  qrcode: QRCodeController.generate(from: userID) ?? UIImage())
     }
 }
 
 extension HomeViewModel: HomeViewModelOutputs {
     
-    var setupAccountView: Signal<String, Never> {
-        return userDataProperty.signal.skipNil()
+    var configureAccountView: Signal<AccountModel, Never> {
+        return accountModelProperty.signal.skipNil()
+        
     }
 }

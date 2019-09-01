@@ -10,13 +10,13 @@ import UIKit
 
 class AccountView: BaseView {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var qrcodeImageview: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var userLabel: UILabel!
+    @IBOutlet private weak var qrcodeImageview: UIImageView!
     
-    override func bindData() {
-        super.bindData()
-        
-        
+    func configure(by account: AccountModel) {
+        titleLabel.text = account.period
+        userLabel.text = account.userID
+        qrcodeImageview.image = account.qrcode
     }
 }

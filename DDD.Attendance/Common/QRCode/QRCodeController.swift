@@ -22,6 +22,7 @@ class QRCodeController {
         guard let output = filter.outputImage?.transformed(by: transform) else {
             return nil
         }
+        
         return UIImage(ciImage: output)
     }
 }

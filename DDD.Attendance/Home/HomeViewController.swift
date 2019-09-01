@@ -25,28 +25,30 @@ class HomeViewController: BaseViewController {
     override func bindViewModel() {
         super.bindViewModel()
         
-        reactive.generateQRCode <~ viewModel.outputs.setupAccountView
+        reactive.setupAccountView <~ viewModel.outputs.configureAccountView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        viewModel.inputs.generateQRCode(by: "godpp")
     }
 }
 
 // MARK: - Private
 private extension HomeViewController {
     
-    func generateQRCode(by userID: String) -> UIImage? {
-        return QRCodeController.generate(from: userID)
+    func setupAccountView(by accountData: AccountModel) {
+       accountView.configure(by: accountData)
     }
 }
 
+// MARK: - Reactive
 extension Reactive where Base: HomeViewController {
     
-    var generateQRCode: BindingTarget<String> {
-        return makeBindingTarget({ base, userID in
-            base.generateQRCode(by: userID)
+    var setupAccountView: BindingTarget<AccountModel> {
+        return makeBindingTarget({ base, qrcode in
+            base.setupAccountView(by: qrcode)
         })
     }
 }
