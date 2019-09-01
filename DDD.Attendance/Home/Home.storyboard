@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c7J-Jw-uLq">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="9qR-R3-qCj">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="c7J-Jw-uLq" customClass="HomeViewController" customModule="DDD_Attendance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Az7-UN-ebh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23X-MQ-Mes">
+                                <rect key="frame" x="0.0" y="44" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKT-uR-SH8" customClass="AccountView" customModule="DDD_Attendance" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="768" width="414" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DKT-uR-SH8" secondAttribute="height" multiplier="207:64" id="ZGa-C5-wSI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="23X-MQ-Mes" firstAttribute="leading" secondItem="WGK-QE-0oJ" secondAttribute="leading" id="9h3-Go-QIh"/>
+                            <constraint firstItem="DKT-uR-SH8" firstAttribute="top" secondItem="23X-MQ-Mes" secondAttribute="bottom" constant="8" id="BpQ-ZS-SuA"/>
+                            <constraint firstAttribute="bottom" secondItem="DKT-uR-SH8" secondAttribute="bottom" id="L8Q-5B-lWd"/>
+                            <constraint firstItem="WGK-QE-0oJ" firstAttribute="trailing" secondItem="DKT-uR-SH8" secondAttribute="trailing" id="RbL-IX-wqI"/>
+                            <constraint firstItem="23X-MQ-Mes" firstAttribute="top" secondItem="WGK-QE-0oJ" secondAttribute="top" id="ep8-We-lU6"/>
+                            <constraint firstItem="WGK-QE-0oJ" firstAttribute="trailing" secondItem="23X-MQ-Mes" secondAttribute="trailing" id="tvV-4c-ihg"/>
+                            <constraint firstItem="DKT-uR-SH8" firstAttribute="leading" secondItem="WGK-QE-0oJ" secondAttribute="leading" id="yvF-K5-huo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WGK-QE-0oJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountView" destination="DKT-uR-SH8" id="eXk-Ob-gmR"/>
+                        <outlet property="tableView" destination="23X-MQ-Mes" id="1Nm-my-3yK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mzu-1y-xIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="-47.544642857142854"/>
+        </scene>
+    </scenes>
+</document>
