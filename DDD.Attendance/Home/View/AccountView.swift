@@ -14,6 +14,13 @@ class AccountView: BaseView {
     @IBOutlet private weak var userLabel: UILabel!
     @IBOutlet private weak var qrcodeImageview: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.cornerRadius = 25
+        layer.masksToBounds = true
+    }
+    
     func configure(by account: AccountModel) {
         titleLabel.text = account.period
         userLabel.text = account.userID

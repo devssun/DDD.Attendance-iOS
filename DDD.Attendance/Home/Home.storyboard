@@ -19,15 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23X-MQ-Mes">
-                                <rect key="frame" x="0.0" y="44" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKT-uR-SH8" customClass="AccountView" customModule="DDD_Attendance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="768" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="627" width="414" height="269"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DKT-uR-SH8" secondAttribute="height" multiplier="207:64" id="ZGa-C5-wSI"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,6 +33,7 @@
                             <constraint firstItem="DKT-uR-SH8" firstAttribute="top" secondItem="23X-MQ-Mes" secondAttribute="bottom" constant="8" id="BpQ-ZS-SuA"/>
                             <constraint firstAttribute="bottom" secondItem="DKT-uR-SH8" secondAttribute="bottom" id="L8Q-5B-lWd"/>
                             <constraint firstItem="WGK-QE-0oJ" firstAttribute="trailing" secondItem="DKT-uR-SH8" secondAttribute="trailing" id="RbL-IX-wqI"/>
+                            <constraint firstItem="DKT-uR-SH8" firstAttribute="height" secondItem="Az7-UN-ebh" secondAttribute="height" multiplier="0.3" id="eV9-a5-JwJ"/>
                             <constraint firstItem="23X-MQ-Mes" firstAttribute="top" secondItem="WGK-QE-0oJ" secondAttribute="top" id="ep8-We-lU6"/>
                             <constraint firstItem="WGK-QE-0oJ" firstAttribute="trailing" secondItem="23X-MQ-Mes" secondAttribute="trailing" id="tvV-4c-ihg"/>
                             <constraint firstItem="DKT-uR-SH8" firstAttribute="leading" secondItem="WGK-QE-0oJ" secondAttribute="leading" id="yvF-K5-huo"/>

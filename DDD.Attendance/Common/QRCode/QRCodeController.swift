@@ -12,14 +12,19 @@ class QRCodeController {
     
     static func generate(from string: String) -> UIImage? {
         let data = string.data(using: String.Encoding.ascii)
-        
-        guard let filter = CIFilter(name: "CIQRCodeGenerator") else {
-            return nil
+
+        guard
+            let filter = CIFilter(name: "CIQRCodeGenerator"),
+            let colorFilter = CIFilter(name: "CIFalseColor") else {
+                return nil
         }
         filter.setValue(data, forKey: "inputMessage")
+        colorFilter.setValue(filter.outputImage, forKey: "inputImage")
+        colorFilter.setValue(CIColor(red: 1, green: 1, blue: 1), forKey: "inputColor1") // Background
+        colorFilter.setValue(CIColor(red: 0, green: 0, blue: 0), forKey: "inputColor0") // Foreground
         let transform = CGAffineTransform(scaleX: 3, y: 3)
         
-        guard let output = filter.outputImage?.transformed(by: transform) else {
+        guard let output = colorFilter.outputImage?.transformed(by: transform) else {
             return nil
         }
         

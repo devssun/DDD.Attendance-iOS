@@ -6,4 +6,20 @@
 //  Copyright © 2019 DDD. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HomeDataSource: BaseDataSource {
+    
+    override func configureCell(tableCell cell: UITableViewCell, withValue value: Any) {
+        switch (cell, value) {
+        case let (cell as AttendanceListCell, value as AttendanceListModel):
+            cell.configureWith(value: value)
+        default:
+            fatalError("Invaild \(cell), \(value)")
+        }
+    }
+    
+    func load(from data: [AttendanceListModel]) {
+        set(values: data, cellClass: AttendanceListCell.self, inSection: 0)
+    }
+}

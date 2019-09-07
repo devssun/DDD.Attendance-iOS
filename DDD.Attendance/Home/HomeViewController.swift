@@ -16,10 +16,17 @@ class HomeViewController: BaseViewController {
     @IBOutlet private weak var accountView: AccountView!
     
     private let viewModel = HomeViewModel()
+    private let dataSource = HomeDataSource()
+    
+    var testModel = [AttendanceListModel]()
     
     override func bindData() {
         super.bindData()
         
+        tableView.register(UINib(nibName: AttendanceListCell.defaultReusableId, bundle: nil), forCellReuseIdentifier: AttendanceListCell.defaultReusableId)
+        tableView.tableHeaderView = UIView(frame: CGRect.zero)
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.dataSource = dataSource
     }
     
     override func bindViewModel() {
@@ -30,8 +37,12 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        for _ in 0..<30 {
+            testModel.append(AttendanceListModel(attendance: true, timeStamp: "\(Date())", title: "test"))
+        }
         viewModel.inputs.generateQRCode(by: "godpp")
+        dataSource.load(from: testModel)
+        tableView.reloadData()
     }
 }
 
