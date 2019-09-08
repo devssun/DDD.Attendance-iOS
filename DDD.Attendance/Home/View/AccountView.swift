@@ -19,6 +19,8 @@ class AccountView: BaseView {
         
         layer.cornerRadius = 25
         layer.masksToBounds = true
+        
+        isUserInteractionEnabled = true
     }
     
     func configure(by account: AccountModel) {
