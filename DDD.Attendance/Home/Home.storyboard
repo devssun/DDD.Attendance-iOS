@@ -24,19 +24,7 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYH-v7-HeT" customClass="AccountView" customModule="DDD_Attendance" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="717" width="414" height="179"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYm-OR-FFM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="dYm-OR-FFM" secondAttribute="bottom" id="6sk-aH-qcj"/>
-                                    <constraint firstItem="dYm-OR-FFM" firstAttribute="top" secondItem="OYH-v7-HeT" secondAttribute="top" id="Y2m-Ar-bC0"/>
-                                    <constraint firstAttribute="trailing" secondItem="dYm-OR-FFM" secondAttribute="trailing" id="u5Y-xf-VLD"/>
-                                    <constraint firstItem="dYm-OR-FFM" firstAttribute="leading" secondItem="OYH-v7-HeT" secondAttribute="leading" id="uBv-Uz-skv"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +41,6 @@
                         <viewLayoutGuide key="safeArea" id="WGK-QE-0oJ"/>
                     </view>
                     <connections>
-                        <outlet property="bottomTriggerButton" destination="dYm-OR-FFM" id="r12-aR-LAl"/>
                         <outlet property="bottomTriggerView" destination="OYH-v7-HeT" id="2vT-Wp-8bR"/>
                         <outlet property="bottomTriggerViewHeightConstraint" destination="kaF-2X-gTY" id="K5Y-e4-Fps"/>
                         <outlet property="tableView" destination="23X-MQ-Mes" id="1Nm-my-3yK"/>

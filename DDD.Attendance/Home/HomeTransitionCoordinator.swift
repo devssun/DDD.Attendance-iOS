@@ -10,14 +10,14 @@ import UIKit
 
 class HomeTransitionCoordinator: NSObject {
 
-    var toViewController: AccountViewController?
-    lazy var toViewControllerInitalYPosition: CGFloat = {
+    private lazy var toViewControllerInitalYPosition: CGFloat = {
         let bottomTriggerViewHeight: CGFloat = fromViewControllerGestureView?.frame.height ?? 0
         let accountViewYPosition = toViewController?.accountView.frame.minY ?? 0
         let y = bottomTriggerViewHeight + accountViewYPosition
         return y
     }()
     
+    var toViewController: AccountViewController?
     var interactivePresentTransition: InteractiveAnimator?
     var interactiveDismissTransition: InteractiveAnimator?
     var fromViewControllerGestureView: UIView?
@@ -49,15 +49,20 @@ class HomeTransitionCoordinator: NSObject {
 
 extension HomeTransitionCoordinator: UIViewControllerTransitioningDelegate {
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(forPresented presented: UIViewController,
+                             presenting: UIViewController,
+                             source: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
         return PresentingViewAnimator(initialY: toViewControllerInitalYPosition)
     }
     
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(forDismissed dismissed: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
         return DismissingViewAnimator(initialY: toViewControllerInitalYPosition)
     }
     
-    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning
+    ) -> UIViewControllerInteractiveTransitioning? {
         guard
             let presentInteractor = interactivePresentTransition,
             presentInteractor.isTransitionInProcess else {
@@ -66,7 +71,8 @@ extension HomeTransitionCoordinator: UIViewControllerTransitioningDelegate {
         return presentInteractor
     }
     
-    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning
+    ) -> UIViewControllerInteractiveTransitioning? {
         guard
             let dismissInteractor = interactiveDismissTransition,
             dismissInteractor.isTransitionInProcess else {

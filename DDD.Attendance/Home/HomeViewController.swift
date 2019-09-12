@@ -13,15 +13,13 @@ import ReactiveSwift
 class HomeViewController: BaseViewController {
 
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var bottomTriggerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var bottomTriggerView: AccountView!
-    @IBOutlet weak var bottomTriggerButton: UIButton!
-    @IBOutlet weak var bottomTriggerViewHeightConstraint: NSLayoutConstraint!
     
     private let viewModel = HomeViewModel()
     private let dataSource = HomeDataSource()
     
     let transition = HomeTransitionCoordinator()
-    var testModel = [AttendanceListModel]()
     
     static func instantiateViewController() -> HomeViewController {
         return Storyboard.home.viewController(HomeViewController.self)
@@ -30,10 +28,13 @@ class HomeViewController: BaseViewController {
     override func bindData() {
         super.bindData()
         
-        tableView.register(UINib(nibName: AttendanceListCell.defaultReusableId, bundle: nil), forCellReuseIdentifier: AttendanceListCell.defaultReusableId)
-        tableView.tableHeaderView = UIView(frame: CGRect.zero)
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
-        tableView.dataSource = dataSource
+        tableView.then {
+            $0.register(UINib(nibName: AttendanceListCell.defaultReusableId, bundle: nil),
+                        forCellReuseIdentifier: AttendanceListCell.defaultReusableId)
+            $0.tableHeaderView = UIView(frame: CGRect.zero)
+            $0.tableFooterView = UIView(frame: CGRect.zero)
+            $0.dataSource = dataSource
+        }
     }
     
     override func bindViewModel() {
@@ -47,14 +48,10 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for _ in 0..<30 {
-            testModel.append(AttendanceListModel(attendance: true, timeStamp: "\(Date())", title: "test"))
-        }
-        viewModel.inputs.generateQRCode(by: "godpp")
-        dataSource.load(from: testModel)
-        tableView.reloadData()
         
-        bottomTriggerButton.addTarget(self, action: #selector(bottomTriggerButtonTapped), for: .touchUpInside)
+        setupBottomTriggerViewTapGestureRecognizer()
+        
+        viewModel.inputs.generateQRCode(by: "godpp")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,7 +82,13 @@ private extension HomeViewController {
         transition.prepareViewforCustomTransition(fromViewController: self, with: accountData)
     }
     
-    @objc func bottomTriggerButtonTapped() {
+    func setupBottomTriggerViewTapGestureRecognizer() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(bottomTriggerViewTapped))
+        recognizer.numberOfTapsRequired = 1
+        bottomTriggerView.addGestureRecognizer(recognizer)
+    }
+    
+    @objc func bottomTriggerViewTapped() {
         if let viewControllerToPresent = transition.toViewController {
             present(viewControllerToPresent, animated: true)
         }
