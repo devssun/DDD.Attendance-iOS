@@ -12,6 +12,7 @@ enum Storyboard: String {
     case main = "Main"
     case home = "Home"
     case account = "Account"
+    case login = "Login"
     
     var instance: UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
