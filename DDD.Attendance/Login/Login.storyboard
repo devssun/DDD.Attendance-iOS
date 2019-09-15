@@ -17,13 +17,84 @@
                     <view key="view" contentMode="scaleToFill" id="4lg-ZI-X4B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkI-m0-cH4">
+                                <rect key="frame" x="151" y="672" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="이메일로 회원가입"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny7-TZ-qzY">
+                                <rect key="frame" x="134" y="616" width="147" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Zvf-SU-9Wt"/>
                     </view>
+                    <connections>
+                        <outlet property="loginPopupButton" destination="Ny7-TZ-qzY" id="dlV-m5-vbz"/>
+                        <outlet property="signUpButton" destination="EkI-m0-cH4" id="530-5z-RTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mfp-nx-M5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="144"/>
+            <point key="canvasLocation" x="198.55072463768118" y="143.97321428571428"/>
+        </scene>
+        <!--Login Popup View Controller-->
+        <scene sceneID="RIn-gF-jEo">
+            <objects>
+                <viewController storyboardIdentifier="LoginPopupViewController" id="CkW-Fo-Fnh" customClass="LoginPopupViewController" customModule="DDD_Attendance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQA-dO-PV0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gt-Wh-9dW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYo-6L-Bqq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8s1-a7-zMh" customClass="LoginPopupView" customModule="DDD_Attendance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8s1-a7-zMh" secondAttribute="bottom" id="2cG-NB-ndy"/>
+                                    <constraint firstAttribute="trailing" secondItem="8s1-a7-zMh" secondAttribute="trailing" id="5yV-e4-xgz"/>
+                                    <constraint firstItem="8s1-a7-zMh" firstAttribute="height" secondItem="JYo-6L-Bqq" secondAttribute="height" multiplier="0.5" id="Fys-Z2-tno"/>
+                                    <constraint firstItem="8s1-a7-zMh" firstAttribute="leading" secondItem="JYo-6L-Bqq" secondAttribute="leading" id="Tdj-ig-GSX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5gt-Wh-9dW" secondAttribute="bottom" id="1is-xu-CGH"/>
+                            <constraint firstItem="5gt-Wh-9dW" firstAttribute="leading" secondItem="cQA-dO-PV0" secondAttribute="leading" id="5ZK-p8-auE"/>
+                            <constraint firstItem="JYo-6L-Bqq" firstAttribute="leading" secondItem="cQA-dO-PV0" secondAttribute="leading" id="C4d-Dz-T3C"/>
+                            <constraint firstAttribute="bottom" secondItem="JYo-6L-Bqq" secondAttribute="bottom" id="EQj-AJ-oK1"/>
+                            <constraint firstAttribute="trailing" secondItem="JYo-6L-Bqq" secondAttribute="trailing" id="kup-AE-eox"/>
+                            <constraint firstItem="JYo-6L-Bqq" firstAttribute="top" secondItem="cQA-dO-PV0" secondAttribute="top" id="qoH-zV-TWB"/>
+                            <constraint firstItem="5gt-Wh-9dW" firstAttribute="top" secondItem="cQA-dO-PV0" secondAttribute="top" id="r0g-ud-hzY"/>
+                            <constraint firstAttribute="trailing" secondItem="5gt-Wh-9dW" secondAttribute="trailing" id="tcG-gx-iEl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wgO-F1-rsA"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="5gt-Wh-9dW" id="h46-uX-UQg"/>
+                        <outlet property="containerView" destination="JYo-6L-Bqq" id="6mQ-re-QoT"/>
+                        <outlet property="loginPopupView" destination="8s1-a7-zMh" id="0E6-Xi-s7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11z-9Q-oBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="144"/>
         </scene>
     </scenes>
 </document>

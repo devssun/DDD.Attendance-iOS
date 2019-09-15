@@ -24,6 +24,10 @@
 		BC101483232E26130096E962 /* GoogleDataTransportCCTSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */; };
 		BC101484232E26130096E962 /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147F232E26130096E962 /* GoogleDataTransport.framework */; };
 		BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101485232E261E0096E962 /* StoreKit.framework */; };
+		BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC101488232E2D110096E962 /* LoginPopupView.xib */; };
+		BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148A232E2D1C0096E962 /* LoginPopupView.swift */; };
+		BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */; };
+		BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */; };
 		BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50AD232A5E4600B56EBF /* Login.storyboard */; };
 		BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */; };
 		BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */; };
@@ -93,6 +97,10 @@
 		BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransportCCTSupport.framework; path = Carthage/Build/iOS/GoogleDataTransportCCTSupport.framework; sourceTree = "<group>"; };
 		BC10147F232E26130096E962 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransport.framework; path = Carthage/Build/iOS/GoogleDataTransport.framework; sourceTree = "<group>"; };
 		BC101485232E261E0096E962 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BC101488232E2D110096E962 /* LoginPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPopupView.xib; sourceTree = "<group>"; };
+		BC10148A232E2D1C0096E962 /* LoginPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupView.swift; sourceTree = "<group>"; };
+		BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransitionCoordinator.swift; sourceTree = "<group>"; };
+		BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewController.swift; sourceTree = "<group>"; };
 		BC3E50AD232A5E4600B56EBF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -179,11 +187,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC101487232E2D020096E962 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC101488232E2D110096E962 /* LoginPopupView.xib */,
+				BC10148A232E2D1C0096E962 /* LoginPopupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BC3E50AB232A5D5700B56EBF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BC101487232E2D020096E962 /* View */,
 				BC3E50AD232A5E4600B56EBF /* Login.storyboard */,
 				BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */,
+				BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */,
+				BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -452,6 +472,7 @@
 				BC3E50C0232A5F8B00B56EBF /* StepThreeView.xib in Resources */,
 				BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */,
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
+				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
@@ -505,6 +526,7 @@
 				BCE1B3ED231BE383001BB684 /* BaseDataSource.swift in Sources */,
 				BC3E50B5232A5F0100B56EBF /* SignUpViewController.swift in Sources */,
 				BCE1B3F3231BE57F001BB684 /* HomeViewModel.swift in Sources */,
+				BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
@@ -519,6 +541,7 @@
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
 				E571F76A2324033B00816C04 /* PresentingViewAnimator.swift in Sources */,
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
+				BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */,
 				BCE1B3E5231BE069001BB684 /* BaseView.swift in Sources */,
 				BC3E50BE232A5F8000B56EBF /* StepTwoView.swift in Sources */,
 				BCE1B3CF231BB75E001BB684 /* BaseViewController.swift in Sources */,
@@ -527,6 +550,7 @@
 				BCE1B3F1231BE576001BB684 /* HomeDataSource.swift in Sources */,
 				BCE1B4132320054F001BB684 /* AttendanceListModel.swift in Sources */,
 				E571F77223241C1E00816C04 /* InteractiveTransitionableViewController.swift in Sources */,
+				BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
 			);

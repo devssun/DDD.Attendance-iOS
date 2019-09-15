@@ -7,24 +7,66 @@
 //
 
 import UIKit
+import ReactiveSwift
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet private weak var loginPopupButton: UIButton!
+    @IBOutlet private weak var signUpButton: UIButton!
+    
+    private let transition = LoginTransitionCoordinator()
+    
+    static func instantiateViewController() -> LoginViewController {
+        return Storyboard.login.viewController(LoginViewController.self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+        reactive.prepareLoginPopupViewController <~ reactive.viewWillAppear
+        
+        reactive.presentLoginPopupViewController <~ loginPopupButton.reactive
+            .controlEvents(.touchUpInside)
     }
-    */
+}
 
+// MARK: - Private
+private extension LoginViewController {
+    
+    func presentLoginPopupViewController() {
+        if let viewControllerToPresent = transition.toViewController {
+            present(viewControllerToPresent, animated: true)
+        }
+    }
+    
+    func prepareLoginPopupViewController() {
+        transition.prepareViewforCustomTransition(fromViewController: self)
+    }
+}
+
+// MARK: - Reactive
+extension Reactive where Base: LoginViewController {
+    
+    var presentLoginPopupViewController: BindingTarget<UIButton> {
+        return makeBindingTarget({ base, _ in
+            base.presentLoginPopupViewController()
+        })
+    }
+    
+    var prepareLoginPopupViewController: BindingTarget<Void> {
+        return makeBindingTarget({ base, _ in
+            base.prepareLoginPopupViewController()
+        })
+    }
+}
+
+extension LoginViewController: InteractiveTransitionableViewController {
+    
+    var interactivePresentTransition: InteractiveAnimator? {
+        return transition.interactivePresentTransition
+    }
+    
+    var interactiveDismissTransition: InteractiveAnimator? {
+        return transition.interactiveDismissTransition
+    }
 }
