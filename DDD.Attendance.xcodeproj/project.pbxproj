@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC10144D232E20330096E962 /* GoogleService-Info.plist */; };
+		BC10146B232E24FF0096E962 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
+		BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */; };
+		BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101460232E24FE0096E962 /* FirebaseDatabase.framework */; };
+		BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101461232E24FE0096E962 /* FirebaseCore.framework */; };
+		BC101470232E24FF0096E962 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101462232E24FE0096E962 /* FirebaseAuth.framework */; };
+		BC101471232E24FF0096E962 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101463232E24FE0096E962 /* FIRAnalyticsConnector.framework */; };
+		BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101464232E24FE0096E962 /* GoogleUtilities.framework */; };
+		BC101476232E24FF0096E962 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101468232E24FE0096E962 /* FirebaseAnalytics.framework */; };
+		BC101478232E25DF0096E962 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101477232E25DF0096E962 /* libc++.tbd */; };
+		BC10147A232E25E80096E962 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101479232E25E80096E962 /* libsqlite3.tbd */; };
+		BC101480232E26130096E962 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147B232E26130096E962 /* leveldb-library.framework */; };
+		BC101481232E26130096E962 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147C232E26130096E962 /* nanopb.framework */; };
+		BC101482232E26130096E962 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */; };
+		BC101483232E26130096E962 /* GoogleDataTransportCCTSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */; };
+		BC101484232E26130096E962 /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147F232E26130096E962 /* GoogleDataTransport.framework */; };
+		BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101485232E261E0096E962 /* StoreKit.framework */; };
 		BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50AD232A5E4600B56EBF /* Login.storyboard */; };
 		BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */; };
 		BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */; };
@@ -59,6 +76,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC10144D232E20330096E962 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Carthage/Build/iOS/GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		BC101460232E24FE0096E962 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Carthage/Build/iOS/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		BC101461232E24FE0096E962 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Carthage/Build/iOS/FirebaseCore.framework; sourceTree = "<group>"; };
+		BC101462232E24FE0096E962 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Carthage/Build/iOS/FirebaseAuth.framework; sourceTree = "<group>"; };
+		BC101463232E24FE0096E962 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIRAnalyticsConnector.framework; path = Carthage/Build/iOS/FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		BC101464232E24FE0096E962 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Carthage/Build/iOS/GoogleUtilities.framework; sourceTree = "<group>"; };
+		BC101468232E24FE0096E962 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Carthage/Build/iOS/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		BC101477232E25DF0096E962 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BC101479232E25E80096E962 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BC10147B232E26130096E962 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "leveldb-library.framework"; path = "Carthage/Build/iOS/leveldb-library.framework"; sourceTree = "<group>"; };
+		BC10147C232E26130096E962 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = Carthage/Build/iOS/nanopb.framework; sourceTree = "<group>"; };
+		BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransportCCTSupport.framework; path = Carthage/Build/iOS/GoogleDataTransportCCTSupport.framework; sourceTree = "<group>"; };
+		BC10147F232E26130096E962 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransport.framework; path = Carthage/Build/iOS/GoogleDataTransport.framework; sourceTree = "<group>"; };
+		BC101485232E261E0096E962 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BC3E50AD232A5E4600B56EBF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -117,11 +151,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */,
+				BC101480232E26130096E962 /* leveldb-library.framework in Frameworks */,
+				BC101481232E26130096E962 /* nanopb.framework in Frameworks */,
+				BC101482232E26130096E962 /* GoogleAppMeasurement.framework in Frameworks */,
+				BC101483232E26130096E962 /* GoogleDataTransportCCTSupport.framework in Frameworks */,
+				BC101484232E26130096E962 /* GoogleDataTransport.framework in Frameworks */,
+				BC10147A232E25E80096E962 /* libsqlite3.tbd in Frameworks */,
+				BC101478232E25DF0096E962 /* libc++.tbd in Frameworks */,
+				BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */,
+				BC101470232E24FF0096E962 /* FirebaseAuth.framework in Frameworks */,
+				BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */,
 				BC3E50CA232A973D00B56EBF /* TextFieldEffects.framework in Frameworks */,
+				BC101476232E24FF0096E962 /* FirebaseAnalytics.framework in Frameworks */,
+				BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */,
 				E571F75F2323F08700816C04 /* SnapKit.framework in Frameworks */,
 				BCE1B3DE231BD8E1001BB684 /* Alamofire.framework in Frameworks */,
+				BC10146B232E24FF0096E962 /* FirebaseInstanceID.framework in Frameworks */,
 				BCE1B3D9231BB858001BB684 /* ReactiveMapKit.framework in Frameworks */,
 				BCE1B3DA231BB858001BB684 /* ReactiveSwift.framework in Frameworks */,
+				BC101471232E24FF0096E962 /* FIRAnalyticsConnector.framework in Frameworks */,
+				BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */,
 				BCE1B3DB231BB858001BB684 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +254,7 @@
 				BCE1B3C1231BB68F001BB684 /* Assets.xcassets */,
 				BCE1B3C3231BB68F001BB684 /* LaunchScreen.storyboard */,
 				BCE1B3C6231BB68F001BB684 /* Info.plist */,
+				BC10144D232E20330096E962 /* GoogleService-Info.plist */,
 			);
 			path = DDD.Attendance;
 			sourceTree = "<group>";
@@ -236,6 +287,22 @@
 		BCE1B3D5231BB858001BB684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC101479232E25E80096E962 /* libsqlite3.tbd */,
+				BC101477232E25DF0096E962 /* libc++.tbd */,
+				BC101485232E261E0096E962 /* StoreKit.framework */,
+				BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */,
+				BC10147F232E26130096E962 /* GoogleDataTransport.framework */,
+				BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */,
+				BC10147B232E26130096E962 /* leveldb-library.framework */,
+				BC10147C232E26130096E962 /* nanopb.framework */,
+				BC101463232E24FE0096E962 /* FIRAnalyticsConnector.framework */,
+				BC101468232E24FE0096E962 /* FirebaseAnalytics.framework */,
+				BC101462232E24FE0096E962 /* FirebaseAuth.framework */,
+				BC101461232E24FE0096E962 /* FirebaseCore.framework */,
+				BC101460232E24FE0096E962 /* FirebaseDatabase.framework */,
+				BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */,
+				BC101464232E24FE0096E962 /* GoogleUtilities.framework */,
+				BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */,
 				BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */,
 				E571F75E2323F08700816C04 /* SnapKit.framework */,
 				BCE1B3DD231BD8E1001BB684 /* Alamofire.framework */,
@@ -394,6 +461,7 @@
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
 				E571F77723241F5300816C04 /* Account.storyboard in Resources */,
+				BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +686,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.seongjun-park.DDD-Attendance";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.DDD-Attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -641,7 +713,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.seongjun-park.DDD-Attendance";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.DDD-Attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
