@@ -21,6 +21,8 @@ class HomeViewController: BaseViewController {
     
     let transition = HomeTransitionCoordinator()
     
+    let test = AttendanceListModel(attendance: true, timeStamp: "October 12", title: "디디디 커리큘럼 2번째\n아이디어 기획발표")
+    
     static func instantiateViewController() -> HomeViewController {
         return Storyboard.home.viewController(HomeViewController.self)
     }
@@ -31,8 +33,13 @@ class HomeViewController: BaseViewController {
         tableView.then {
             $0.register(UINib(nibName: AttendanceListCell.defaultReusableId, bundle: nil),
                         forCellReuseIdentifier: AttendanceListCell.defaultReusableId)
+            $0.register(UINib(nibName: HomeHeaderCell.defaultReusableId, bundle: nil),
+                        forCellReuseIdentifier: HomeHeaderCell.defaultReusableId)
+            $0.register(UINib(nibName: WelcomeCell.defaultReusableId, bundle: nil),
+                        forCellReuseIdentifier: WelcomeCell.defaultReusableId)
             $0.tableHeaderView = UIView(frame: CGRect.zero)
             $0.tableFooterView = UIView(frame: CGRect.zero)
+            $0.separatorInset = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.width, bottom: 0, right: 0)
             $0.dataSource = dataSource
         }
     }
@@ -52,6 +59,9 @@ class HomeViewController: BaseViewController {
         setupBottomTriggerViewTapGestureRecognizer()
         
         viewModel.inputs.generateQRCode(by: "godpp")
+        
+        dataSource.load(from: "We suggest you to wear a colorful the gray weather in Milan", with: [test,test,test,test,test,test,test])
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {

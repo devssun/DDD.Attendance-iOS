@@ -7,25 +7,30 @@
 //
 
 import UIKit
+import SnapKit
 
 class AccountView: BaseView {
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var userLabel: UILabel!
-    @IBOutlet private weak var qrcodeImageview: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var qrcodeImageview: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         layer.cornerRadius = 25
         layer.masksToBounds = true
-        
         isUserInteractionEnabled = true
+        
+        qrcodeImageview.snp.makeConstraints {
+            $0.width.equalTo(30)
+            $0.height.equalTo(30)
+            $0.trailing.equalTo(-48)
+            $0.centerY.equalTo(titleLabel.snp.centerY)
+        }
     }
     
     func configure(by account: AccountModel) {
         titleLabel.text = account.period
-        userLabel.text = account.userID
         qrcodeImageview.image = account.qrcode
     }
 }
