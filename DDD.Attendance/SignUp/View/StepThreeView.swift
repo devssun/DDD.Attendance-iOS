@@ -8,14 +8,28 @@
 
 import UIKit
 
-class StepThreeView: UIView {
+class StepThreeView: BaseView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var designerPositionCardView: PositionCardView!
+    @IBOutlet weak var andPositionCardView: PositionCardView!
+    @IBOutlet weak var iosPositionCardView: PositionCardView!
+    @IBOutlet weak var backendPositionCardView: PositionCardView!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        initView()
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func initView() {
 
+    }
+    
+    override func bindViewModel() {
+        
+    }
 }

@@ -8,23 +8,31 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class SignUpViewController: BaseViewController {
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var containerView: UIView!
+    
+    static func instantiateViewController() -> SignUpViewController {
+        return Storyboard.account.viewController(SignUpViewController.self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        initView()
     }
-    */
+    
+    private func initView() {
+        progressView.clipsToBounds = true
+        progressView.layer.cornerRadius = 3
+        
+        progressView.layer.sublayers![1].cornerRadius = 3
+        progressView.subviews[1].clipsToBounds = true
+    }
+}
+
+// MARK: - Private
+private extension SignUpViewController {
 
 }
