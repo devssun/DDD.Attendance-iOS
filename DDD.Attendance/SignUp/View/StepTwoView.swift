@@ -8,6 +8,9 @@
 
 import UIKit
 
+import ReactiveCocoa
+import ReactiveSwift
+
 class StepTwoView: BaseView {
     
     @IBOutlet weak var emailTextField: RoundedTextField!
@@ -15,11 +18,14 @@ class StepTwoView: BaseView {
     private let nextButton: SignUpButton = SignUpButton()
     private let eyeButton = UIButton()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    private let viewModel: SignUpViewModel
+    
+    init(with viewModel: SignUpViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
         initView()
     }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -59,11 +65,16 @@ class StepTwoView: BaseView {
             .observeValues { [weak self] _ in
                 guard let self = self else { return }
                 
-                // TODO
+                self.passwordTextField.resignFirstResponder()
+                self.nextButton.sendActions(for: .touchUpInside)
         }
     }
     
     override func bindViewModel() {
+        viewModel.email <~ emailTextField.reactive.continuousTextValues
+        viewModel.password <~ passwordTextField.reactive.continuousTextValues
         
+        nextButton.reactive.isEnabled <~ viewModel.buttonEnabledSignal
+        nextButton.reactive.pressed = CocoaAction(viewModel.nextStepAction)
     }
 }

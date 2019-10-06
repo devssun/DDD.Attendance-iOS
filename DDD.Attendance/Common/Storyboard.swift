@@ -11,7 +11,7 @@ import UIKit
 enum Storyboard: String {
     case main = "Main"
     case home = "Home"
-    case account = "Account"
+    case account = "SignUp"
     case login = "Login"
     
     var instance: UIStoryboard {

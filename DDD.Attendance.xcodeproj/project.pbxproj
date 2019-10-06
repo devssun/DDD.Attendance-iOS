@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2057031F232E2B0200103A3E /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057031E232E2B0200103A3E /* SignUpButton.swift */; };
 		20570323232E439900103A3E /* PositionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20570322232E439900103A3E /* PositionCardView.swift */; };
+		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
 		BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50AD232A5E4600B56EBF /* Login.storyboard */; };
 		BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		2057031E232E2B0200103A3E /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		20570322232E439900103A3E /* PositionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCardView.swift; sourceTree = "<group>"; };
+		2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		20B81DFA232D54E20081D341 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		BC3E50AD232A5E4600B56EBF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				BC3E50B6232A5F2200B56EBF /* View */,
 				BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */,
 				BC3E50B4232A5F0100B56EBF /* SignUpViewController.swift */,
+				2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				E571F77A2324345400816C04 /* UIView+Extension.swift in Sources */,
 				BC3E50C2232A5F9B00B56EBF /* StepThreeView.swift in Sources */,
 				BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */,
+				2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */,
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
 				E571F76A2324033B00816C04 /* PresentingViewAnimator.swift in Sources */,
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,

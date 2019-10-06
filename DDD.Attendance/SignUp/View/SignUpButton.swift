@@ -42,8 +42,6 @@ class SignUpButton: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
         isEnabled = false
         titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-        
-        updateColor()
     }
     
     private func updateColor() {

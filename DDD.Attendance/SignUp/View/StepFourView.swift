@@ -10,11 +10,14 @@ import UIKit
 
 class StepFourView: BaseView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    private let viewModel: SignUpViewModel
+    
+    init(with viewModel: SignUpViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
         initView()
     }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
