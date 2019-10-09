@@ -1,6 +1,15 @@
 # master
 *Please add new entries at the top.*
 
+# 6.1.0
+
+1. add possibility to use `all` and `any` operators with array of arguments (#735, kudos to @olejnjak)
+   ```swift
+   let property = Property.any([boolProperty1, boolProperty2, boolProperty3])
+   ```
+1. Fixed Result extensions ambiguity (#733, kudos to @nekrich)
+1. Add `<~` binding operator to `Signal.Observer` (#635, kudos to @Marcocanc)
+
 # 6.0.0
 1. Dropped support for Swift 4.2 (Xcode 9)
 2. Removed dependency on https://github.com/antitypical/Result (#702, kudos to @NachoSoto and @mdiep)
