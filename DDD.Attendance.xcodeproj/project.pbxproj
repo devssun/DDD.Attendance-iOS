@@ -28,6 +28,7 @@
 		BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148A232E2D1C0096E962 /* LoginPopupView.swift */; };
 		BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */; };
 		BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */; };
+		BC381F302349F4760040202D /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC381F2F2349F4760040202D /* Firebase.swift */; };
 		BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50AD232A5E4600B56EBF /* Login.storyboard */; };
 		BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */; };
 		BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */; };
@@ -42,6 +43,9 @@
 		BC3E50C6232A5FC800B56EBF /* StepFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C5232A5FC800B56EBF /* StepFourView.swift */; };
 		BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */; };
 		BC3E50CA232A973D00B56EBF /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
+		BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */; };
+		BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F9234E36FE0031C7F1 /* PosterCell.swift */; };
+		BC8863FD234E37780031C7F1 /* PosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FC234E37780031C7F1 /* PosterModel.swift */; };
 		BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */; };
 		BCE1B3BD231BB68D001BB684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BC231BB68D001BB684 /* ViewController.swift */; };
 		BCE1B3C0231BB68D001BB684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3BE231BB68D001BB684 /* Main.storyboard */; };
@@ -101,6 +105,7 @@
 		BC10148A232E2D1C0096E962 /* LoginPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupView.swift; sourceTree = "<group>"; };
 		BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransitionCoordinator.swift; sourceTree = "<group>"; };
 		BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewController.swift; sourceTree = "<group>"; };
+		BC381F2F2349F4760040202D /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		BC3E50AD232A5E4600B56EBF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -115,6 +120,9 @@
 		BC3E50C5232A5FC800B56EBF /* StepFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFourView.swift; sourceTree = "<group>"; };
 		BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = Carthage/Build/iOS/TextFieldEffects.framework; sourceTree = "<group>"; };
+		BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
+		BC8863F9234E36FE0031C7F1 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		BC8863FC234E37780031C7F1 /* PosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModel.swift; sourceTree = "<group>"; };
 		BCE1B3B7231BB68D001BB684 /* DDD.Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDD.Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE1B3BC231BB68D001BB684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,14 +204,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BC381F2D2349F4600040202D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BC381F2F2349F4760040202D /* Firebase.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		BC3E50AB232A5D5700B56EBF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BC8863FB234E376E0031C7F1 /* Model */,
+				BC8863F6234E36CB0031C7F1 /* Cell */,
 				BC101487232E2D020096E962 /* View */,
 				BC3E50AD232A5E4600B56EBF /* Login.storyboard */,
 				BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */,
 				BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */,
 				BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */,
+				BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -241,6 +260,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BC8863F6234E36CB0031C7F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC8863F9234E36FE0031C7F1 /* PosterCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC8863FB234E376E0031C7F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC8863FC234E37780031C7F1 /* PosterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BCE1B3AE231BB68D001BB684 = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +296,7 @@
 		BCE1B3B9231BB68D001BB684 /* DDD.Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BC381F2D2349F4600040202D /* Repository */,
 				BCE1B3F8231BE6D5001BB684 /* Common */,
 				BCE1B3CD231BB756001BB684 /* Base */,
 				BCE1B3D0231BB793001BB684 /* Home */,
@@ -503,6 +539,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TextFieldEffects.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CHIPageControl.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -527,6 +564,7 @@
 				BC3E50B5232A5F0100B56EBF /* SignUpViewController.swift in Sources */,
 				BCE1B3F3231BE57F001BB684 /* HomeViewModel.swift in Sources */,
 				BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */,
+				BC381F302349F4760040202D /* Firebase.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
@@ -539,6 +577,7 @@
 				BC3E50C2232A5F9B00B56EBF /* StepThreeView.swift in Sources */,
 				BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */,
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
+				BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */,
 				E571F76A2324033B00816C04 /* PresentingViewAnimator.swift in Sources */,
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
 				BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */,
@@ -551,6 +590,8 @@
 				BCE1B4132320054F001BB684 /* AttendanceListModel.swift in Sources */,
 				E571F77223241C1E00816C04 /* InteractiveTransitionableViewController.swift in Sources */,
 				BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */,
+				BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */,
+				BC8863FD234E37780031C7F1 /* PosterModel.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
 			);
