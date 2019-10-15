@@ -46,6 +46,7 @@
 		BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */; };
 		BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F9234E36FE0031C7F1 /* PosterCell.swift */; };
 		BC8863FD234E37780031C7F1 /* PosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FC234E37780031C7F1 /* PosterModel.swift */; };
+		BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */; };
 		BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */; };
 		BCE1B3BD231BB68D001BB684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BC231BB68D001BB684 /* ViewController.swift */; };
 		BCE1B3C0231BB68D001BB684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3BE231BB68D001BB684 /* Main.storyboard */; };
@@ -123,6 +124,7 @@
 		BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
 		BC8863F9234E36FE0031C7F1 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		BC8863FC234E37780031C7F1 /* PosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModel.swift; sourceTree = "<group>"; };
+		BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewModel.swift; sourceTree = "<group>"; };
 		BCE1B3B7231BB68D001BB684 /* DDD.Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDD.Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE1B3BC231BB68D001BB684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				BC101488232E2D110096E962 /* LoginPopupView.xib */,
 				BC10148A232E2D1C0096E962 /* LoginPopupView.swift */,
+				BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */,
 				BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */,
 				BC8863FD234E37780031C7F1 /* PosterModel.swift in Sources */,
+				BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
 			);

@@ -10,14 +10,19 @@ import FirebaseAuth
 
 class Firebase {
     
-    static func login(with email: String, _ password: String, completion: @escaping (AuthDataResult?) -> Void) {
-        Auth.auth()
-            .signIn(withEmail: email, password: password) { value, error in
-                guard let value = value else {
-                    completion(nil)
-                    return
-                }
-                completion(value)
+    let manager: Auth
+    
+    init(manager: Auth = Auth.auth()) {
+        self.manager = manager
+    }
+    
+    func login(with email: String, _ password: String, completion: @escaping (AuthDataResult?) -> Void) {
+        manager.signIn(withEmail: email, password: password) { value, error in
+            guard let value = value else {
+                completion(nil)
+                return
+            }
+            completion(value)
         }
     }
 }

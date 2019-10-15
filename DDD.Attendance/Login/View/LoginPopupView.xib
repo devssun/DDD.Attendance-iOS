@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-qD-hCd">
-                    <rect key="frame" x="30" y="198.5" width="354" height="108"/>
+                    <rect key="frame" x="30" y="175.5" width="354" height="108"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IO4-LE-rnP">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -43,7 +43,7 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-3r-pZU">
-                    <rect key="frame" x="0.0" y="393.5" width="414" height="69.5"/>
+                    <rect key="frame" x="0.0" y="370.5" width="414" height="92.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLV-zA-VVS">
                             <rect key="frame" x="30" y="-31" width="62" height="62"/>
@@ -203,11 +203,11 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fiO-3r-pZU" secondAttribute="trailing" id="MxY-Xt-NrM"/>
                 <constraint firstItem="I3j-qD-hCd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="V1i-6J-o3J" secondAttribute="bottom" constant="28" id="Qqa-II-yva"/>
                 <constraint firstItem="I3j-qD-hCd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TIZ-fV-O1q"/>
-                <constraint firstItem="fiO-3r-pZU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.15" id="VhP-Xr-HOa"/>
+                <constraint firstItem="fiO-3r-pZU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="VhP-Xr-HOa"/>
                 <constraint firstItem="TLV-zA-VVS" firstAttribute="top" secondItem="I3j-qD-hCd" secondAttribute="bottom" constant="56" id="rF3-CQ-Wg7"/>
                 <constraint firstItem="V1i-6J-o3J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="sNK-Pf-tDj"/>
                 <constraint firstItem="TLV-zA-VVS" firstAttribute="leading" secondItem="I3j-qD-hCd" secondAttribute="leading" id="tuQ-zW-tCj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fiO-3r-pZU" secondAttribute="bottom" id="uDx-Wb-ILS"/>
+                <constraint firstAttribute="bottom" secondItem="fiO-3r-pZU" secondAttribute="bottom" id="uDx-Wb-ILS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
