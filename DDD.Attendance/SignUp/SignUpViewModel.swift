@@ -7,6 +7,7 @@
 //
 import ReactiveSwift
 import ReactiveCocoa
+import UIKit
 
 enum SignUpStep: Int {
     case StepOne = 1
@@ -15,14 +16,22 @@ enum SignUpStep: Int {
     case StepFour
 }
 
+enum Position: Int {
+    case None = -1
+    case Designer
+    case And
+    case iOS
+    case Backend
+}
+
 class SignUpViewModel {
     let firstName = MutableProperty<String?>(nil)
     let lastName = MutableProperty<String?>(nil)
     let email = MutableProperty<String?>(nil)
     let password = MutableProperty<String?>(nil)
-    let position = MutableProperty<String?>(nil)
+    let position = MutableProperty<Position>(.None)
     
-    let step = MutableProperty<SignUpStep>(SignUpStep.StepOne)
+    let step = MutableProperty<SignUpStep>(.StepThree)
     
     lazy private(set) var progressBarSignal: Signal<Float, Never> = { [unowned self] in
         return self.step.signal.map { Float($0.rawValue) * 0.25 }
@@ -32,14 +41,28 @@ class SignUpViewModel {
         return self.step.signal.map { "Step \($0.rawValue)" }
     }()
     
-    lazy private(set) var buttonEnabledSignal: SignalProducer<Bool, Never> = { [unowned self] in
+    lazy private(set) var stepOneBtnEnabledSignal: SignalProducer<Bool, Never> = { [unowned self] in
         let notEmptySignals = [
             self.firstName.producer.skipNil().map { $0 != "" },
-            self.lastName.producer.skipNil().map { $0 != "" }
+            self.lastName.producer.skipNil().map { $0 != "" },
         ]
         return SignalProducer
             .combineLatest(notEmptySignals)
-            .map { $0.reduce(true) {$0 && $1} }
+            .map { $0.reduce(true) { $0 && $1 } }
+    }()
+    
+    lazy private(set) var stepTwoBtnEnabledSignal: SignalProducer<Bool, Never> = { [unowned self] in
+        let notEmptySignals = [
+            self.email.producer.skipNil().map { $0 != "" },
+            self.password.producer.skipNil().map { $0 != "" },
+        ]
+        return SignalProducer
+            .combineLatest(notEmptySignals)
+            .map { $0.reduce(true) { $0 && $1 } }
+    }()
+    
+    lazy private(set) var stepThreeBtnEnabledSignal: SignalProducer<Bool, Never> = { [unowned self] in
+       return self.position.producer.map { $0 != .None }
     }()
    
     // Actions
@@ -50,4 +73,12 @@ class SignUpViewModel {
             }
         })
     }()
+    
+    func signUpTapped(position: Position) {
+        self.position.value = position
+    }
+    
+    init() {
+        
+    }
 }

@@ -23,16 +23,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-jG-cu5">
-                    <rect key="frame" x="57.5" y="50" width="235.5" height="64"/>
+                    <rect key="frame" x="49" y="50" width="252" height="64"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the Position?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX1-lv-zMa">
-                            <rect key="frame" x="0.0" y="0.0" width="235.5" height="29"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인의 직무는 무엇인가요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX1-lv-zMa">
+                            <rect key="frame" x="0.0" y="0.0" width="252" height="29"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You always can change" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-Gj-paN">
-                            <rect key="frame" x="38" y="46" width="159" height="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인의 포지션을 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-Gj-paN">
+                            <rect key="frame" x="35.5" y="46" width="181" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.56862745100000001" green="0.57254901960000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -47,8 +47,10 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Designer"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="signup_position_design"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="positionIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldW-Op-ClN" customClass="PositionCardView" customModule="DDD_Attendance" customModuleProvider="target">
@@ -56,8 +58,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="iOS Dev"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="signup_position_ios"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="positionIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yay-1t-uRF" customClass="PositionCardView" customModule="DDD_Attendance" customModuleProvider="target">
@@ -65,8 +69,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Android Dev"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="signup_position_and"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="positionIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptv-Co-7xA" customClass="PositionCardView" customModule="DDD_Attendance" customModuleProvider="target">
@@ -74,32 +80,22 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Backend Dev"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="YES"/>
                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="signup_position_backend"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="positionIndex">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs1-RT-Iz6" customClass="SignUpButton" customModule="DDD_Attendance" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="655" width="350" height="63"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="63" id="PNu-Sj-C0u"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                    <state key="normal" title="다음">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="9fg-9B-rNe" firstAttribute="leading" secondItem="Wh0-gY-8o0" secondAttribute="leading" constant="28" id="0yV-70-ZxE"/>
-                <constraint firstItem="qs1-RT-Iz6" firstAttribute="leading" secondItem="Wh0-gY-8o0" secondAttribute="leading" id="2C8-9U-cSm"/>
                 <constraint firstAttribute="trailing" secondItem="Yay-1t-uRF" secondAttribute="trailing" constant="28" id="4Bi-pp-pc2"/>
                 <constraint firstItem="Yay-1t-uRF" firstAttribute="height" secondItem="9fg-9B-rNe" secondAttribute="height" id="6IE-xa-mBQ"/>
                 <constraint firstItem="ldW-Op-ClN" firstAttribute="leading" secondItem="9fg-9B-rNe" secondAttribute="leading" id="97q-a2-lRR"/>
                 <constraint firstItem="Ptv-Co-7xA" firstAttribute="height" secondItem="9fg-9B-rNe" secondAttribute="height" id="9Cw-7H-q2f"/>
                 <constraint firstItem="9fg-9B-rNe" firstAttribute="top" secondItem="bH0-jG-cu5" secondAttribute="bottom" constant="47" id="D5W-7D-2Zo"/>
                 <constraint firstItem="ldW-Op-ClN" firstAttribute="width" secondItem="9fg-9B-rNe" secondAttribute="width" id="HK0-zC-TRU"/>
-                <constraint firstAttribute="trailing" secondItem="qs1-RT-Iz6" secondAttribute="trailing" id="Jch-3Q-TMz"/>
                 <constraint firstItem="ldW-Op-ClN" firstAttribute="top" secondItem="9fg-9B-rNe" secondAttribute="bottom" constant="15" id="JpQ-Yi-O9D"/>
                 <constraint firstItem="Ptv-Co-7xA" firstAttribute="top" secondItem="ldW-Op-ClN" secondAttribute="top" id="N1z-yF-i3A"/>
                 <constraint firstItem="bH0-jG-cu5" firstAttribute="top" secondItem="Wh0-gY-8o0" secondAttribute="top" constant="50" id="THX-8b-jYo"/>
@@ -110,9 +106,7 @@
                 <constraint firstItem="Yay-1t-uRF" firstAttribute="leading" secondItem="9fg-9B-rNe" secondAttribute="trailing" constant="15" id="lR4-hC-83I"/>
                 <constraint firstItem="bH0-jG-cu5" firstAttribute="centerX" secondItem="Wh0-gY-8o0" secondAttribute="centerX" id="lgV-jD-Ao2"/>
                 <constraint firstItem="Yay-1t-uRF" firstAttribute="top" secondItem="9fg-9B-rNe" secondAttribute="top" id="pZM-hA-wt8"/>
-                <constraint firstAttribute="bottom" secondItem="qs1-RT-Iz6" secondAttribute="bottom" id="rLV-W4-rcZ"/>
                 <constraint firstItem="Ptv-Co-7xA" firstAttribute="width" secondItem="9fg-9B-rNe" secondAttribute="width" id="wTi-jF-U3w"/>
-                <constraint firstItem="qs1-RT-Iz6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ldW-Op-ClN" secondAttribute="bottom" constant="30" id="xaw-ru-Uqn"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

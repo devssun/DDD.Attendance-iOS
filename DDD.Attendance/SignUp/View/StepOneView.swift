@@ -35,6 +35,7 @@ class StepOneView: BaseView {
         lastNameTextField.inputAccessoryView = nextButton
         firstNameTextField.inputAccessoryView = nextButton
         lastNameTextField.becomeFirstResponder()
+        nextButton.isEnabled = false
         
         lastNameTextField.reactive
             .controlEvents(.editingDidEndOnExit)
@@ -57,7 +58,7 @@ class StepOneView: BaseView {
         viewModel.lastName <~ lastNameTextField.reactive.continuousTextValues
         viewModel.firstName <~ firstNameTextField.reactive.continuousTextValues
         
-        nextButton.reactive.isEnabled <~ viewModel.buttonEnabledSignal
+        nextButton.reactive.isEnabled <~ viewModel.stepOneBtnEnabledSignal
         nextButton.reactive.pressed = CocoaAction(viewModel.nextStepAction)
     }
 }

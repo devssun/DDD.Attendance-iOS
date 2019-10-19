@@ -40,15 +40,14 @@ class SignUpButton: UIButton {
     
     private func initView() {
         translatesAutoresizingMaskIntoConstraints = false
-        isEnabled = false
         titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
     }
     
     private func updateColor() {
         if isEnabled {
-            backgroundColor = UIColor.black
+            backgroundColor = .black
         } else {
-            backgroundColor = UIColor.init(red: 171/255, green: 181/255, blue: 197/255, alpha: 1.0)
+            backgroundColor = UIColor(red: 171/255, green: 181/255, blue: 197/255, alpha: 1.0)
         }
     }
 }

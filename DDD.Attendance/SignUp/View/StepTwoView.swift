@@ -16,7 +16,7 @@ class StepTwoView: BaseView {
     @IBOutlet weak var emailTextField: RoundedTextField!
     @IBOutlet weak var passwordTextField: RoundedTextField!
     private let nextButton: SignUpButton = SignUpButton()
-    private let eyeButton = UIButton()
+    private let eyeButton: UIButton = UIButton()
     
     private let viewModel: SignUpViewModel
     
@@ -68,13 +68,15 @@ class StepTwoView: BaseView {
                 self.passwordTextField.resignFirstResponder()
                 self.nextButton.sendActions(for: .touchUpInside)
         }
+        
+        nextButton.isEnabled = false
     }
     
     override func bindViewModel() {
         viewModel.email <~ emailTextField.reactive.continuousTextValues
         viewModel.password <~ passwordTextField.reactive.continuousTextValues
         
-        nextButton.reactive.isEnabled <~ viewModel.buttonEnabledSignal
+        nextButton.reactive.isEnabled <~ viewModel.stepTwoBtnEnabledSignal
         nextButton.reactive.pressed = CocoaAction(viewModel.nextStepAction)
     }
 }

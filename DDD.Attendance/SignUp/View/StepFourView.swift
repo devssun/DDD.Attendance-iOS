@@ -11,6 +11,7 @@ import UIKit
 class StepFourView: BaseView {
     
     private let viewModel: SignUpViewModel
+    private let nextButton: SignUpButton = SignUpButton()
     
     init(with viewModel: SignUpViewModel) {
         self.viewModel = viewModel
@@ -24,6 +25,14 @@ class StepFourView: BaseView {
     }
     
     private func initView() {
+        addSubview(nextButton)
+        nextButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self)
+            make.left.equalTo(self)
+            make.right.equalTo(self)
+        }
+        nextButton.title = "로그인 하기"
+        nextButton.isEnabled = true
         
     }
     

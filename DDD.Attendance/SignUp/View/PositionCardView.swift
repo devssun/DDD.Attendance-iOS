@@ -12,9 +12,8 @@ import SnapKit
 import ReactiveCocoa
 
 @IBDesignable
-class PositionCardView: UIView {
-    
-    var isSelected: Bool = false {
+class PositionCardView: UIControl {
+    override var isSelected: Bool {
         didSet {
             updateView()
         }
@@ -34,6 +33,19 @@ class PositionCardView: UIView {
             imageView.sizeToFit()
         }
     }
+    
+    @IBInspectable
+    var positionIndex: Int {
+        get {
+            return position.rawValue
+        }
+        set(index) {
+            position = Position(rawValue: index) ?? .None
+            updateView()
+        }
+    }
+    
+    var position: Position = .None
     
     private var textLabel: UILabel = {
         let textLabel = UILabel()
@@ -69,6 +81,7 @@ class PositionCardView: UIView {
     
     private func initView() {
         layer.cornerRadius = 8
+        layer.borderColor = UIColor(red: 21/255, green: 21/255, blue: 21/255, alpha: 1.0).cgColor
 
         addSubview(checkButton)
         checkButton.snp.makeConstraints { (make) in
@@ -87,18 +100,31 @@ class PositionCardView: UIView {
             make.top.equalTo(imageView.snp.bottom).offset(15)
             make.centerX.equalTo(self)
         }
+
+        switch position {
+        case .Designer:
+            textLabel.text = "Designer"
+            imageView.image = UIImage(named: "signup_position_design")
+        case .And:
+            textLabel.text = "Android Dev"
+            imageView.image = UIImage(named: "signup_position_and")
+        case .iOS:
+            textLabel.text = "iOS Dev"
+            imageView.image = UIImage(named: "signup_position_ios")
+        case .Backend:
+            textLabel.text = "Backend Dev"
+            imageView.image = UIImage(named: "signup_position_backend")
+        default:
+            break
+        }
         
+        imageView.sizeToFit()
         updateView()
     }
     
     private func updateView() {
-        if isSelected {
-            layer.borderWidth = 2
-            layer.borderColor = UIColor(red: 21/255, green: 21/255, blue: 21/255, alpha: 1.0).cgColor
-            checkButton.isSelected.toggle()
-        } else {
-            layer.borderWidth = 0
-        }
+        checkButton.isSelected = isSelected
+        layer.borderWidth = isSelected ? 2 : 0
     }
     
     override func prepareForInterfaceBuilder() {
