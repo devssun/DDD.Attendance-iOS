@@ -20,16 +20,36 @@ class LoginPopupViewController: BaseViewController {
         return Storyboard.login.viewController(LoginPopupViewController.self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+        loginPopupView.resultHandler = { [weak self] result in
+            if result.0 {
+                self?.moveHomeViewController()
+            } else {
+                self?.loginFailureAction(with: result.1)
+            }
+        }
     }
 }
 
 // MARK: - Private
 private extension LoginPopupViewController {
     
+    func moveHomeViewController() {
+        let homeVC = HomeViewController.instantiateViewController()
+        UIApplication.shared.keyWindow?.rootViewController = homeVC
+    }
+    
+    func loginFailureAction(with message: String?) {
+        message.then {
+            showAlert(title: "로그인 실패", message: $0)
+        }
+        loginPopupView.failureAction()
+    }
 }
 
+// MARK: - Animatable
 extension LoginPopupViewController: Animatable {
     
     var animatableBackgroundView: UIView {
@@ -40,7 +60,5 @@ extension LoginPopupViewController: Animatable {
         return containerView
     }
     
-    func prepareBeingDismissed() {
-        
-    }
+    func prepareBeingDismissed() {}
 }

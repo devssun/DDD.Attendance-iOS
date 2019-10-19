@@ -18,31 +18,54 @@ class LoginPopupView: BaseView {
     
     private let viewModel = LoginPopupViewModel()
     
+    var resultHandler: (((Bool, String?)) -> Void)?
+    
+    override func bindData() {
+        super.bindData()
+        
+        loginButton.then {
+            $0.isEnabled = false
+        }
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
         
         reactive.pressLoginButton <~ loginButton.reactive
             .controlEvents(.touchUpInside)
         
-        viewModel.outputs.login.observeValues { _ in
-            
-        }
+        reactive.requestFirebaseAuth <~ viewModel.outputs.loginAccount
+        
+        reactive.loginResultHandler <~ viewModel.outputs.loginResult
+        
+        reactive.isEnabledLoginButton <~ viewModel.outputs.isValidAccount
+        
+        reactive.checkValidAccount <~ idTextField.reactive.continuousTextValues
+            .combineLatest(with: passwordTextField.reactive.continuousTextValues)
+    }
+    
+    func failureAction() {
+        passwordTextField.text?.removeAll()
+        idTextField.becomeFirstResponder()
     }
 }
 
 private extension LoginPopupView {
     
-    func pressLoginButton(with email: String?, _ password: String?) {
-        viewModel.inputs.pressLoginButton(with: email, password)
+    func pressLoginButton() {
+        viewModel.inputs.pressLoginButton()
     }
     
-    func getAccount() -> (String?, String?) {
-        guard
-            let email = idTextField.text,
-            let password = passwordTextField.text else {
-                return (nil, nil)
-        }
-        return (email, password)
+    func requestFirebaseAuth(with account: (String, String)) {
+        viewModel.inputs.requestFirebaseAuth(with: account)
+    }
+    
+    func checkValidAccount(with account: (String, String)) {
+        viewModel.inputs.checkValidAccount(with: account)
+    }
+    
+    func isEnabledLoginButton(with isValid: Bool) {
+        loginButton.isEnabled = isValid
     }
 }
 
@@ -50,8 +73,31 @@ extension Reactive where Base: LoginPopupView {
     
     var pressLoginButton: BindingTarget<UIButton> {
         return makeBindingTarget({ base, _ in
-            let account = base.getAccount()
-            base.pressLoginButton(with: account.0, account.1)
+            base.pressLoginButton()
+        })
+    }
+    
+    var requestFirebaseAuth: BindingTarget<(String, String)> {
+        return makeBindingTarget({ base, account in
+            base.requestFirebaseAuth(with: account)
+        })
+    }
+    
+    var loginResultHandler: BindingTarget<(Bool, String?)> {
+        return makeBindingTarget({ base, result in
+            base.resultHandler?(result)
+        })
+    }
+    
+    var checkValidAccount: BindingTarget<(String, String)> {
+        return makeBindingTarget({ base, account in
+            base.checkValidAccount(with: account)
+        })
+    }
+    
+    var isEnabledLoginButton: BindingTarget<Bool> {
+        return makeBindingTarget({ base, isValid in
+            base.isEnabledLoginButton(with: isValid)
         })
     }
 }
