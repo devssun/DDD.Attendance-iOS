@@ -9,6 +9,7 @@
 import UIKit
 import ReactiveSwift
 import FirebaseAuth
+import NVActivityIndicatorView
 
 class LoginPopupView: BaseView {
 
@@ -54,6 +55,8 @@ private extension LoginPopupView {
     
     func pressLoginButton() {
         viewModel.inputs.pressLoginButton()
+        let activityData = ActivityData(type: .pacman)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
     }
     
     func requestFirebaseAuth(with account: (String, String)) {

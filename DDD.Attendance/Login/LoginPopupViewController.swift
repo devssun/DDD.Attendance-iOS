@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class LoginPopupViewController: BaseViewController {
 
@@ -24,6 +25,7 @@ class LoginPopupViewController: BaseViewController {
         super.bindViewModel()
         
         loginPopupView.resultHandler = { [weak self] result in
+            NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
             if result.0 {
                 self?.moveHomeViewController()
             } else {

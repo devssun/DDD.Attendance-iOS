@@ -40,8 +40,8 @@ class LoginPopupViewModel {
     private let firebase: Firebase
     private let isValidAccountProperty = MutableProperty<Bool?>(nil)
     private let pressLoginButtonProperty = MutableProperty<Void?>(nil)
-    private let emailProperty = MutableProperty<String?>(nil)
-    private let passwordProperty = MutableProperty<String?>(nil)
+    private let emailProperty = MutableProperty<String>("")
+    private let passwordProperty = MutableProperty<String>("")
     private let loginResultProperty = MutableProperty<(Bool, String?)>((false, nil))
     
     init(firebase: Firebase = Firebase()) {
@@ -60,6 +60,7 @@ extension LoginPopupViewModel: LoginPopupViewModelInputs {
     
     func pressLoginButton() {
         pressLoginButtonProperty.value = ()
+        isValidAccountProperty.value = false
     }
     
     func requestFirebaseAuth(with account: LoginPopupViewModel.Account) {
@@ -78,10 +79,9 @@ extension LoginPopupViewModel: LoginPopupViewModelOutputs {
         return isValidAccountProperty.signal.skipNil()
             .sample(on: pressLoginButtonProperty.signal.skipNil())
             .filter { $0 }
-            .combineLatest(with: emailProperty.signal.skipNil()
-                .zip(with: passwordProperty.signal.skipNil()))
-            .map { $0.1 }
-            .filter { $0.0.count > 0 && $0.1.count > 0 }
+            .map { [unowned self] _ -> Account in
+                return (self.emailProperty.value, self.passwordProperty.value)
+            }
     }
     
     var loginResult: Signal<(Bool, String?), Never> {
@@ -89,8 +89,8 @@ extension LoginPopupViewModel: LoginPopupViewModelOutputs {
     }
     
     var isValidAccount: Signal<Bool, Never> {
-        return emailProperty.signal.skipNil()
-            .combineLatest(with: passwordProperty.signal.skipNil())
+        return emailProperty.signal
+            .combineLatest(with: passwordProperty.signal)
             .filterMap { [unowned self] (email, password) in
                 let isValid = self.validateEmail(from: email) && self.validatePassword(from: password)
                 self.isValidAccountProperty.value = isValid
