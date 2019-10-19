@@ -546,6 +546,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TextFieldEffects.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CHIPageControl.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
