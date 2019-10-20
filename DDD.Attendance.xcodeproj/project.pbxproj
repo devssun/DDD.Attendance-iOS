@@ -11,6 +11,28 @@
 		20570323232E439900103A3E /* PositionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20570322232E439900103A3E /* PositionCardView.swift */; };
 		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
+		BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC10144D232E20330096E962 /* GoogleService-Info.plist */; };
+		BC10146B232E24FF0096E962 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
+		BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */; };
+		BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101460232E24FE0096E962 /* FirebaseDatabase.framework */; };
+		BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101461232E24FE0096E962 /* FirebaseCore.framework */; };
+		BC101470232E24FF0096E962 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101462232E24FE0096E962 /* FirebaseAuth.framework */; };
+		BC101471232E24FF0096E962 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101463232E24FE0096E962 /* FIRAnalyticsConnector.framework */; };
+		BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101464232E24FE0096E962 /* GoogleUtilities.framework */; };
+		BC101476232E24FF0096E962 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101468232E24FE0096E962 /* FirebaseAnalytics.framework */; };
+		BC101478232E25DF0096E962 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101477232E25DF0096E962 /* libc++.tbd */; };
+		BC10147A232E25E80096E962 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101479232E25E80096E962 /* libsqlite3.tbd */; };
+		BC101480232E26130096E962 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147B232E26130096E962 /* leveldb-library.framework */; };
+		BC101481232E26130096E962 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147C232E26130096E962 /* nanopb.framework */; };
+		BC101482232E26130096E962 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */; };
+		BC101483232E26130096E962 /* GoogleDataTransportCCTSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */; };
+		BC101484232E26130096E962 /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147F232E26130096E962 /* GoogleDataTransport.framework */; };
+		BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101485232E261E0096E962 /* StoreKit.framework */; };
+		BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC101488232E2D110096E962 /* LoginPopupView.xib */; };
+		BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148A232E2D1C0096E962 /* LoginPopupView.swift */; };
+		BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */; };
+		BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */; };
+		BC381F302349F4760040202D /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC381F2F2349F4760040202D /* Firebase.swift */; };
 		BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50AD232A5E4600B56EBF /* Login.storyboard */; };
 		BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */; };
 		BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */; };
@@ -25,6 +47,11 @@
 		BC3E50C6232A5FC800B56EBF /* StepFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C5232A5FC800B56EBF /* StepFourView.swift */; };
 		BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */; };
 		BC3E50CA232A973D00B56EBF /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
+		BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */; };
+		BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F9234E36FE0031C7F1 /* PosterCell.swift */; };
+		BC8863FD234E37780031C7F1 /* PosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FC234E37780031C7F1 /* PosterModel.swift */; };
+		BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */; };
+		BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */; };
 		BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */; };
 		BCE1B3BD231BB68D001BB684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BC231BB68D001BB684 /* ViewController.swift */; };
 		BCE1B3C0231BB68D001BB684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3BE231BB68D001BB684 /* Main.storyboard */; };
@@ -67,6 +94,28 @@
 		20570322232E439900103A3E /* PositionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCardView.swift; sourceTree = "<group>"; };
 		2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		20B81DFA232D54E20081D341 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		BC10144D232E20330096E962 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Carthage/Build/iOS/GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		BC101460232E24FE0096E962 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Carthage/Build/iOS/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		BC101461232E24FE0096E962 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Carthage/Build/iOS/FirebaseCore.framework; sourceTree = "<group>"; };
+		BC101462232E24FE0096E962 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Carthage/Build/iOS/FirebaseAuth.framework; sourceTree = "<group>"; };
+		BC101463232E24FE0096E962 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIRAnalyticsConnector.framework; path = Carthage/Build/iOS/FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		BC101464232E24FE0096E962 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Carthage/Build/iOS/GoogleUtilities.framework; sourceTree = "<group>"; };
+		BC101468232E24FE0096E962 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Carthage/Build/iOS/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		BC101477232E25DF0096E962 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BC101479232E25E80096E962 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BC10147B232E26130096E962 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "leveldb-library.framework"; path = "Carthage/Build/iOS/leveldb-library.framework"; sourceTree = "<group>"; };
+		BC10147C232E26130096E962 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nanopb.framework; path = Carthage/Build/iOS/nanopb.framework; sourceTree = "<group>"; };
+		BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransportCCTSupport.framework; path = Carthage/Build/iOS/GoogleDataTransportCCTSupport.framework; sourceTree = "<group>"; };
+		BC10147F232E26130096E962 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransport.framework; path = Carthage/Build/iOS/GoogleDataTransport.framework; sourceTree = "<group>"; };
+		BC101485232E261E0096E962 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BC101488232E2D110096E962 /* LoginPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPopupView.xib; sourceTree = "<group>"; };
+		BC10148A232E2D1C0096E962 /* LoginPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupView.swift; sourceTree = "<group>"; };
+		BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransitionCoordinator.swift; sourceTree = "<group>"; };
+		BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewController.swift; sourceTree = "<group>"; };
+		BC381F2F2349F4760040202D /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		BC3E50AD232A5E4600B56EBF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -81,6 +130,11 @@
 		BC3E50C5232A5FC800B56EBF /* StepFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFourView.swift; sourceTree = "<group>"; };
 		BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = Carthage/Build/iOS/TextFieldEffects.framework; sourceTree = "<group>"; };
+		BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
+		BC8863F9234E36FE0031C7F1 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		BC8863FC234E37780031C7F1 /* PosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModel.swift; sourceTree = "<group>"; };
+		BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewModel.swift; sourceTree = "<group>"; };
+		BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extension.swift"; sourceTree = "<group>"; };
 		BCE1B3B7231BB68D001BB684 /* DDD.Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDD.Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE1B3BC231BB68D001BB684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,11 +179,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */,
+				BC101480232E26130096E962 /* leveldb-library.framework in Frameworks */,
+				BC101481232E26130096E962 /* nanopb.framework in Frameworks */,
+				BC101482232E26130096E962 /* GoogleAppMeasurement.framework in Frameworks */,
+				BC101483232E26130096E962 /* GoogleDataTransportCCTSupport.framework in Frameworks */,
+				BC101484232E26130096E962 /* GoogleDataTransport.framework in Frameworks */,
+				BC10147A232E25E80096E962 /* libsqlite3.tbd in Frameworks */,
+				BC101478232E25DF0096E962 /* libc++.tbd in Frameworks */,
+				BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */,
+				BC101470232E24FF0096E962 /* FirebaseAuth.framework in Frameworks */,
+				BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */,
 				BC3E50CA232A973D00B56EBF /* TextFieldEffects.framework in Frameworks */,
+				BC101476232E24FF0096E962 /* FirebaseAnalytics.framework in Frameworks */,
+				BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */,
 				E571F75F2323F08700816C04 /* SnapKit.framework in Frameworks */,
 				BCE1B3DE231BD8E1001BB684 /* Alamofire.framework in Frameworks */,
+				BC10146B232E24FF0096E962 /* FirebaseInstanceID.framework in Frameworks */,
 				BCE1B3D9231BB858001BB684 /* ReactiveMapKit.framework in Frameworks */,
 				BCE1B3DA231BB858001BB684 /* ReactiveSwift.framework in Frameworks */,
+				BC101471232E24FF0096E962 /* FIRAnalyticsConnector.framework in Frameworks */,
+				BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */,
 				BCE1B3DB231BB858001BB684 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,11 +207,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC101487232E2D020096E962 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC101488232E2D110096E962 /* LoginPopupView.xib */,
+				BC10148A232E2D1C0096E962 /* LoginPopupView.swift */,
+				BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC381F2D2349F4600040202D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BC381F2F2349F4760040202D /* Firebase.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		BC3E50AB232A5D5700B56EBF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BC8863FB234E376E0031C7F1 /* Model */,
+				BC8863F6234E36CB0031C7F1 /* Cell */,
+				BC101487232E2D020096E962 /* View */,
 				BC3E50AD232A5E4600B56EBF /* Login.storyboard */,
 				BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */,
+				BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */,
+				BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */,
+				BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -182,6 +276,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BC8863F6234E36CB0031C7F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC8863F9234E36FE0031C7F1 /* PosterCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC8863FB234E376E0031C7F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC8863FC234E37780031C7F1 /* PosterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BCE1B3AE231BB68D001BB684 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +312,7 @@
 		BCE1B3B9231BB68D001BB684 /* DDD.Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BC381F2D2349F4600040202D /* Repository */,
 				BCE1B3F8231BE6D5001BB684 /* Common */,
 				BCE1B3CD231BB756001BB684 /* Base */,
 				BCE1B3D0231BB793001BB684 /* Home */,
@@ -215,6 +326,7 @@
 				BCE1B3C1231BB68F001BB684 /* Assets.xcassets */,
 				BCE1B3C3231BB68F001BB684 /* LaunchScreen.storyboard */,
 				BCE1B3C6231BB68F001BB684 /* Info.plist */,
+				BC10144D232E20330096E962 /* GoogleService-Info.plist */,
 			);
 			path = DDD.Attendance;
 			sourceTree = "<group>";
@@ -247,6 +359,22 @@
 		BCE1B3D5231BB858001BB684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC101479232E25E80096E962 /* libsqlite3.tbd */,
+				BC101477232E25DF0096E962 /* libc++.tbd */,
+				BC101485232E261E0096E962 /* StoreKit.framework */,
+				BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */,
+				BC10147F232E26130096E962 /* GoogleDataTransport.framework */,
+				BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */,
+				BC10147B232E26130096E962 /* leveldb-library.framework */,
+				BC10147C232E26130096E962 /* nanopb.framework */,
+				BC101463232E24FE0096E962 /* FIRAnalyticsConnector.framework */,
+				BC101468232E24FE0096E962 /* FirebaseAnalytics.framework */,
+				BC101462232E24FE0096E962 /* FirebaseAuth.framework */,
+				BC101461232E24FE0096E962 /* FirebaseCore.framework */,
+				BC101460232E24FE0096E962 /* FirebaseDatabase.framework */,
+				BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */,
+				BC101464232E24FE0096E962 /* GoogleUtilities.framework */,
+				BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */,
 				BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */,
 				E571F75E2323F08700816C04 /* SnapKit.framework */,
 				BCE1B3DD231BD8E1001BB684 /* Alamofire.framework */,
@@ -330,6 +458,7 @@
 			children = (
 				E571F7792324345400816C04 /* UIView+Extension.swift */,
 				BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */,
+				BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -397,6 +526,7 @@
 				BC3E50C0232A5F8B00B56EBF /* StepThreeView.xib in Resources */,
 				BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */,
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
+				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
@@ -406,6 +536,7 @@
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
 				E571F77723241F5300816C04 /* Account.storyboard in Resources */,
+				BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +557,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TextFieldEffects.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CHIPageControl.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -449,6 +582,8 @@
 				BCE1B3ED231BE383001BB684 /* BaseDataSource.swift in Sources */,
 				BC3E50B5232A5F0100B56EBF /* SignUpViewController.swift in Sources */,
 				BCE1B3F3231BE57F001BB684 /* HomeViewModel.swift in Sources */,
+				BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */,
+				BC381F302349F4760040202D /* Firebase.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
@@ -463,10 +598,13 @@
 				BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */,
 				2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */,
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
+				BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */,
 				E571F76A2324033B00816C04 /* PresentingViewAnimator.swift in Sources */,
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
+				BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */,
 				BCE1B3E5231BE069001BB684 /* BaseView.swift in Sources */,
 				BC3E50BE232A5F8000B56EBF /* StepTwoView.swift in Sources */,
+				BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */,
 				BCE1B3CF231BB75E001BB684 /* BaseViewController.swift in Sources */,
 				BC3E50B8232A5F6100B56EBF /* StepOneView.swift in Sources */,
 				E571F76C2324075300816C04 /* DismissingViewAnimator.swift in Sources */,
@@ -474,6 +612,10 @@
 				20570323232E439900103A3E /* PositionCardView.swift in Sources */,
 				BCE1B4132320054F001BB684 /* AttendanceListModel.swift in Sources */,
 				E571F77223241C1E00816C04 /* InteractiveTransitionableViewController.swift in Sources */,
+				BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */,
+				BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */,
+				BC8863FD234E37780031C7F1 /* PosterModel.swift in Sources */,
+				BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
 				2057031F232E2B0200103A3E /* SignUpButton.swift in Sources */,
@@ -634,7 +776,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.seongjun-park.DDD-Attendance";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.DDD-Attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -657,7 +803,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.seongjun-park.DDD-Attendance";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.DDD-Attendance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
