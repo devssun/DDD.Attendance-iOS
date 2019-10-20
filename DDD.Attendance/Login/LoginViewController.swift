@@ -13,15 +13,18 @@ import ReactiveSwift
 
 class LoginViewController: BaseViewController {
 
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet private weak var loginPopupButton: UIButton!
     @IBOutlet private weak var signUpButton: UIButton!
     
     private let transition = LoginTransitionCoordinator()
     private let dataSource = LoginDataSource()
-    private let posterModels = [PosterModel(poster: #imageLiteral(resourceName: "onboarding1Character"), title: "간편한 출석체크", description: "QR코드를 통한 본인 인증으로\n5초면 출석체크 완료!"),
-                                PosterModel(poster: #imageLiteral(resourceName: "onboarding2Character"), title: "스터디 일정 체크", description: "세션 날짜와 장소, 시간대까지\n이제 앱에서 바로 체크하세요 :)!")]
+    private let posterModels = [PosterModel(poster: #imageLiteral(resourceName: "onboarding1Character"),
+                                            title: "간편한 출석체크",
+                                            description: "QR코드를 통한 본인 인증으로\n5초면 출석체크 완료!"),
+                                PosterModel(poster: #imageLiteral(resourceName: "onboarding2Character"),
+                                            title: "스터디 일정 체크",
+                                            description: "세션 날짜와 장소, 시간대까지\n이제 앱에서 바로 체크하세요 :)!")]
     private var pageControl: CHIPageControlAji?
     
     static func instantiateViewController() -> LoginViewController {

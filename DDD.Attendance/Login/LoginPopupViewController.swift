@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
 import NVActivityIndicatorView
 
 class LoginPopupViewController: BaseViewController {
@@ -32,6 +34,12 @@ class LoginPopupViewController: BaseViewController {
                 self?.loginFailureAction(with: result.1)
             }
         }
+        
+        reactive.keyboardWillShow <~ NotificationCenter.default.reactive
+            .keyboard(.willShow)
+        
+        reactive.keyboardWillHide <~ NotificationCenter.default.reactive
+            .keyboard(.willHide)
     }
 }
 
@@ -49,6 +57,14 @@ private extension LoginPopupViewController {
         }
         loginPopupView.failureAction()
     }
+    
+    func keyboardWillShow(with context: KeyboardChangeContext) {
+        view.frame.origin.y -= context.beginFrame.height
+    }
+    
+    func keyboardWillHide() {
+        view.frame.origin.y = 0
+    }
 }
 
 // MARK: - Animatable
@@ -63,4 +79,19 @@ extension LoginPopupViewController: Animatable {
     }
     
     func prepareBeingDismissed() {}
+}
+
+extension Reactive where Base: LoginPopupViewController {
+    
+    var keyboardWillShow: BindingTarget<KeyboardChangeContext> {
+        return makeBindingTarget({ base, context in
+            base.keyboardWillShow(with: context)
+        })
+    }
+    
+    var keyboardWillHide: BindingTarget<KeyboardChangeContext> {
+        return makeBindingTarget({ base, _ in
+            base.keyboardWillHide()
+        })
+    }
 }
