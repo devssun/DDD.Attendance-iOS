@@ -64,6 +64,9 @@ class LoginViewController: BaseViewController {
         
         reactive.presentLoginPopupViewController <~ loginPopupButton.reactive
             .controlEvents(.touchUpInside)
+        
+        reactive.presentSignUpViewController <~ signUpButton.reactive
+            .controlEvents(.touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -86,6 +89,11 @@ private extension LoginViewController {
     func prepareLoginPopupViewController() {
         transition.prepareViewforCustomTransition(fromViewController: self)
     }
+    
+    func presentSignUpViewController() {
+        let signUpViewController = SignUpViewController.instantiateViewController()
+        present(signUpViewController, animated: true)
+    }
 }
 
 // MARK: - Reactive
@@ -100,6 +108,12 @@ extension Reactive where Base: LoginViewController {
     var prepareLoginPopupViewController: BindingTarget<Void> {
         return makeBindingTarget({ base, _ in
             base.prepareLoginPopupViewController()
+        })
+    }
+    
+    var presentSignUpViewController: BindingTarget<UIButton> {
+        return makeBindingTarget({ base, _ in
+            base.presentSignUpViewController()
         })
     }
 }

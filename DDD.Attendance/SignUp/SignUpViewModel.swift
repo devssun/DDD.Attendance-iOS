@@ -14,6 +14,7 @@ enum SignUpStep: Int {
     case StepTwo
     case StepThree
     case StepFour
+    case Complete
 }
 
 enum Position: Int {
@@ -73,20 +74,34 @@ class SignUpViewModel {
         }
     }()
     
+    let (alertSignal, alertObserver) = Signal<String, Never>.pipe()
+    
+    private let firebase: Firebase
+    
+    init(firebase: Firebase = Firebase()) {
+        self.firebase = firebase
+    }
+    
     func pressNextButton() {
         step.value = SignUpStep(rawValue: step.value.rawValue + 1) ?? .StepOne
     }
     
     func pressSignUpButton() {
-        step.value = SignUpStep(rawValue: step.value.rawValue + 1) ?? .StepOne
-    }
-    
-    init() {
-        
+        signUpFirebase(with: email.value ?? "", password.value ?? "")
     }
 }
 
 private extension SignUpViewModel {
+    func signUpFirebase(with email: String, _ password: String) {
+        firebase.signUp(with: email, password) { [weak self] result in
+            if result?.user != nil {
+                self?.step.value = .StepFour
+            } else {
+                self?.alertObserver.send(value: "서버 오류입니다. 잠시 후에 다시 시도해주세요.")
+            }
+        }
+    }
+    
     func validateEmail(_ string: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)

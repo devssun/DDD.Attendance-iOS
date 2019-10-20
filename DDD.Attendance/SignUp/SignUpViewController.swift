@@ -42,10 +42,18 @@ class SignUpViewController: BaseViewController {
         progressView.reactive.progress <~ viewModel.progressBarSignal
         currentStepLabel.reactive.text <~ viewModel.currentStepSignal
         
-        viewModel.step.signal.observeValues { [weak self] _ in
+        viewModel.step.signal
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] _ in
             guard let self = self else { return }
             
             self.refreshContainerView()
+        }
+        
+        viewModel.alertSignal
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] errMsg in
+                self?.showAlert(title: "회원 가입 실패", message: errMsg)
         }
     }
 }
@@ -63,7 +71,7 @@ private extension SignUpViewController {
     private func refreshContainerView() {
         setContentOffset(point: .zero, animated: false)
         
-        let stepView: BaseView
+        var stepView: BaseView? = nil
         
         switch viewModel.step.value {
         case .StepOne:
@@ -74,15 +82,19 @@ private extension SignUpViewController {
             stepView = StepThreeView(with: viewModel)
         case .StepFour:
             stepView = StepFourView(with: viewModel)
+        case .Complete:
+            dismiss(animated: true, completion: nil)
         }
         
-        containerView.subviews.forEach({ $0.removeFromSuperview() })
-        containerView.addSubview(stepView)
-        stepView.snp.makeConstraints { (make) in
-            make.top.equalTo(containerView)
-            make.left.equalTo(containerView)
-            make.right.equalTo(containerView)
-            make.height.equalTo(containerView)
+        if let view = stepView {
+            containerView.subviews.forEach({ $0.removeFromSuperview() })
+            containerView.addSubview(view)
+            view.snp.makeConstraints { (make) in
+                make.top.equalTo(containerView)
+                make.left.equalTo(containerView)
+                make.right.equalTo(containerView)
+                make.height.equalTo(containerView)
+            }
         }
     }
 }

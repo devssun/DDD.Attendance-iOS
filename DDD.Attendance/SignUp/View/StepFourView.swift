@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
 
 class StepFourView: BaseView {
     
@@ -35,10 +38,24 @@ class StepFourView: BaseView {
         }
         nextButton.title = "로그인 하기"
         nextButton.isEnabled = true
-        
     }
     
     override func bindViewModel() {
-        
+        reactive.pressNextButton <~ nextButton.reactive
+            .controlEvents(.touchUpInside)
+            .skipRepeats()
+    }
+    
+    func pressNextButton() {
+        viewModel.pressNextButton()
     }
 }
+
+extension Reactive where Base: StepFourView {
+    var pressNextButton: BindingTarget<SignUpButton> {
+        return makeBindingTarget({ base, _ in
+            base.pressNextButton()
+        })
+    }
+}
+

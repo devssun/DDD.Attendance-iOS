@@ -71,7 +71,7 @@ class StepThreeView: BaseView {
     }
     
     func pressNextButton() {
-        viewModel.pressNextButton()
+        viewModel.pressSignUpButton()
     }
 }
 
