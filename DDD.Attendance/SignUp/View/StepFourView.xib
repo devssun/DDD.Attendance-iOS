@@ -10,7 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepFourView" customModule="DDD_Attendance" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepFourView" customModule="DDD_Attendance" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="hZV-no-4BB" id="X6G-0Y-K3r"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xew-aM-Fld">
             <rect key="frame" x="0.0" y="0.0" width="350" height="718"/>

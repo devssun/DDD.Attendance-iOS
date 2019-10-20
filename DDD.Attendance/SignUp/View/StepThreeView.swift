@@ -35,9 +35,10 @@ class StepThreeView: BaseView {
     private func initView() {
         addSubview(nextButton)
         nextButton.snp.makeConstraints { (make) in
-            make.bottom.equalTo(self)
-            make.left.equalTo(self)
-            make.right.equalTo(self)
+            make.top.greaterThanOrEqualTo(backendPositionCardView.snp.bottom).offset(30)
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
         }
         nextButton.title = "다음"
         nextButton.isEnabled = false
@@ -53,7 +54,9 @@ class StepThreeView: BaseView {
         reactive.pressPositionCardView <~ backendPositionCardView.reactive
             .controlEvents(.touchUpInside)
         nextButton.reactive.isEnabled <~ viewModel.stepThreeBtnEnabledSignal
-        nextButton.reactive.pressed = CocoaAction(viewModel.nextStepAction)
+        reactive.pressNextButton <~ nextButton.reactive
+            .controlEvents(.touchUpInside)
+            .skipRepeats()
     }
     
     func setAllUnChecked() {
@@ -66,6 +69,10 @@ class StepThreeView: BaseView {
     func setPosition(_ position: Position) {
         viewModel.position.value = position
     }
+    
+    func pressNextButton() {
+        viewModel.pressNextButton()
+    }
 }
 
 extension Reactive where Base: StepThreeView {
@@ -74,6 +81,12 @@ extension Reactive where Base: StepThreeView {
             base.setAllUnChecked()
             view.isSelected = true
             base.setPosition(view.position)
+        })
+    }
+    
+    var pressNextButton: BindingTarget<SignUpButton> {
+        return makeBindingTarget({ base, _ in
+            base.pressNextButton()
         })
     }
 }

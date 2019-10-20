@@ -81,6 +81,7 @@
                 <constraint firstItem="cwd-o8-Z3x" firstAttribute="top" secondItem="nXz-pM-0K7" secondAttribute="bottom" constant="48" id="Xpm-7s-mZH"/>
                 <constraint firstAttribute="trailing" secondItem="cwd-o8-Z3x" secondAttribute="trailing" constant="25" id="n5G-cP-JOk"/>
                 <constraint firstItem="cwd-o8-Z3x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tre-A7-flw"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LHx-hc-2tq" secondAttribute="bottom" constant="100" id="vc1-tI-IbN"/>
                 <constraint firstItem="EXU-Fu-BDK" firstAttribute="top" secondItem="cwd-o8-Z3x" secondAttribute="bottom" constant="12" id="xVA-l8-JZS"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

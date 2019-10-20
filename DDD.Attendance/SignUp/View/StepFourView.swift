@@ -10,9 +10,10 @@ import UIKit
 
 class StepFourView: BaseView {
     
+    @IBOutlet weak var imageView: UIImageView!
     private let viewModel: SignUpViewModel
     private let nextButton: SignUpButton = SignUpButton()
-    
+   
     init(with viewModel: SignUpViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
@@ -27,9 +28,10 @@ class StepFourView: BaseView {
     private func initView() {
         addSubview(nextButton)
         nextButton.snp.makeConstraints { (make) in
-            make.bottom.equalTo(self)
-            make.left.equalTo(self)
-            make.right.equalTo(self)
+            make.top.greaterThanOrEqualTo(imageView.snp.bottom).offset(30)
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
         }
         nextButton.title = "로그인 하기"
         nextButton.isEnabled = true

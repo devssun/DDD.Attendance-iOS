@@ -12,8 +12,13 @@ import SnapKit
 import ReactiveSwift
 import ReactiveCocoa
 
+protocol SignUpViewScrollDelegate: class {
+    func setContentOffset(point: CGPoint, animated: Bool)
+}
+
 class SignUpViewController: BaseViewController {
     
+    @IBOutlet weak private var scrollView: UIScrollView!
     @IBOutlet weak private var progressView: UIProgressView!
     @IBOutlet weak private var containerView: UIView!
     @IBOutlet weak private var currentStepLabel: UILabel!
@@ -56,13 +61,15 @@ private extension SignUpViewController {
     }
     
     private func refreshContainerView() {
+        setContentOffset(point: .zero, animated: false)
+        
         let stepView: BaseView
         
         switch viewModel.step.value {
         case .StepOne:
-            stepView = StepOneView(with: viewModel)
+            stepView = StepOneView(with: viewModel, delegate: self)
         case .StepTwo:
-            stepView = StepTwoView(with: viewModel)
+            stepView = StepTwoView(with: viewModel, delegate: self)
         case .StepThree:
             stepView = StepThreeView(with: viewModel)
         case .StepFour:
@@ -77,5 +84,11 @@ private extension SignUpViewController {
             make.right.equalTo(containerView)
             make.height.equalTo(containerView)
         }
+    }
+}
+
+extension SignUpViewController: SignUpViewScrollDelegate {
+    func setContentOffset(point: CGPoint, animated: Bool) {
+        scrollView.setContentOffset(point, animated: animated)
     }
 }

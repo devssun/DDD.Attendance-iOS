@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepTwoView" customModule="DDD_Attendance" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="f44-oA-Cw0" id="16X-1m-Vj3"/>
+                <outlet property="errorTextLabel" destination="mRt-A9-x4b" id="bOv-Cn-e3G"/>
                 <outlet property="passwordTextField" destination="7wJ-88-Ntq" id="eq2-ew-E3t"/>
             </connections>
         </placeholder>

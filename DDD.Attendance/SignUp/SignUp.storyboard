@@ -89,6 +89,7 @@
                         <outlet property="containerView" destination="ULo-yO-g0y" id="eyD-0e-pr0"/>
                         <outlet property="currentStepLabel" destination="b84-rl-g5L" id="JLm-EU-xM7"/>
                         <outlet property="progressView" destination="nQR-6O-Nw3" id="i2A-eb-FbV"/>
+                        <outlet property="scrollView" destination="oYU-iT-tIJ" id="kPJ-7E-ciV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vy3-Vu-XJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
