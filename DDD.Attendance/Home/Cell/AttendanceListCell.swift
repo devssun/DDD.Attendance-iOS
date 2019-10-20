@@ -19,6 +19,5 @@ class AttendanceListCell: UITableViewCell, BaseCell {
     func configureWith(value: AttendanceListModel) {
         attendanceTitleLabel.text = value.title
         attendanceTimeStampLabel.text = value.timeStamp
-        attendanceImageView.backgroundColor = UIColor.red
     }
 }

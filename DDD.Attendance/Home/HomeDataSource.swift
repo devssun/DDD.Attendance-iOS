@@ -15,6 +15,11 @@ class HomeDataSource: BaseDataSource {
         case attendance
     }
     
+    enum HeaderTitle {
+        static let welcome = "Welcome Back"
+        static let list = "Calendar List"
+    }
+    
     override func configureCell(tableCell cell: UITableViewCell, withValue value: Any) {
         switch (cell, value) {
         case let (cell as HomeHeaderCell, value as String):
@@ -29,9 +34,9 @@ class HomeDataSource: BaseDataSource {
     }
     
     func load(from welcomeData: String, with attendanceList: [AttendanceListModel]) {
-        appendRow(value: "Welcome Back", cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
+        appendRow(value: HeaderTitle.welcome, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
         appendRow(value: welcomeData, cellClass: WelcomeCell.self, toSection: Section.welcome.rawValue)
         appendSection(values: attendanceList, cellClass: AttendanceListCell.self)
-        set(value: "Calendar List", cellClass: HomeHeaderCell.self, inSection: Section.attendance.rawValue, row: 0)
+        set(value: HeaderTitle.list, cellClass: HomeHeaderCell.self, inSection: Section.attendance.rawValue, row: 0)
     }
 }

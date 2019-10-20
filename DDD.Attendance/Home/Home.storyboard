@@ -42,7 +42,7 @@
                         <viewLayoutGuide key="safeArea" id="WGK-QE-0oJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="1pd-4u-TCR">
-                        <barButtonItem key="rightBarButtonItem" title="P" id="37G-vU-fHN"/>
+                        <barButtonItem key="rightBarButtonItem" image="profile" id="37G-vU-fHN"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomTriggerView" destination="OYH-v7-HeT" id="2vT-Wp-8bR"/>
@@ -73,4 +73,7 @@
             <point key="canvasLocation" x="160.86956521739131" y="-47.544642857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile" width="26" height="26"/>
+    </resources>
 </document>

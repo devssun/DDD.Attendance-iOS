@@ -44,6 +44,16 @@ class HomeViewController: BaseViewController {
         }
     }
     
+    override func bindStyle() {
+        super.bindStyle()
+        
+        navigationController.then {
+            $0.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+            $0.navigationBar.shadowImage = UIImage()
+            $0.navigationBar.backgroundColor = UIColor.clear
+        }
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
         
@@ -71,7 +81,7 @@ class HomeViewController: BaseViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        bottomTriggerView.hide(animated: false)
+//        bottomTriggerView.hide(animated: false)
     }
     
     // setup

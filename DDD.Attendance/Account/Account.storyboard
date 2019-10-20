@@ -32,7 +32,19 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcU-ey-fP6" customClass="AccountView" customModule="DDD_Attendance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="179" width="414" height="717"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXe-lW-bwC">
+                                                <rect key="frame" x="188" y="529" width="38.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="iXe-lW-bwC" firstAttribute="centerX" secondItem="RcU-ey-fP6" secondAttribute="centerX" id="6pg-9U-apg"/>
+                                            <constraint firstAttribute="bottom" secondItem="iXe-lW-bwC" secondAttribute="bottom" constant="170" id="9wS-Yk-Zvc"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,6 +75,7 @@
                         <outlet property="accountView" destination="RcU-ey-fP6" id="bhU-pT-fcU"/>
                         <outlet property="backgroundView" destination="Qrd-Ta-JY1" id="758-hp-ZQZ"/>
                         <outlet property="containerView" destination="Hbs-gl-wH2" id="GW0-9D-wlH"/>
+                        <outlet property="noticeLabel" destination="iXe-lW-bwC" id="6f5-9m-8b1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jma-Na-qo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
