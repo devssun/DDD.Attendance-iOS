@@ -8,23 +8,99 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+import SnapKit
+import ReactiveSwift
+import ReactiveCocoa
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+protocol SignUpViewScrollDelegate: class {
+    func setContentOffset(point: CGPoint, animated: Bool)
+}
 
-        // Do any additional setup after loading the view.
+class SignUpViewController: BaseViewController {
+    
+    @IBOutlet weak private var scrollView: UIScrollView!
+    @IBOutlet weak private var progressView: UIProgressView!
+    @IBOutlet weak private var containerView: UIView!
+    @IBOutlet weak private var currentStepLabel: UILabel!
+    
+    private let viewModel = SignUpViewModel()
+    
+    static func instantiateViewController() -> SignUpViewController {
+        return Storyboard.account.viewController(SignUpViewController.self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureLayout()
+        refreshContainerView()
     }
-    */
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+        progressView.reactive.progress <~ viewModel.progressBarSignal
+        currentStepLabel.reactive.text <~ viewModel.currentStepSignal
+        
+        viewModel.step.signal
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] _ in
+            guard let self = self else { return }
+            
+            self.refreshContainerView()
+        }
+        
+        viewModel.alertSignal
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] errMsg in
+                self?.showAlert(title: "회원 가입 실패", message: errMsg)
+        }
+    }
+}
 
+// MARK: - Layout
+private extension SignUpViewController {
+    private func configureLayout() {
+        progressView.clipsToBounds = true
+        progressView.layer.cornerRadius = 3
+        
+        progressView.layer.sublayers![1].cornerRadius = 3
+        progressView.subviews[1].clipsToBounds = true
+    }
+    
+    private func refreshContainerView() {
+        setContentOffset(point: .zero, animated: false)
+        
+        var stepView: BaseView? = nil
+        
+        switch viewModel.step.value {
+        case .StepOne:
+            stepView = StepOneView(with: viewModel, delegate: self)
+        case .StepTwo:
+            stepView = StepTwoView(with: viewModel, delegate: self)
+        case .StepThree:
+            stepView = StepThreeView(with: viewModel)
+        case .StepFour:
+            stepView = StepFourView(with: viewModel)
+        case .Complete:
+            dismiss(animated: true, completion: nil)
+        }
+        
+        if let view = stepView {
+            containerView.subviews.forEach({ $0.removeFromSuperview() })
+            containerView.addSubview(view)
+            view.snp.makeConstraints { (make) in
+                make.top.equalTo(containerView)
+                make.left.equalTo(containerView)
+                make.right.equalTo(containerView)
+                make.height.equalTo(containerView)
+            }
+        }
+    }
+}
+
+extension SignUpViewController: SignUpViewScrollDelegate {
+    func setContentOffset(point: CGPoint, animated: Bool) {
+        scrollView.setContentOffset(point, animated: animated)
+    }
 }

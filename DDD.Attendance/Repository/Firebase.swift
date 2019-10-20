@@ -25,4 +25,14 @@ class Firebase {
             completion(value)
         }
     }
+    
+    func signUp(with email: String, _ password: String, completion: @escaping (AuthDataResult?) -> Void) {
+        manager.createUser(withEmail: email, password: password) { value, error in
+            guard let value = value else {
+                completion(nil)
+                return
+            }
+            completion(value)
+        }
+    }
 }

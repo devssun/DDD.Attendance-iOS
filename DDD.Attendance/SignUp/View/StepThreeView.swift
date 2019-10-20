@@ -8,14 +8,85 @@
 
 import UIKit
 
-class StepThreeView: UIView {
+import ReactiveCocoa
+import ReactiveSwift
+import SnapKit
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class StepThreeView: BaseView {
+
+    @IBOutlet weak var designerPositionCardView: PositionCardView!
+    @IBOutlet weak var andPositionCardView: PositionCardView!
+    @IBOutlet weak var iosPositionCardView: PositionCardView!
+    @IBOutlet weak var backendPositionCardView: PositionCardView!
+    
+    private let nextButton: SignUpButton = SignUpButton()
+    private let viewModel: SignUpViewModel
+    
+    init(with viewModel: SignUpViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
+        initView()
     }
-    */
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func initView() {
+        addSubview(nextButton)
+        nextButton.snp.makeConstraints { (make) in
+            make.top.greaterThanOrEqualTo(backendPositionCardView.snp.bottom).offset(30)
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+        nextButton.title = "다음"
+        nextButton.isEnabled = false
+    }
+    
+    override func bindViewModel() {
+        reactive.pressPositionCardView <~ designerPositionCardView.reactive
+            .controlEvents(.touchUpInside)
+        reactive.pressPositionCardView <~ andPositionCardView.reactive
+            .controlEvents(.touchUpInside)
+        reactive.pressPositionCardView <~ iosPositionCardView.reactive
+            .controlEvents(.touchUpInside)
+        reactive.pressPositionCardView <~ backendPositionCardView.reactive
+            .controlEvents(.touchUpInside)
+        nextButton.reactive.isEnabled <~ viewModel.stepThreeBtnEnabledSignal
+        reactive.pressNextButton <~ nextButton.reactive
+            .controlEvents(.touchUpInside)
+            .skipRepeats()
+    }
+    
+    func setAllUnChecked() {
+        designerPositionCardView.isSelected = false
+        iosPositionCardView.isSelected = false
+        andPositionCardView.isSelected = false
+        backendPositionCardView.isSelected = false
+    }
+    
+    func setPosition(_ position: Position) {
+        viewModel.position.value = position
+    }
+    
+    func pressNextButton() {
+        viewModel.pressSignUpButton()
+    }
+}
+
+extension Reactive where Base: StepThreeView {
+    var pressPositionCardView: BindingTarget<PositionCardView> {
+        return makeBindingTarget({ base, view in
+            base.setAllUnChecked()
+            view.isSelected = true
+            base.setPosition(view.position)
+        })
+    }
+    
+    var pressNextButton: BindingTarget<SignUpButton> {
+        return makeBindingTarget({ base, _ in
+            base.pressNextButton()
+        })
+    }
 }

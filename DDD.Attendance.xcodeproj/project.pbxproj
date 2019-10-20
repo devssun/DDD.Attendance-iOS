@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2057031F232E2B0200103A3E /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057031E232E2B0200103A3E /* SignUpButton.swift */; };
+		20570323232E439900103A3E /* PositionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20570322232E439900103A3E /* PositionCardView.swift */; };
+		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
+		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
 		BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC10144D232E20330096E962 /* GoogleService-Info.plist */; };
 		BC10146B232E24FF0096E962 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
 		BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */; };
@@ -91,6 +95,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2057031E232E2B0200103A3E /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
+		20570322232E439900103A3E /* PositionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCardView.swift; sourceTree = "<group>"; };
+		2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		20B81DFA232D54E20081D341 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		BC10144D232E20330096E962 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Carthage/Build/iOS/GTMSessionFetcher.framework; sourceTree = "<group>"; };
@@ -256,6 +264,7 @@
 				BC3E50B6232A5F2200B56EBF /* View */,
 				BC3E50B2232A5EF600B56EBF /* SignUp.storyboard */,
 				BC3E50B4232A5F0100B56EBF /* SignUpViewController.swift */,
+				2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -271,6 +280,8 @@
 				BC3E50BF232A5F8B00B56EBF /* StepThreeView.xib */,
 				BC3E50C5232A5FC800B56EBF /* StepFourView.swift */,
 				BC3E50C3232A5FBC00B56EBF /* StepFourView.xib */,
+				2057031E232E2B0200103A3E /* SignUpButton.swift */,
+				20570322232E439900103A3E /* PositionCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +411,7 @@
 				BCE1B3F9231BE6DA001BB684 /* QRCode */,
 				E571F766232402D200816C04 /* ReuseableView.swift */,
 				E571F7642324024D00816C04 /* Storyboard.swift */,
+				20B81DFA232D54E20081D341 /* RoundedTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -593,6 +605,7 @@
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
 				BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */,
+				20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */,
 				BCE1B4102320034F001BB684 /* AttendanceListCell.swift in Sources */,
 				BCE1B3FE231BF127001BB684 /* AccountModel.swift in Sources */,
 				BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */,
@@ -601,6 +614,7 @@
 				E571F77A2324345400816C04 /* UIView+Extension.swift in Sources */,
 				BC3E50C2232A5F9B00B56EBF /* StepThreeView.swift in Sources */,
 				BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */,
+				2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */,
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
 				BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */,
 				E571F76A2324033B00816C04 /* PresentingViewAnimator.swift in Sources */,
@@ -615,6 +629,7 @@
 				E571F76C2324075300816C04 /* DismissingViewAnimator.swift in Sources */,
 				BCE1B3F1231BE576001BB684 /* HomeDataSource.swift in Sources */,
 				BC1014922333D9BB0096E962 /* HomeHeaderCell.swift in Sources */,
+				20570323232E439900103A3E /* PositionCardView.swift in Sources */,
 				BCE1B4132320054F001BB684 /* AttendanceListModel.swift in Sources */,
 				E571F77223241C1E00816C04 /* InteractiveTransitionableViewController.swift in Sources */,
 				BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */,
@@ -623,6 +638,7 @@
 				BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
+				2057031F232E2B0200103A3E /* SignUpButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +785,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86PPC52X64;
+				DEVELOPMENT_TEAM = RRV2MQK29Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -796,7 +812,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86PPC52X64;
+				DEVELOPMENT_TEAM = RRV2MQK29Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
