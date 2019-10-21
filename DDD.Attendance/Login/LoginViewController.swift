@@ -36,6 +36,17 @@ class LoginViewController: BaseViewController {
         
         collectionView.then {
             $0.dataSource = dataSource
+            let flowLayout = UICollectionViewFlowLayout()
+            print(UIScreen.main.bounds.height)
+            if UIScreen.main.bounds.height >= 828 {
+                flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width,
+                                             height: view.frame.height * 0.6)
+            } else {
+                flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width,
+                                             height: view.frame.height * 0.7)
+            }
+            flowLayout.scrollDirection = .horizontal
+            $0.collectionViewLayout = flowLayout
         }
     }
     

@@ -17,8 +17,7 @@ class AccountView: BaseView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.cornerRadius = 25
-        layer.masksToBounds = true
+        roundCorners(corners: [.topLeft, .topRight], cornerRadii: 25)
         isUserInteractionEnabled = true
         
         qrcodeImageview.then {
