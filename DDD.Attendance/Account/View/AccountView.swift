@@ -21,7 +21,7 @@ class AccountView: BaseView {
         isUserInteractionEnabled = true
         
         qrcodeImageview.then {
-            $0.layer.cornerRadius = 20
+            $0.layer.cornerRadius = $0.frame.height / 4
             $0.layer.borderWidth = 1.0
             $0.layer.borderColor = UIColor.white.cgColor
         }
@@ -30,6 +30,7 @@ class AccountView: BaseView {
             $0.top.equalTo(snp.top).offset(10)
             $0.width.equalTo(qrcodeImageview.snp.height)
             $0.trailing.equalTo(snp.trailing).offset(-48)
+            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-15)
         }
         
         titleLabel.snp.makeConstraints {
