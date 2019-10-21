@@ -48,7 +48,8 @@ private extension LoginPopupViewController {
     
     func moveHomeViewController() {
         let homeVC = HomeViewController.instantiateViewController()
-        UIApplication.shared.keyWindow?.rootViewController = homeVC
+        let navigationVC = UINavigationController(rootViewController: homeVC)
+        UIApplication.shared.keyWindow?.rootViewController = navigationVC
     }
     
     func loginFailureAction(with message: String?) {

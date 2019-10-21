@@ -46,7 +46,7 @@ class HomeViewController: BaseViewController {
     
     override func bindStyle() {
         super.bindStyle()
-        
+
         navigationController.then {
             $0.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
             $0.navigationBar.shadowImage = UIImage()
