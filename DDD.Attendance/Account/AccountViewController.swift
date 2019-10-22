@@ -7,18 +7,37 @@
 //
 
 import UIKit
+import SnapKit
+import ReactiveSwift
 
 class AccountViewController: BaseViewController {
 
     @IBOutlet weak var backgroundView: UIVisualEffectView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var accountView: AccountView!
+    @IBOutlet weak var noticeLabel: UILabel!
     
     lazy var accountViewHeight: CGFloat = accountView.frame.height
     var accountModel: AccountModel?
     
     static func instantiateViewController() -> AccountViewController {
         return Storyboard.account.viewController(AccountViewController.self)
+    }
+    
+    override func bindData() {
+        super.bindData()
+        
+        noticeLabel.then {
+            $0.text = "This QR code is very safe\nShare to any others"
+        }
+    }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        
+        reactive.showDetailAction <~ reactive.viewWillAppear
+        
+        reactive.hideDetailAction <~ reactive.viewWillDisappear
     }
     
     override func viewDidLoad() {
@@ -36,6 +55,20 @@ private extension AccountViewController {
         }
         accountView.configure(by: accountModel)
     }
+    
+    func showDetailAction() {
+        UIView.animate(withDuration: 0.4) {
+            self.accountView.showDetailAction()
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func hideDetailAction() {
+        UIView.animate(withDuration: 0.3) {
+            self.accountView.hideDetailAction()
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 extension AccountViewController: Animatable {
@@ -48,7 +81,20 @@ extension AccountViewController: Animatable {
         return containerView
     }
     
-    func prepareBeingDismissed() {
-        
+    func prepareBeingDismissed() {}
+}
+
+extension Reactive where Base: AccountViewController {
+    
+    var showDetailAction: BindingTarget<Void> {
+        return makeBindingTarget({ base, _ in
+            base.showDetailAction()
+        })
+    }
+    
+    var hideDetailAction: BindingTarget<Void> {
+        return makeBindingTarget({ base, _ in
+            base.hideDetailAction()
+        })
     }
 }

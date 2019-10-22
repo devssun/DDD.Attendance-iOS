@@ -19,8 +19,6 @@ protocol Animatable {
 
 class PresentingViewAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
-    
-    
     let duration: TimeInterval
     let initialY: CGFloat
     

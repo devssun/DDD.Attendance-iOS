@@ -26,7 +26,7 @@ class SignUpViewController: BaseViewController {
     private let viewModel = SignUpViewModel()
     
     static func instantiateViewController() -> SignUpViewController {
-        return Storyboard.account.viewController(SignUpViewController.self)
+        return Storyboard.signup.viewController(SignUpViewController.self)
     }
     
     override func viewDidLoad() {

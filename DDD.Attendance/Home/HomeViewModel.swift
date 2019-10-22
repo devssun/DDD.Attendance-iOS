@@ -42,7 +42,7 @@ extension HomeViewModel: HomeViewModelInputs {
     
     func generateQRCode(by userID: String) {
         accountModelProperty.value = AccountModel(userID: userID,
-                                                  period: "DDD.3기",
+                                                  period: "See the details",
                                                   qrcode: QRCodeController.generate(from: userID) ?? UIImage())
     }
 }

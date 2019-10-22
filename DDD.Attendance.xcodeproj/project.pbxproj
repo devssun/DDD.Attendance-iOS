@@ -32,6 +32,10 @@
 		BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148A232E2D1C0096E962 /* LoginPopupView.swift */; };
 		BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */; };
 		BC10148F232E32DB0096E962 /* LoginPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */; };
+		BC1014922333D9BB0096E962 /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1014902333D9BB0096E962 /* HomeHeaderCell.swift */; };
+		BC1014932333D9BB0096E962 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1014912333D9BB0096E962 /* HomeHeaderCell.xib */; };
+		BC1014982333DD4E0096E962 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1014962333DD4E0096E962 /* WelcomeCell.swift */; };
+		BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1014972333DD4E0096E962 /* WelcomeCell.xib */; };
 		BC381F302349F4760040202D /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC381F2F2349F4760040202D /* Firebase.swift */; };
 		BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50AD232A5E4600B56EBF /* Login.storyboard */; };
 		BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */; };
@@ -52,6 +56,7 @@
 		BC8863FD234E37780031C7F1 /* PosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FC234E37780031C7F1 /* PosterModel.swift */; };
 		BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */; };
 		BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */; };
+		BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC886402235C6FD60031C7F1 /* Date+Extension.swift */; };
 		BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */; };
 		BCE1B3BD231BB68D001BB684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BC231BB68D001BB684 /* ViewController.swift */; };
 		BCE1B3C0231BB68D001BB684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3BE231BB68D001BB684 /* Main.storyboard */; };
@@ -115,6 +120,10 @@
 		BC10148A232E2D1C0096E962 /* LoginPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupView.swift; sourceTree = "<group>"; };
 		BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransitionCoordinator.swift; sourceTree = "<group>"; };
 		BC10148E232E32DB0096E962 /* LoginPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewController.swift; sourceTree = "<group>"; };
+		BC1014902333D9BB0096E962 /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		BC1014912333D9BB0096E962 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
+		BC1014962333DD4E0096E962 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
+		BC1014972333DD4E0096E962 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
 		BC381F2F2349F4760040202D /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		BC3E50AD232A5E4600B56EBF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC3E50AF232A5E5600B56EBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +144,7 @@
 		BC8863FC234E37780031C7F1 /* PosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModel.swift; sourceTree = "<group>"; };
 		BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewModel.swift; sourceTree = "<group>"; };
 		BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extension.swift"; sourceTree = "<group>"; };
+		BC886402235C6FD60031C7F1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		BCE1B3B7231BB68D001BB684 /* DDD.Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDD.Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE1B3BC231BB68D001BB684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -427,6 +437,10 @@
 			children = (
 				BCE1B40E2320034F001BB684 /* AttendanceListCell.swift */,
 				BCE1B40F2320034F001BB684 /* AttendanceListCell.xib */,
+				BC1014902333D9BB0096E962 /* HomeHeaderCell.swift */,
+				BC1014912333D9BB0096E962 /* HomeHeaderCell.xib */,
+				BC1014962333DD4E0096E962 /* WelcomeCell.swift */,
+				BC1014972333DD4E0096E962 /* WelcomeCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -459,6 +473,7 @@
 				E571F7792324345400816C04 /* UIView+Extension.swift */,
 				BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */,
 				BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */,
+				BC886402235C6FD60031C7F1 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -528,12 +543,14 @@
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
 				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
+				BC1014932333D9BB0096E962 /* HomeHeaderCell.xib in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
 				BCE1B3F7231BE689001BB684 /* AccountView.xib in Resources */,
 				BCE1B3C0231BB68D001BB684 /* Main.storyboard in Resources */,
 				BC3E50C4232A5FBC00B56EBF /* StepFourView.xib in Resources */,
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
+				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
 				E571F77723241F5300816C04 /* Account.storyboard in Resources */,
 				BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */,
@@ -559,6 +576,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/TextFieldEffects.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CHIPageControl.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -587,6 +605,7 @@
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
+				BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */,
 				20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */,
 				BCE1B4102320034F001BB684 /* AttendanceListCell.swift in Sources */,
 				BCE1B3FE231BF127001BB684 /* AccountModel.swift in Sources */,
@@ -607,8 +626,10 @@
 				BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */,
 				BCE1B3CF231BB75E001BB684 /* BaseViewController.swift in Sources */,
 				BC3E50B8232A5F6100B56EBF /* StepOneView.swift in Sources */,
+				BC1014982333DD4E0096E962 /* WelcomeCell.swift in Sources */,
 				E571F76C2324075300816C04 /* DismissingViewAnimator.swift in Sources */,
 				BCE1B3F1231BE576001BB684 /* HomeDataSource.swift in Sources */,
+				BC1014922333D9BB0096E962 /* HomeHeaderCell.swift in Sources */,
 				20570323232E439900103A3E /* PositionCardView.swift in Sources */,
 				BCE1B4132320054F001BB684 /* AttendanceListModel.swift in Sources */,
 				E571F77223241C1E00816C04 /* InteractiveTransitionableViewController.swift in Sources */,
@@ -765,7 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RRV2MQK29Y;
+				DEVELOPMENT_TEAM = 86PPC52X64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -792,7 +813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RRV2MQK29Y;
+				DEVELOPMENT_TEAM = 86PPC52X64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

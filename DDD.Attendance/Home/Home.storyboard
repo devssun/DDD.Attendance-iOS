@@ -18,28 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23X-MQ-Mes">
-                                <rect key="frame" x="0.0" y="44" width="414" height="673"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23X-MQ-Mes">
+                                <rect key="frame" x="35" y="44" width="344" height="762.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYH-v7-HeT" customClass="AccountView" customModule="DDD_Attendance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="717" width="414" height="179"/>
+                                <rect key="frame" x="0.0" y="806.5" width="414" height="89.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="23X-MQ-Mes" firstAttribute="leading" secondItem="WGK-QE-0oJ" secondAttribute="leading" id="9h3-Go-QIh"/>
+                            <constraint firstItem="23X-MQ-Mes" firstAttribute="width" secondItem="Az7-UN-ebh" secondAttribute="width" multiplier="0.83" id="3QR-lr-5Za"/>
                             <constraint firstItem="OYH-v7-HeT" firstAttribute="leading" secondItem="WGK-QE-0oJ" secondAttribute="leading" id="Jja-s0-T37"/>
                             <constraint firstItem="OYH-v7-HeT" firstAttribute="top" secondItem="23X-MQ-Mes" secondAttribute="bottom" id="Tb0-zy-ml0"/>
                             <constraint firstAttribute="bottom" secondItem="OYH-v7-HeT" secondAttribute="bottom" id="Wjh-ca-DB3"/>
                             <constraint firstItem="23X-MQ-Mes" firstAttribute="top" secondItem="WGK-QE-0oJ" secondAttribute="top" id="ep8-We-lU6"/>
-                            <constraint firstItem="OYH-v7-HeT" firstAttribute="height" secondItem="Az7-UN-ebh" secondAttribute="height" multiplier="0.2" id="kaF-2X-gTY"/>
-                            <constraint firstItem="WGK-QE-0oJ" firstAttribute="trailing" secondItem="23X-MQ-Mes" secondAttribute="trailing" id="tvV-4c-ihg"/>
+                            <constraint firstItem="OYH-v7-HeT" firstAttribute="height" secondItem="Az7-UN-ebh" secondAttribute="height" multiplier="0.1" id="kaF-2X-gTY"/>
+                            <constraint firstItem="23X-MQ-Mes" firstAttribute="centerX" secondItem="Az7-UN-ebh" secondAttribute="centerX" id="tch-xx-SmU"/>
+                            <constraint firstItem="23X-MQ-Mes" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WGK-QE-0oJ" secondAttribute="leading" id="xXs-1o-Bp7"/>
                             <constraint firstItem="OYH-v7-HeT" firstAttribute="trailing" secondItem="WGK-QE-0oJ" secondAttribute="trailing" id="yFR-jc-u5A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WGK-QE-0oJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1pd-4u-TCR">
+                        <barButtonItem key="rightBarButtonItem" image="profile" id="37G-vU-fHN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomTriggerView" destination="OYH-v7-HeT" id="2vT-Wp-8bR"/>
                         <outlet property="bottomTriggerViewHeightConstraint" destination="kaF-2X-gTY" id="K5Y-e4-Fps"/>
@@ -48,7 +52,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzu-1y-xIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160.86956521739131" y="-47.544642857142854"/>
+            <point key="canvasLocation" x="1071.0144927536232" y="-47.544642857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile" width="26" height="26"/>
+    </resources>
 </document>
