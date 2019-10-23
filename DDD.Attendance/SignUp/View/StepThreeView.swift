@@ -11,6 +11,7 @@ import UIKit
 import ReactiveCocoa
 import ReactiveSwift
 import SnapKit
+import NVActivityIndicatorView
 
 class StepThreeView: BaseView {
 
@@ -72,6 +73,8 @@ class StepThreeView: BaseView {
     
     func pressNextButton() {
         viewModel.pressSignUpButton()
+        let activityData = ActivityData(type: .pacman)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
     }
 }
 

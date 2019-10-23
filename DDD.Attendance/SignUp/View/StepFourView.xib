@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="350" height="718"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="LnX-Lc-Qqw">
-                    <rect key="frame" x="58.000000000000014" y="50" width="234.33333333333337" height="63.666666666666657"/>
+                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LnX-Lc-Qqw">
+                    <rect key="frame" x="58.000000000000014" y="35" width="234.33333333333337" height="58.666666666666657"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입이 완료되었습니다 :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S53-cs-Sf8">
                             <rect key="frame" x="0.0" y="0.0" width="234.33333333333334" height="28.666666666666668"/>
@@ -30,7 +30,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멤버가 되신 걸 환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuK-2T-Gmg">
-                            <rect key="frame" x="37.333333333333329" y="45.666666666666671" width="159.33333333333337" height="18"/>
+                            <rect key="frame" x="37.333333333333329" y="40.666666666666671" width="159.33333333333337" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.56862745100000001" green="0.57254901960000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                     </subviews>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_complete" translatesAutoresizingMaskIntoConstraints="NO" id="hZV-no-4BB">
-                    <rect key="frame" x="51" y="181.66666666666663" width="248" height="248"/>
+                    <rect key="frame" x="51" y="161.66666666666663" width="248" height="248"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,7 +46,7 @@
                 <constraint firstItem="hZV-no-4BB" firstAttribute="centerX" secondItem="Bqf-dj-SaJ" secondAttribute="centerX" id="O27-E6-qR9"/>
                 <constraint firstItem="LnX-Lc-Qqw" firstAttribute="centerX" secondItem="xew-aM-Fld" secondAttribute="centerX" id="ZiU-vW-O2L"/>
                 <constraint firstItem="hZV-no-4BB" firstAttribute="top" secondItem="LnX-Lc-Qqw" secondAttribute="bottom" constant="68" id="xVb-Xr-0MP"/>
-                <constraint firstItem="LnX-Lc-Qqw" firstAttribute="top" secondItem="xew-aM-Fld" secondAttribute="top" constant="50" id="yBy-tL-ZVo"/>
+                <constraint firstItem="LnX-Lc-Qqw" firstAttribute="top" secondItem="xew-aM-Fld" secondAttribute="top" constant="35" id="yBy-tL-ZVo"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

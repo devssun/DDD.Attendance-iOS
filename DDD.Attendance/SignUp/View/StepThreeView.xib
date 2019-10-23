@@ -22,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="350" height="718"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-jG-cu5">
-                    <rect key="frame" x="49" y="50" width="252" height="64"/>
+                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-jG-cu5">
+                    <rect key="frame" x="49" y="35" width="252" height="59"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인의 직무는 무엇인가요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX1-lv-zMa">
                             <rect key="frame" x="0.0" y="0.0" width="252" height="29"/>
@@ -32,7 +32,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인의 포지션을 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2c-Gj-paN">
-                            <rect key="frame" x="35.5" y="46" width="181" height="18"/>
+                            <rect key="frame" x="35.5" y="41" width="181" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.56862745100000001" green="0.57254901960000004" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-9B-rNe" customClass="PositionCardView" customModule="DDD_Attendance" customModuleProvider="target">
-                    <rect key="frame" x="28" y="161" width="139.5" height="165"/>
+                    <rect key="frame" x="28" y="141" width="139.5" height="165"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="165" id="nco-L3-dKE"/>
@@ -54,7 +54,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldW-Op-ClN" customClass="PositionCardView" customModule="DDD_Attendance" customModuleProvider="target">
-                    <rect key="frame" x="28" y="341" width="139.5" height="165"/>
+                    <rect key="frame" x="28" y="321" width="139.5" height="165"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="iOS Dev"/>
@@ -65,7 +65,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yay-1t-uRF" customClass="PositionCardView" customModule="DDD_Attendance" customModuleProvider="target">
-                    <rect key="frame" x="182.5" y="161" width="139.5" height="165"/>
+                    <rect key="frame" x="182.5" y="141" width="139.5" height="165"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Android Dev"/>
@@ -76,7 +76,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptv-Co-7xA" customClass="PositionCardView" customModule="DDD_Attendance" customModuleProvider="target">
-                    <rect key="frame" x="182.5" y="341" width="139.5" height="165"/>
+                    <rect key="frame" x="182.5" y="321" width="139.5" height="165"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Backend Dev"/>
@@ -98,7 +98,7 @@
                 <constraint firstItem="ldW-Op-ClN" firstAttribute="width" secondItem="9fg-9B-rNe" secondAttribute="width" id="HK0-zC-TRU"/>
                 <constraint firstItem="ldW-Op-ClN" firstAttribute="top" secondItem="9fg-9B-rNe" secondAttribute="bottom" constant="15" id="JpQ-Yi-O9D"/>
                 <constraint firstItem="Ptv-Co-7xA" firstAttribute="top" secondItem="ldW-Op-ClN" secondAttribute="top" id="N1z-yF-i3A"/>
-                <constraint firstItem="bH0-jG-cu5" firstAttribute="top" secondItem="Wh0-gY-8o0" secondAttribute="top" constant="50" id="THX-8b-jYo"/>
+                <constraint firstItem="bH0-jG-cu5" firstAttribute="top" secondItem="Wh0-gY-8o0" secondAttribute="top" constant="35" id="THX-8b-jYo"/>
                 <constraint firstItem="Ptv-Co-7xA" firstAttribute="leading" secondItem="Yay-1t-uRF" secondAttribute="leading" id="UFU-Ua-VqR"/>
                 <constraint firstItem="Ptv-Co-7xA" firstAttribute="bottom" secondItem="ldW-Op-ClN" secondAttribute="bottom" id="UHi-Zs-LbT"/>
                 <constraint firstItem="Yay-1t-uRF" firstAttribute="width" secondItem="9fg-9B-rNe" secondAttribute="width" id="Vch-Ks-afJ"/>
