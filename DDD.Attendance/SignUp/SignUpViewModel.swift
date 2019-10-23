@@ -23,6 +23,21 @@ enum Position: Int {
     case And
     case iOS
     case Backend
+    
+    var name: String {
+        switch self {
+        case .Designer:
+            return "Designer"
+        case .And:
+            return "AOS"
+        case .iOS:
+            return "iOS"
+        case .Backend:
+            return "BackEnd"
+        default:
+            return ""
+        }
+    }
 }
 
 class SignUpViewModel {
@@ -67,7 +82,7 @@ class SignUpViewModel {
        return self.position.producer.map { $0 != .None }
     }()
     
-   lazy private(set) var validationResultSignal: SignalProducer<UIColor, Never> = { [unowned self] in
+    lazy private(set) var validationResultSignal: SignalProducer<UIColor, Never> = { [unowned self] in
         let result = self.password.producer.skipNil().map(self.validatePassword)
         return result.map { (enabled: Bool) -> UIColor in
             return (enabled ? UIColor(red: 102/255, green: 102/255, blue: 102/255, alpha: 1.0) : UIColor(red: 239/255, green: 48/255, blue: 36/255, alpha: 1.0))
@@ -87,13 +102,17 @@ class SignUpViewModel {
     }
     
     func pressSignUpButton() {
-        signUpFirebase(with: email.value ?? "", password.value ?? "")
+        let user = UserModel(email: email.value ?? "",
+                             name: (lastName.value ?? "") + (firstName.value ?? ""),
+                             position: position.value.name,
+                             isManager: false)
+        signUpFirebase(with: user, password.value ?? "")
     }
 }
 
 private extension SignUpViewModel {
-    func signUpFirebase(with email: String, _ password: String) {
-        firebase.signUp(with: email, password) { [weak self] result in
+    func signUpFirebase(with user: UserModel, _ password: String) {
+        firebase.signUp(with: user, password) { [weak self] result in
             if result?.user != nil {
                 self?.step.value = .StepFour
             } else {
