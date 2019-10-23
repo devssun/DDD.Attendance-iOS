@@ -69,7 +69,11 @@ extension StepOneView: UITextFieldDelegate {
         if textField == lastNameTextField {
             firstNameTextField.becomeFirstResponder()
         } else if textField == firstNameTextField {
-            nextButton.sendActions(for: .touchUpInside)
+            if nextButton.isEnabled {
+                nextButton.sendActions(for: .touchUpInside)
+            } else {
+                lastNameTextField.becomeFirstResponder()
+            }
         }
     }
 }

@@ -86,8 +86,12 @@ extension StepTwoView: UITextFieldDelegate {
         if textField == emailTextField {
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
-            passwordTextField.resignFirstResponder()
-            nextButton.sendActions(for: .touchUpInside)
+            if nextButton.isEnabled {
+                passwordTextField.resignFirstResponder()
+                nextButton.sendActions(for: .touchUpInside)
+            } else {
+                emailTextField.becomeFirstResponder()
+            }
         }
     }
 }
