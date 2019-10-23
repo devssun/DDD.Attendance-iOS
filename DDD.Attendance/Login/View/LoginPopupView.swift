@@ -54,6 +54,7 @@ class LoginPopupView: BaseView {
 private extension LoginPopupView {
     
     func pressLoginButton() {
+        endEditing(true)
         viewModel.inputs.pressLoginButton()
         let activityData = ActivityData(type: .pacman)
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
