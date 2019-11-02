@@ -69,7 +69,7 @@ private extension LoginPopupViewController {
     }
     
     func keyboardWillShow(with context: KeyboardChangeContext) {
-        if view.frame.origin.y != 0 {
+        if view.frame.origin.y >= 0 {
             view.frame.origin.y -= context.beginFrame.height
         }
     }
