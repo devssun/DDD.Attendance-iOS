@@ -14,6 +14,7 @@ class HomeViewController: BaseViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var bottomTriggerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var profileButton: UIBarButtonItem!
     @IBOutlet weak var bottomTriggerView: AccountView!
     
     private let viewModel = HomeViewModel()
@@ -41,6 +42,11 @@ class HomeViewController: BaseViewController {
             $0.tableFooterView = UIView(frame: CGRect.zero)
             $0.separatorInset = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.width, bottom: 0, right: 0)
             $0.dataSource = dataSource
+        }
+        
+        profileButton.then {
+            $0.action = #selector(signOut)
+            $0.target = self
         }
     }
     
@@ -111,6 +117,17 @@ private extension HomeViewController {
     @objc func bottomTriggerViewTapped() {
         if let viewControllerToPresent = transition.toViewController {
             present(viewControllerToPresent, animated: true)
+        }
+    }
+    
+    @objc func signOut() {
+        Firebase().signOut { [weak self] isSuccess in
+            if isSuccess {
+                let loginVC = LoginViewController.instantiateViewController()
+                UIApplication.shared.keyWindow?.rootViewController = loginVC
+            } else {
+                self?.showAlert(title: "로그아웃 실패", message: "로그아웃에 실패하였습니다.")
+            }
         }
     }
 }

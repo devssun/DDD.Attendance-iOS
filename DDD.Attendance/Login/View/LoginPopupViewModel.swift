@@ -7,6 +7,7 @@
 //
 
 import ReactiveSwift
+import NVActivityIndicatorView
 
 protocol LoginPopupViewModelInputs {
     
@@ -121,10 +122,13 @@ private extension LoginPopupViewModel {
     }
     
     func checkLoginSession() {
+        let activityData = ActivityData(type: .pacman)
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
         fetchLoginStatus { [weak self] status  in
             if status != .failure {
                 self?.loginResultProperty.value = status
             }
+            NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
         }
     }
     

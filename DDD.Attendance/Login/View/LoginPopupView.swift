@@ -27,6 +27,14 @@ class LoginPopupView: BaseView {
         loginButton.then {
             $0.isEnabled = false
         }
+        
+        idTextField.then {
+            $0.delegate = self
+        }
+        
+        passwordTextField.then {
+            $0.delegate = self
+        }
     }
     
     override func bindViewModel() {
@@ -56,8 +64,14 @@ private extension LoginPopupView {
     func pressLoginButton() {
         endEditing(true)
         viewModel.inputs.pressLoginButton()
-        let activityData = ActivityData(type: .pacman)
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+        startIndicator()
+    }
+    
+    func startIndicator() {
+        if !NVActivityIndicatorPresenter.sharedInstance.isAnimating {
+            let activityData = ActivityData(type: .pacman)
+            NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+        }
     }
     
     func requestFirebaseAuth(with account: (String, String)) {
@@ -70,6 +84,18 @@ private extension LoginPopupView {
     
     func isEnabledLoginButton(with isValid: Bool) {
         loginButton.isEnabled = isValid
+    }
+}
+
+extension LoginPopupView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == idTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            passwordTextField.resignFirstResponder()
+        }
+        return true
     }
 }
 

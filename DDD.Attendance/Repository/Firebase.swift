@@ -52,6 +52,16 @@ class Firebase {
         }
     }
     
+    func signOut(completion: @escaping (Bool) -> Void) {
+        do {
+            try manager.signOut()
+            completion(true)
+        } catch {
+            print(error)
+            completion(false)
+        }
+    }
+    
     func checkAdminAccunt(completion: @escaping (LoginStatus) -> Void) {
         guard let uid = manager.currentUser?.uid else {
             completion(LoginStatus.failure)

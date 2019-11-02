@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23X-MQ-Mes">
-                                <rect key="frame" x="35" y="44" width="344" height="762.5"/>
+                                <rect key="frame" x="35" y="88" width="344" height="718.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYH-v7-HeT" customClass="AccountView" customModule="DDD_Attendance" customModuleProvider="target">
@@ -44,9 +44,11 @@
                     <navigationItem key="navigationItem" id="1pd-4u-TCR">
                         <barButtonItem key="rightBarButtonItem" image="profile" id="37G-vU-fHN"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="bottomTriggerView" destination="OYH-v7-HeT" id="2vT-Wp-8bR"/>
                         <outlet property="bottomTriggerViewHeightConstraint" destination="kaF-2X-gTY" id="K5Y-e4-Fps"/>
+                        <outlet property="profileButton" destination="37G-vU-fHN" id="myD-bv-ugm"/>
                         <outlet property="tableView" destination="23X-MQ-Mes" id="1Nm-my-3yK"/>
                     </connections>
                 </viewController>
