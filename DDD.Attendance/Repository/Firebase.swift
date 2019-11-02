@@ -13,6 +13,14 @@ class Firebase {
     
     let manager: Auth
     
+    private let database = Database.database().reference()
+    
+    enum LoginStatus {
+        case admin
+        case `default`
+        case failure
+    }
+    
     init(manager: Auth = Auth.auth()) {
         self.manager = manager
     }
@@ -41,6 +49,29 @@ class Firebase {
             ]
             Database.database().reference().child("users").child(value.user.uid).setValue(userData)
             completion(value)
+        }
+    }
+    
+    func checkAdminAccunt(completion: @escaping (LoginStatus) -> Void) {
+        guard let uid = manager.currentUser?.uid else {
+            completion(LoginStatus.failure)
+            return
+        }
+        database
+            .child("users")
+            .child(uid)
+            .observeSingleEvent(of: .value, with: { snapShot in
+                let value = snapShot.value as? NSDictionary
+                if let isManager = value?["isManager"] as? Bool {
+                    isManager
+                        ? completion(LoginStatus.admin)
+                        : completion(LoginStatus.default)
+                } else {
+                    completion(LoginStatus.failure)
+                }
+            }) { error in
+                print(error.localizedDescription)
+                completion(LoginStatus.failure)
         }
     }
 }

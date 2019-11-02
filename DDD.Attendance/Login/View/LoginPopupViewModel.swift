@@ -21,7 +21,7 @@ protocol LoginPopupViewModelOutputs {
     
     var loginAccount: Signal<LoginPopupViewModel.Account, Never> { get }
     
-    var loginResult: Signal<(Bool, String?), Never> { get }
+    var loginResult: Signal<Firebase.LoginStatus, Never> { get }
     
     var isValidAccount: Signal<Bool, Never> { get }
 }
@@ -42,10 +42,11 @@ class LoginPopupViewModel {
     private let pressLoginButtonProperty = MutableProperty<Void?>(nil)
     private let emailProperty = MutableProperty<String>("")
     private let passwordProperty = MutableProperty<String>("")
-    private let loginResultProperty = MutableProperty<(Bool, String?)>((false, nil))
+    private let loginResultProperty = MutableProperty<Firebase.LoginStatus?>(nil)
     
     init(firebase: Firebase = Firebase()) {
         self.firebase = firebase
+        self.checkLoginSession()
     }
 }
 
@@ -84,8 +85,8 @@ extension LoginPopupViewModel: LoginPopupViewModelOutputs {
             }
     }
     
-    var loginResult: Signal<(Bool, String?), Never> {
-        return loginResultProperty.signal
+    var loginResult: Signal<Firebase.LoginStatus, Never> {
+        return loginResultProperty.signal.skipNil()
     }
     
     var isValidAccount: Signal<Bool, Never> {
@@ -104,9 +105,25 @@ private extension LoginPopupViewModel {
     func loginFirebase(with email: String, _ password: String) {
         firebase.login(with: email, password) { [weak self] result in
             if result?.user != nil {
-                self?.loginResultProperty.value = (true, nil)
+                self?.fetchLoginStatus { status in
+                     self?.loginResultProperty.value = status
+                }
             } else {
-                self?.loginResultProperty.value = (false, "Email 또는 Password를 확인해주세요.")
+                self?.loginResultProperty.value = .failure
+            }
+        }
+    }
+    
+    func fetchLoginStatus(completion: @escaping (Firebase.LoginStatus) -> Void) {
+        firebase.checkAdminAccunt { status in
+            completion(status)
+        }
+    }
+    
+    func checkLoginSession() {
+        fetchLoginStatus { [weak self] status  in
+            if status != .failure {
+                self?.loginResultProperty.value = status
             }
         }
     }

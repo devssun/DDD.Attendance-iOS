@@ -26,12 +26,15 @@ class LoginPopupViewController: BaseViewController {
     override func bindViewModel() {
         super.bindViewModel()
         
-        loginPopupView.resultHandler = { [weak self] result in
+        loginPopupView.resultHandler = { [weak self] status in
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
-            if result.0 {
+            switch status {
+            case .admin:
+                self?.moveScannerViewController()
+            case .default:
                 self?.moveHomeViewController()
-            } else {
-                self?.loginFailureAction(with: result.1)
+            case .failure:
+                self?.loginFailureAction(with: "Email 또는 Password를 확인해주세요.")
             }
         }
         
@@ -49,6 +52,12 @@ private extension LoginPopupViewController {
     func moveHomeViewController() {
         let homeVC = HomeViewController.instantiateViewController()
         let navigationVC = UINavigationController(rootViewController: homeVC)
+        UIApplication.shared.keyWindow?.rootViewController = navigationVC
+    }
+    
+    func moveScannerViewController() {
+        let scannerVC = ScannerViewController()
+        let navigationVC = UINavigationController(rootViewController: scannerVC)
         UIApplication.shared.keyWindow?.rootViewController = navigationVC
     }
     

@@ -19,7 +19,7 @@ class LoginPopupView: BaseView {
     
     private let viewModel = LoginPopupViewModel()
     
-    var resultHandler: (((Bool, String?)) -> Void)?
+    var resultHandler: ((Firebase.LoginStatus) -> Void)?
     
     override func bindData() {
         super.bindData()
@@ -87,9 +87,9 @@ extension Reactive where Base: LoginPopupView {
         })
     }
     
-    var loginResultHandler: BindingTarget<(Bool, String?)> {
-        return makeBindingTarget({ base, result in
-            base.resultHandler?(result)
+    var loginResultHandler: BindingTarget<Firebase.LoginStatus> {
+        return makeBindingTarget({ base, status in
+            base.resultHandler?(status)
         })
     }
     
