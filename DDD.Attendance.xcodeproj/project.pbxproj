@@ -12,8 +12,10 @@
 		20570323232E439900103A3E /* PositionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20570322232E439900103A3E /* PositionCardView.swift */; };
 		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
+		BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */; };
+		BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
+		BC0C4F4E23746C8A00DA85B0 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; };
 		BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC10144D232E20330096E962 /* GoogleService-Info.plist */; };
-		BC10146B232E24FF0096E962 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
 		BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */; };
 		BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101460232E24FE0096E962 /* FirebaseDatabase.framework */; };
 		BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101461232E24FE0096E962 /* FirebaseCore.framework */; };
@@ -52,7 +54,6 @@
 		BC3E50C6232A5FC800B56EBF /* StepFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C5232A5FC800B56EBF /* StepFourView.swift */; };
 		BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */; };
 		BC3E50CA232A973D00B56EBF /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
-		BC7E4AB4235F5C7700A314DA /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7E4AB3235F5C7700A314DA /* FirebaseStorage.framework */; };
 		BC7E4AB6235F5F7F00A314DA /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4AB5235F5F7F00A314DA /* ScannerViewController.swift */; };
 		BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */; };
 		BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F9234E36FE0031C7F1 /* PosterCell.swift */; };
@@ -101,6 +102,10 @@
 		20570322232E439900103A3E /* PositionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCardView.swift; sourceTree = "<group>"; };
 		2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		20B81DFA232D54E20081D341 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		BC0C4F4823744E4100DA85B0 /* FirebaseInAppMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInAppMessaging.framework; path = Carthage/Build/iOS/FirebaseInAppMessaging.framework; sourceTree = "<group>"; };
+		BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
+		BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Carthage/Build/iOS/Protobuf.framework; sourceTree = "<group>"; };
+		BC0C4F4F23746EEF00DA85B0 /* DDD.Attendance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DDD.Attendance.entitlements; sourceTree = "<group>"; };
 		BC10144D232E20330096E962 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Carthage/Build/iOS/GTMSessionFetcher.framework; sourceTree = "<group>"; };
@@ -191,7 +196,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC7E4AB4235F5C7700A314DA /* FirebaseStorage.framework in Frameworks */,
+				BC0C4F4E23746C8A00DA85B0 /* Protobuf.framework in Frameworks */,
+				BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */,
+				BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */,
+				BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */,
 				BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */,
 				BC101480232E26130096E962 /* leveldb-library.framework in Frameworks */,
 				BC101481232E26130096E962 /* nanopb.framework in Frameworks */,
@@ -208,11 +216,9 @@
 				BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */,
 				E571F75F2323F08700816C04 /* SnapKit.framework in Frameworks */,
 				BCE1B3DE231BD8E1001BB684 /* Alamofire.framework in Frameworks */,
-				BC10146B232E24FF0096E962 /* FirebaseInstanceID.framework in Frameworks */,
 				BCE1B3D9231BB858001BB684 /* ReactiveMapKit.framework in Frameworks */,
 				BCE1B3DA231BB858001BB684 /* ReactiveSwift.framework in Frameworks */,
 				BC101471232E24FF0096E962 /* FIRAnalyticsConnector.framework in Frameworks */,
-				BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */,
 				BCE1B3DB231BB858001BB684 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +340,7 @@
 		BCE1B3B9231BB68D001BB684 /* DDD.Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BC0C4F4F23746EEF00DA85B0 /* DDD.Attendance.entitlements */,
 				BC381F2D2349F4600040202D /* Repository */,
 				BCE1B3F8231BE6D5001BB684 /* Common */,
 				BCE1B3CD231BB756001BB684 /* Base */,
@@ -379,6 +386,9 @@
 		BCE1B3D5231BB858001BB684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */,
+				BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */,
+				BC0C4F4823744E4100DA85B0 /* FirebaseInAppMessaging.framework */,
 				BC7E4AB3235F5C7700A314DA /* FirebaseStorage.framework */,
 				BC101479232E25E80096E962 /* libsqlite3.tbd */,
 				BC101477232E25DF0096E962 /* libc++.tbd */,
@@ -523,6 +533,11 @@
 				TargetAttributes = {
 					BCE1B3B6231BB68D001BB684 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -789,6 +804,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86PPC52X64;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -816,6 +832,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86PPC52X64;
 				FRAMEWORK_SEARCH_PATHS = (
