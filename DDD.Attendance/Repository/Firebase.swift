@@ -70,8 +70,8 @@ class Firebase {
         database
             .child("users")
             .child(uid)
-            .observeSingleEvent(of: .value, with: { snapShot in
-                let value = snapShot.value as? NSDictionary
+            .observeSingleEvent(of: .value, with: { snapshot in
+                let value = snapshot.value as? NSDictionary
                 if let isManager = value?["isManager"] as? Bool {
                     isManager
                         ? completion(LoginStatus.admin)
@@ -82,6 +82,15 @@ class Firebase {
             }) { error in
                 print(error.localizedDescription)
                 completion(LoginStatus.failure)
+        }
+    }
+    
+    func fetchCurriculumList() {
+        database.child("curriculum")
+            .observeSingleEvent(of: .value) { snapshot in
+                let value = snapshot.value as? NSDictionary
+                
+                
         }
     }
 }

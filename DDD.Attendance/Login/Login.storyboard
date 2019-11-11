@@ -50,12 +50,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="413" height="472"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding1Character" translatesAutoresizingMaskIntoConstraints="NO" id="Tt1-XQ-ukL">
-                                                    <rect key="frame" x="82.5" y="20" width="248" height="248"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Tt1-XQ-ukL" secondAttribute="height" multiplier="1:1" id="J8J-qN-e7c"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-tD-bgv">
                                                     <rect key="frame" x="8" y="308" width="397" height="95"/>
                                                     <subviews>
@@ -201,21 +195,28 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ds-hQ-r5m" customClass="AnimationView" customModule="Lottie">
+                                                    <rect key="frame" x="82.5" y="20" width="248" height="248"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2Ds-hQ-r5m" secondAttribute="height" multiplier="1:1" id="YpP-iu-1Di"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Tt1-XQ-ukL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="slU-Cz-cMh" secondAttribute="leading" constant="50" id="4P6-oX-KlZ"/>
-                                            <constraint firstItem="Tt1-XQ-ukL" firstAttribute="centerX" secondItem="slU-Cz-cMh" secondAttribute="centerX" id="7kn-nL-MDA"/>
                                             <constraint firstItem="p6Q-tD-bgv" firstAttribute="centerX" secondItem="slU-Cz-cMh" secondAttribute="centerX" id="9yV-Cv-iwq"/>
+                                            <constraint firstItem="p6Q-tD-bgv" firstAttribute="top" secondItem="2Ds-hQ-r5m" secondAttribute="bottom" constant="40" id="GEP-Nb-XAV"/>
                                             <constraint firstAttribute="bottom" secondItem="p6Q-tD-bgv" secondAttribute="bottom" priority="750" constant="69" id="Gzr-Qg-ZGK"/>
+                                            <constraint firstItem="2Ds-hQ-r5m" firstAttribute="centerX" secondItem="slU-Cz-cMh" secondAttribute="centerX" id="JIe-1W-MYa"/>
                                             <constraint firstItem="p6Q-tD-bgv" firstAttribute="leading" secondItem="slU-Cz-cMh" secondAttribute="leadingMargin" id="VhL-zT-g9C"/>
-                                            <constraint firstItem="p6Q-tD-bgv" firstAttribute="top" secondItem="Tt1-XQ-ukL" secondAttribute="bottom" constant="40" id="ewa-u9-H4N"/>
-                                            <constraint firstItem="Tt1-XQ-ukL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="slU-Cz-cMh" secondAttribute="top" constant="20" id="f1j-w3-AXa"/>
+                                            <constraint firstItem="2Ds-hQ-r5m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="slU-Cz-cMh" secondAttribute="leading" constant="50" id="lsh-fw-Uj5"/>
+                                            <constraint firstItem="2Ds-hQ-r5m" firstAttribute="top" secondItem="slU-Cz-cMh" secondAttribute="top" constant="20" id="qBN-BS-qoT"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="p6Q-tD-bgv" secondAttribute="trailing" id="zFz-CF-IBi"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="posterAnimationView" destination="2Ds-hQ-r5m" id="LH7-MW-HqL"/>
                                             <outlet property="posterDescriptionLabel" destination="Puz-dr-OaN" id="Grx-eu-7L9"/>
-                                            <outlet property="posterImageView" destination="Tt1-XQ-ukL" id="N2u-ny-ROg"/>
                                             <outlet property="posterTitleLabel" destination="boD-hN-GkD" id="Swc-fz-trG"/>
                                         </connections>
                                     </collectionViewCell>
@@ -332,7 +333,4 @@
             <point key="canvasLocation" x="919" y="144"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="onboarding1Character" width="248" height="248"/>
-    </resources>
 </document>

@@ -10,7 +10,7 @@ import UIKit
 
 struct PosterModel {
     
-    let poster: UIImage
+    let poster: String
     let title: String
     let description: String
 }
