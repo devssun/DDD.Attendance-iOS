@@ -61,6 +61,11 @@
 		BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */; };
 		BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */; };
 		BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC886402235C6FD60031C7F1 /* Date+Extension.swift */; };
+		BCDE47502379A990009CEAC2 /* Curriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE474F2379A990009CEAC2 /* Curriculum.swift */; };
+		BCDE47532379BD97009CEAC2 /* CodableFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDE47512379BD97009CEAC2 /* CodableFirebase.framework */; };
+		BCDE47542379BD97009CEAC2 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDE47522379BD97009CEAC2 /* Lottie.framework */; };
+		BCDE47572379BED0009CEAC2 /* onBoarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = BCDE47552379BECF009CEAC2 /* onBoarding1.json */; };
+		BCDE47582379BED0009CEAC2 /* onBoarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = BCDE47562379BED0009CEAC2 /* onBoarding2.json */; };
 		BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */; };
 		BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3C1231BB68F001BB684 /* Assets.xcassets */; };
 		BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3C3231BB68F001BB684 /* LaunchScreen.storyboard */; };
@@ -154,6 +159,11 @@
 		BC8863FE23561B590031C7F1 /* LoginPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewModel.swift; sourceTree = "<group>"; };
 		BC886400235B5BA00031C7F1 /* UIVIewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extension.swift"; sourceTree = "<group>"; };
 		BC886402235C6FD60031C7F1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		BCDE474F2379A990009CEAC2 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
+		BCDE47512379BD97009CEAC2 /* CodableFirebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableFirebase.framework; path = Carthage/Build/iOS/CodableFirebase.framework; sourceTree = "<group>"; };
+		BCDE47522379BD97009CEAC2 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		BCDE47552379BECF009CEAC2 /* onBoarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onBoarding1.json; sourceTree = "<group>"; };
+		BCDE47562379BED0009CEAC2 /* onBoarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onBoarding2.json; sourceTree = "<group>"; };
 		BCE1B3B7231BB68D001BB684 /* DDD.Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDD.Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE1B3C1231BB68F001BB684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -196,6 +206,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCDE47532379BD97009CEAC2 /* CodableFirebase.framework in Frameworks */,
+				BCDE47542379BD97009CEAC2 /* Lottie.framework in Frameworks */,
 				BC0C4F4E23746C8A00DA85B0 /* Protobuf.framework in Frameworks */,
 				BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */,
 				BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */,
@@ -248,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				BC381F2F2349F4760040202D /* Firebase.swift */,
+				BCDE474F2379A990009CEAC2 /* Curriculum.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -340,6 +353,8 @@
 		BCE1B3B9231BB68D001BB684 /* DDD.Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BCDE47552379BECF009CEAC2 /* onBoarding1.json */,
+				BCDE47562379BED0009CEAC2 /* onBoarding2.json */,
 				BC0C4F4F23746EEF00DA85B0 /* DDD.Attendance.entitlements */,
 				BC381F2D2349F4600040202D /* Repository */,
 				BCE1B3F8231BE6D5001BB684 /* Common */,
@@ -386,6 +401,8 @@
 		BCE1B3D5231BB858001BB684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCDE47512379BD97009CEAC2 /* CodableFirebase.framework */,
+				BCDE47522379BD97009CEAC2 /* Lottie.framework */,
 				BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */,
 				BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */,
 				BC0C4F4823744E4100DA85B0 /* FirebaseInAppMessaging.framework */,
@@ -567,6 +584,7 @@
 				BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */,
 				BC3E50C0232A5F8B00B56EBF /* StepThreeView.xib in Resources */,
 				BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */,
+				BCDE47582379BED0009CEAC2 /* onBoarding2.json in Resources */,
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
 				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
@@ -575,6 +593,7 @@
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
 				BCE1B3F7231BE689001BB684 /* AccountView.xib in Resources */,
 				BC3E50C4232A5FBC00B56EBF /* StepFourView.xib in Resources */,
+				BCDE47572379BED0009CEAC2 /* onBoarding1.json in Resources */,
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
 				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
@@ -603,6 +622,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/CHIPageControl.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CodableFirebase.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -632,6 +653,7 @@
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
 				BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */,
 				20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */,
+				BCDE47502379A990009CEAC2 /* Curriculum.swift in Sources */,
 				BCE1B4102320034F001BB684 /* AttendanceListCell.swift in Sources */,
 				BCE1B3FE231BF127001BB684 /* AccountModel.swift in Sources */,
 				BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */,
