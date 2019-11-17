@@ -6,6 +6,7 @@
 //  Copyright © 2019 DDD. All rights reserved.
 //
 
+import CodableFirebase
 import FirebaseAuth
 import FirebaseDatabase
 
@@ -41,11 +42,16 @@ class Firebase {
                 completion(nil)
                 return
             }
+            var attendance = [String: Bool]()
+            (0..<10).forEach {
+                attendance.updateValue(false, forKey: "\($0)")
+            }
             let userData: [String: Any] = [
                 "email": user.email,
                 "name": user.name,
                 "position": user.position,
                 "isManager": false,
+                "attendance": attendance
             ]
             Database.database().reference().child("users").child(value.user.uid).setValue(userData)
             completion(value)
@@ -85,12 +91,56 @@ class Firebase {
         }
     }
     
-    func fetchCurriculumList() {
+    func fetchCurriculumList(completion: @escaping ([Curriculum]?) -> Void) {
+        guard let uid = manager.currentUser?.uid else {
+            completion(nil)
+            return
+        }
+        let group = DispatchGroup.init()
+        let queue = DispatchQueue.global()
+        var curriculumList = [[String: String]]()
+        var attendanceList = [Bool]()
+        
+        group.enter()
         database.child("curriculum")
             .observeSingleEvent(of: .value) { snapshot in
-                let value = snapshot.value as? NSDictionary
-                
-                
+                guard
+                    let value = snapshot.value,
+                    let result = value as? [[String: String]] else {
+                        completion(nil)
+                        return
+                }
+                curriculumList = result
+                group.leave()
+        }
+        
+        group.enter()
+        database
+            .child("users")
+            .child(uid)
+            .observeSingleEvent(of: .value, with: { snapshot in
+                guard
+                    let value = snapshot.value as? NSDictionary,
+                    let result = value["attendance"] as? [Bool] else {
+                        completion(nil)
+                        return
+                }
+                attendanceList = result
+                group.leave()
+            }) { error in
+                print(error.localizedDescription)
+                completion(nil)
+        }
+        
+        group.notify(queue: queue) {
+            let results = curriculumList.enumerated().map { offset, element in
+                return Curriculum(date: element["date"] ?? "",
+                                  title: element["title"] ?? "",
+                                  index: offset + 1,
+                                  isAttend: attendanceList[offset])
+            }
+            print(results)
+            completion(results)
         }
     }
 }

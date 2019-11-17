@@ -26,17 +26,17 @@ class HomeDataSource: BaseDataSource {
             cell.configureWith(value: value)
         case let (cell as WelcomeCell, value as String):
             cell.configureWith(value: value)
-        case let (cell as AttendanceListCell, value as AttendanceListModel):
+        case let (cell as AttendanceListCell, value as Curriculum):
             cell.configureWith(value: value)
         default:
             fatalError("Invaild \(cell), \(value)")
         }
     }
     
-    func load(from welcomeData: String, with attendanceList: [AttendanceListModel]) {
+    func load(from welcomeData: String, with curriculumList: [Curriculum]) {
         appendRow(value: HeaderTitle.welcome, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
         appendRow(value: welcomeData, cellClass: WelcomeCell.self, toSection: Section.welcome.rawValue)
-        appendSection(values: attendanceList, cellClass: AttendanceListCell.self)
-        set(value: HeaderTitle.list, cellClass: HomeHeaderCell.self, inSection: Section.attendance.rawValue, row: 0)
+        appendRow(value: HeaderTitle.list, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
+        appendSection(values: curriculumList, cellClass: AttendanceListCell.self)
     }
 }

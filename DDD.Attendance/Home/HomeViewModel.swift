@@ -11,12 +11,16 @@ import ReactiveSwift
 
 protocol HomeViewModelInputs {
     
-    func generateQRCode(by userID: String)
+    func generateQRCode()
+    
+    func remoteCurriculumList()
 }
 
 protocol HomeViewModelOutputs {
     
     var configureAccountView: Signal<AccountModel, Never> { get }
+    
+    var fetchCurriculumList: Signal<[Curriculum], Never> { get }
 }
 
 protocol HomeViewModelTypes {
@@ -28,7 +32,13 @@ protocol HomeViewModelTypes {
 
 class HomeViewModel {
     
+    private let firebase: Firebase
     private let accountModelProperty = MutableProperty<AccountModel?>(nil)
+    private let curriculumListProperty = MutableProperty<[Curriculum]?>(nil)
+    
+    init(firebase: Firebase = Firebase()) {
+        self.firebase = firebase
+    }
 }
 
 extension HomeViewModel: HomeViewModelTypes {
@@ -40,10 +50,17 @@ extension HomeViewModel: HomeViewModelTypes {
 
 extension HomeViewModel: HomeViewModelInputs {
     
-    func generateQRCode(by userID: String) {
-        accountModelProperty.value = AccountModel(userID: userID,
+    func generateQRCode() {
+        guard let uid = firebase.manager.currentUser?.uid else { return }
+        accountModelProperty.value = AccountModel(userID: uid,
                                                   period: "See the details",
-                                                  qrcode: QRCodeController.generate(from: userID) ?? UIImage())
+                                                  qrcode: QRCodeController.generate(from: uid) ?? UIImage())
+    }
+    
+    func remoteCurriculumList() {
+        firebase.fetchCurriculumList { [weak self] curriculum in
+            self?.curriculumListProperty.value = curriculum
+        }
     }
 }
 
@@ -52,5 +69,9 @@ extension HomeViewModel: HomeViewModelOutputs {
     var configureAccountView: Signal<AccountModel, Never> {
         return accountModelProperty.signal.skipNil()
         
+    }
+    
+    var fetchCurriculumList: Signal<[Curriculum], Never> {
+        return curriculumListProperty.signal.skipNil()
     }
 }

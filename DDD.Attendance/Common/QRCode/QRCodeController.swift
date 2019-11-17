@@ -10,8 +10,8 @@ import UIKit
 
 class QRCodeController {
     
-    static func generate(from string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
+    static func generate(from uid: String) -> UIImage? {
+        let data = uid.data(using: String.Encoding.ascii)
 
         guard
             let filter = CIFilter(name: "CIQRCodeGenerator"),

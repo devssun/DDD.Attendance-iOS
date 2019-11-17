@@ -11,8 +11,9 @@ import AVFoundation
 
 class ScannerViewController: BaseViewController {
 
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
+    private var captureSession: AVCaptureSession!
+    private var previewLayer: AVCaptureVideoPreviewLayer!
+    private let firebase = Firebase()
     
     override func bindData() {
         super.bindData()
@@ -20,12 +21,18 @@ class ScannerViewController: BaseViewController {
         view.then {
             $0.backgroundColor = UIColor.black
         }
+
+        navigationItem.title = "Attendance Detector"
         
         setupScanner()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .cancel,
+                                                         target: self,
+                                                         action: #selector(signOut)), animated: true)
         
         captureSession.startRunning()
     }
@@ -92,7 +99,9 @@ private extension ScannerViewController {
     }
     
     func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
+        let ac = UIAlertController(title: "Scanning not supported",
+                                   message: "Your device does not support scanning a code from an item. Please use a device with a camera.",
+                                   preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
         captureSession = nil
@@ -102,6 +111,17 @@ private extension ScannerViewController {
         showAlert(title: "출석 완료", message: code) { [weak self] _ in
             if self?.captureSession?.isRunning == false {
                 self?.captureSession.startRunning()
+            }
+        }
+    }
+    
+    @objc func signOut() {
+        firebase.signOut { [weak self] isSuccess in
+            if isSuccess {
+                let loginVC = LoginViewController.instantiateViewController()
+                UIApplication.shared.keyWindow?.rootViewController = loginVC
+            } else {
+                self?.showAlert(title: "로그아웃 실패", message: "로그아웃에 실패하였습니다.")
             }
         }
     }

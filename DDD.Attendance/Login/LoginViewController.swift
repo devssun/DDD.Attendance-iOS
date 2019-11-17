@@ -37,13 +37,12 @@ class LoginViewController: BaseViewController {
         collectionView.then {
             $0.dataSource = dataSource
             let flowLayout = UICollectionViewFlowLayout()
-            print(UIScreen.main.bounds.height)
-            if UIScreen.main.bounds.height >= 828 {
+            if UIScreen.main.bounds.height < 812 {
                 flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width,
-                                             height: view.frame.height * 0.6)
+                                             height: collectionView.frame.height * 0.7)
             } else {
-                flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width,
-                                             height: view.frame.height * 0.7)
+                flowLayout.itemSize = CGSize(width: collectionView.frame.width,
+                                             height: collectionView.frame.height)
             }
             flowLayout.scrollDirection = .horizontal
             $0.collectionViewLayout = flowLayout
@@ -58,17 +57,17 @@ class LoginViewController: BaseViewController {
             $0.layer.cornerRadius = 25
         }
         
-        pageControl.then {
-            $0.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
-            collectionView.addSubview($0)
-            $0.numberOfPages = posterModels.count
-            $0.tintColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1.0)
-            $0.currentPageTintColor = UIColor(red: 54/255, green: 159/255, blue: 255/255, alpha: 1.0)
-            $0.snp.makeConstraints { make in
-                make.centerY.equalTo(collectionView.snp.centerY)
-                make.top.equalTo(view.snp.top).offset(70)
-            }
-        }
+//        pageControl.then {
+//            $0.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
+//            collectionView.addSubview($0)
+//            $0.numberOfPages = posterModels.count
+//            $0.tintColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1.0)
+//            $0.currentPageTintColor = UIColor(red: 54/255, green: 159/255, blue: 255/255, alpha: 1.0)
+//            $0.snp.makeConstraints { make in
+//                make.centerY.equalTo(collectionView.snp.centerY)
+//                make.top.equalTo(view.snp.top).offset(70)
+//            }
+//        }
     }
     
     override func bindViewModel() {

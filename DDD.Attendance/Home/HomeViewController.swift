@@ -22,8 +22,6 @@ class HomeViewController: BaseViewController {
     
     let transition = HomeTransitionCoordinator()
     
-    let test = AttendanceListModel(attendance: true, timeStamp: "October 12", title: "디디디 커리큘럼 2번째\n아이디어 기획발표")
-    
     static func instantiateViewController() -> HomeViewController {
         return Storyboard.home.viewController(HomeViewController.self)
     }
@@ -67,6 +65,8 @@ class HomeViewController: BaseViewController {
         
         reactive.prepareAccountViewController <~ viewModel.outputs.configureAccountView
             .sample(on: reactive.viewWillAppear)
+        
+        reactive.loadDataSource <~ viewModel.outputs.fetchCurriculumList
     }
     
     override func viewDidLoad() {
@@ -74,10 +74,9 @@ class HomeViewController: BaseViewController {
         
         setupBottomTriggerViewTapGestureRecognizer()
         
-        viewModel.inputs.generateQRCode(by: "godpp")
+        viewModel.inputs.generateQRCode()
         
-        dataSource.load(from: "We suggest you to wear a colorful the gray weather in Milan", with: [test,test,test,test,test,test,test])
-        tableView.reloadData()
+        viewModel.inputs.remoteCurriculumList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -114,6 +113,12 @@ private extension HomeViewController {
         bottomTriggerView.addGestureRecognizer(recognizer)
     }
     
+    func loadDataSource(with curriculumList: [Curriculum]) {
+        dataSource.load(from: "We suggest you to wear a colorful\nthe gray weather in Milan",
+                        with: curriculumList)
+        tableView.reloadData()
+    }
+    
     @objc func bottomTriggerViewTapped() {
         if let viewControllerToPresent = transition.toViewController {
             present(viewControllerToPresent, animated: true)
@@ -144,6 +149,12 @@ extension Reactive where Base: HomeViewController {
     var prepareAccountViewController: BindingTarget<AccountModel> {
         return makeBindingTarget({ base, model in
             base.prepareAccountViewController(by: model)
+        })
+    }
+    
+    var loadDataSource: BindingTarget<[Curriculum]> {
+        return makeBindingTarget({ base, curriculum in
+            base.loadDataSource(with: curriculum)
         })
     }
 }

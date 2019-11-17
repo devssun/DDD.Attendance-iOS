@@ -25,7 +25,3 @@ class PosterCell: UICollectionViewCell, BaseCell {
         posterAnimationView.play()
     }
 }
-
-// MARK: - Private
-private extension PosterCell {
-}

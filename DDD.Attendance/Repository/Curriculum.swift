@@ -12,7 +12,9 @@ struct Curriculum: Codable {
     
     let date: String
     
-    let description: String
-    
     let title: String
+    
+    let index: Int
+    
+    let isAttend: Bool
 }
