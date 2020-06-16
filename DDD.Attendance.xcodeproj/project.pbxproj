@@ -30,7 +30,6 @@
 		BC101482232E26130096E962 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */; };
 		BC101483232E26130096E962 /* GoogleDataTransportCCTSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */; };
 		BC101484232E26130096E962 /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10147F232E26130096E962 /* GoogleDataTransport.framework */; };
-		BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101485232E261E0096E962 /* StoreKit.framework */; };
 		BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC101488232E2D110096E962 /* LoginPopupView.xib */; };
 		BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148A232E2D1C0096E962 /* LoginPopupView.swift */; };
 		BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */; };
@@ -127,7 +126,6 @@
 		BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransportCCTSupport.framework; path = Carthage/Build/iOS/GoogleDataTransportCCTSupport.framework; sourceTree = "<group>"; };
 		BC10147F232E26130096E962 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleDataTransport.framework; path = Carthage/Build/iOS/GoogleDataTransport.framework; sourceTree = "<group>"; };
-		BC101485232E261E0096E962 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BC101488232E2D110096E962 /* LoginPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginPopupView.xib; sourceTree = "<group>"; };
 		BC10148A232E2D1C0096E962 /* LoginPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupView.swift; sourceTree = "<group>"; };
 		BC10148C232E32810096E962 /* LoginTransitionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTransitionCoordinator.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */,
 				BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */,
 				BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */,
-				BC101486232E261E0096E962 /* StoreKit.framework in Frameworks */,
 				BC101480232E26130096E962 /* leveldb-library.framework in Frameworks */,
 				BC101481232E26130096E962 /* nanopb.framework in Frameworks */,
 				BC101482232E26130096E962 /* GoogleAppMeasurement.framework in Frameworks */,
@@ -409,7 +406,6 @@
 				BC7E4AB3235F5C7700A314DA /* FirebaseStorage.framework */,
 				BC101479232E25E80096E962 /* libsqlite3.tbd */,
 				BC101477232E25DF0096E962 /* libc++.tbd */,
-				BC101485232E261E0096E962 /* StoreKit.framework */,
 				BC10147D232E26130096E962 /* GoogleAppMeasurement.framework */,
 				BC10147F232E26130096E962 /* GoogleDataTransport.framework */,
 				BC10147E232E26130096E962 /* GoogleDataTransportCCTSupport.framework */,
@@ -828,7 +824,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86PPC52X64;
+				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -843,7 +839,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.DDD-Attendance";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddd.DDDAttendance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -856,7 +852,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86PPC52X64;
+				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -871,7 +867,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ddd.DDD-Attendance";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddd.DDDAttendance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
