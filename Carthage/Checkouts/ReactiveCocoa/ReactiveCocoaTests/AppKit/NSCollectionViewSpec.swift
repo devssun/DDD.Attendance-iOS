@@ -1,3 +1,4 @@
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import Quick
 import Nimble
 import ReactiveCocoa
@@ -62,3 +63,4 @@ private final class TestCollectionView: NSCollectionView {
 		reloadDataObserver.send(value: ())
 	}
 }
+#endif

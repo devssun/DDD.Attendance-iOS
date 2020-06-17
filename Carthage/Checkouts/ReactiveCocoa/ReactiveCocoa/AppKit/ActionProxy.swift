@@ -1,3 +1,4 @@
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
 import ReactiveSwift
 
@@ -91,3 +92,4 @@ extension Reactive where Base: NSObject, Base: ActionMessageSending {
 		}
 	}
 }
+#endif

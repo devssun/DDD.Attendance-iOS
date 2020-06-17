@@ -1,5 +1,6 @@
-import ReactiveSwift
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
+import ReactiveSwift
 
 extension Reactive where Base: NSTextView {
 	private var notifications: Signal<Notification, Never> {
@@ -36,3 +37,4 @@ extension Reactive where Base: NSTextView {
 	}
 
 }
+#endif

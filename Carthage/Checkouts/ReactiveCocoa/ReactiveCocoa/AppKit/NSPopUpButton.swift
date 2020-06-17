@@ -1,5 +1,6 @@
-import ReactiveSwift
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
+import ReactiveSwift
 
 extension Reactive where Base: NSPopUpButton {
 	
@@ -45,3 +46,4 @@ extension Reactive where Base: NSPopUpButton {
 		}
 	}
 }
+#endif

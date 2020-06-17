@@ -1,3 +1,4 @@
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import Quick
 import Nimble
 import ReactiveCocoa
@@ -129,3 +130,4 @@ final class NSPopUpButtonSpec: QuickSpec {
 		}
 	}
 }
+#endif
