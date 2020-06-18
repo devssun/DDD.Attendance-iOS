@@ -12,13 +12,13 @@
 		20570323232E439900103A3E /* PositionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20570322232E439900103A3E /* PositionCardView.swift */; };
 		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
+		4611919B249BA9170028D99F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4611919A249BA9170028D99F /* GoogleService-Info.plist */; };
 		46337A7A249A697E00AF4FA4 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; };
 		46337A7B249A697E00AF4FA4 /* Protobuf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		46337A7E249A697F00AF4FA4 /* TextFieldEffects.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */; };
 		BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
-		BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC10144D232E20330096E962 /* GoogleService-Info.plist */; };
 		BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */; };
 		BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101460232E24FE0096E962 /* FirebaseDatabase.framework */; };
 		BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101461232E24FE0096E962 /* FirebaseCore.framework */; };
@@ -123,11 +123,11 @@
 		20570322232E439900103A3E /* PositionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCardView.swift; sourceTree = "<group>"; };
 		2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		20B81DFA232D54E20081D341 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		4611919A249BA9170028D99F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC0C4F4823744E4100DA85B0 /* FirebaseInAppMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInAppMessaging.framework; path = Carthage/Build/iOS/FirebaseInAppMessaging.framework; sourceTree = "<group>"; };
 		BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
 		BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Carthage/Build/iOS/Protobuf.framework; sourceTree = "<group>"; };
 		BC0C4F4F23746EEF00DA85B0 /* DDD.Attendance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DDD.Attendance.entitlements; sourceTree = "<group>"; };
-		BC10144D232E20330096E962 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = Carthage/Build/iOS/GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		BC101460232E24FE0096E962 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Carthage/Build/iOS/FirebaseDatabase.framework; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 				BCE1B3C1231BB68F001BB684 /* Assets.xcassets */,
 				BCE1B3C3231BB68F001BB684 /* LaunchScreen.storyboard */,
 				BCE1B3C6231BB68F001BB684 /* Info.plist */,
-				BC10144D232E20330096E962 /* GoogleService-Info.plist */,
+				4611919A249BA9170028D99F /* GoogleService-Info.plist */,
 			);
 			path = DDD.Attendance;
 			sourceTree = "<group>";
@@ -606,13 +606,13 @@
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
 				BCE1B3F7231BE689001BB684 /* AccountView.xib in Resources */,
+				4611919B249BA9170028D99F /* GoogleService-Info.plist in Resources */,
 				BC3E50C4232A5FBC00B56EBF /* StepFourView.xib in Resources */,
 				BCDE47572379BED0009CEAC2 /* onBoarding1.json in Resources */,
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
 				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
 				E571F77723241F5300816C04 /* Account.storyboard in Resources */,
-				BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
