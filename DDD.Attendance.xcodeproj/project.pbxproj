@@ -12,9 +12,12 @@
 		20570323232E439900103A3E /* PositionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20570322232E439900103A3E /* PositionCardView.swift */; };
 		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
+		46337A7A249A697E00AF4FA4 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; };
+		46337A7B249A697E00AF4FA4 /* Protobuf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
+		46337A7E249A697F00AF4FA4 /* TextFieldEffects.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */; };
 		BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
-		BC0C4F4E23746C8A00DA85B0 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; };
 		BC10144E232E20330096E962 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC10144D232E20330096E962 /* GoogleService-Info.plist */; };
 		BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */; };
 		BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC101460232E24FE0096E962 /* FirebaseDatabase.framework */; };
@@ -52,7 +55,6 @@
 		BC3E50C4232A5FBC00B56EBF /* StepFourView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50C3232A5FBC00B56EBF /* StepFourView.xib */; };
 		BC3E50C6232A5FC800B56EBF /* StepFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C5232A5FC800B56EBF /* StepFourView.swift */; };
 		BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50C7232A6D6C00B56EBF /* Optional+Extension.swift */; };
-		BC3E50CA232A973D00B56EBF /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		BC7E4AB6235F5F7F00A314DA /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4AB5235F5F7F00A314DA /* ScannerViewController.swift */; };
 		BC8863F5234E36C50031C7F1 /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F4234E36C50031C7F1 /* LoginDataSource.swift */; };
 		BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8863F9234E36FE0031C7F1 /* PosterCell.swift */; };
@@ -99,6 +101,21 @@
 		E571F77A2324345400816C04 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571F7792324345400816C04 /* UIView+Extension.swift */; };
 		E571F77C23243D7600816C04 /* HomeTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571F77B23243D7600816C04 /* HomeTransitionCoordinator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46337A7C249A697E00AF4FA4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46337A7B249A697E00AF4FA4 /* Protobuf.framework in Embed Frameworks */,
+				46337A7E249A697F00AF4FA4 /* TextFieldEffects.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		204FC78E236084D100AE693A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -206,7 +223,6 @@
 			files = (
 				BCDE47532379BD97009CEAC2 /* CodableFirebase.framework in Frameworks */,
 				BCDE47542379BD97009CEAC2 /* Lottie.framework in Frameworks */,
-				BC0C4F4E23746C8A00DA85B0 /* Protobuf.framework in Frameworks */,
 				BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */,
 				BC101472232E24FF0096E962 /* GoogleUtilities.framework in Frameworks */,
 				BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */,
@@ -220,13 +236,14 @@
 				BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */,
 				BC101470232E24FF0096E962 /* FirebaseAuth.framework in Frameworks */,
 				BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */,
-				BC3E50CA232A973D00B56EBF /* TextFieldEffects.framework in Frameworks */,
 				BC101476232E24FF0096E962 /* FirebaseAnalytics.framework in Frameworks */,
 				BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */,
 				E571F75F2323F08700816C04 /* SnapKit.framework in Frameworks */,
+				46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */,
 				BCE1B3DE231BD8E1001BB684 /* Alamofire.framework in Frameworks */,
 				BCE1B3D9231BB858001BB684 /* ReactiveMapKit.framework in Frameworks */,
 				BCE1B3DA231BB858001BB684 /* ReactiveSwift.framework in Frameworks */,
+				46337A7A249A697E00AF4FA4 /* Protobuf.framework in Frameworks */,
 				BC101471232E24FF0096E962 /* FIRAnalyticsConnector.framework in Frameworks */,
 				BCE1B3DB231BB858001BB684 /* ReactiveCocoa.framework in Frameworks */,
 			);
@@ -524,6 +541,7 @@
 				BCE1B3B4231BB68D001BB684 /* Frameworks */,
 				BCE1B3B5231BB68D001BB684 /* Resources */,
 				BCE1B3DC231BB85E001BB684 /* Carthage */,
+				46337A7C249A697E00AF4FA4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
