@@ -14,7 +14,7 @@ class ScannerViewController: BaseViewController {
     private var captureSession: AVCaptureSession!
     private var previewLayer: AVCaptureVideoPreviewLayer!
     private let firebase = Firebase()
-    var attendanceTimeStamp: Int64!
+    var attendanceTimeStamp: Int64?
     
     override func bindData() {
         super.bindData()
@@ -36,15 +36,20 @@ class ScannerViewController: BaseViewController {
                                                          target: self,
                                                          action: #selector(outQRScanner)), animated: true)
         
+        guard attendanceTimeStamp != nil else {
+            self.showAlert(title: "출석 시간 없음",
+                           message: "출석 시간이 등록되지 않았습니다.") { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }
+            return
+        }
         captureSession.startRunning()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if captureSession?.isRunning == false {
-            captureSession.startRunning()
-        }
+        captureSession.startRunning()
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -109,19 +114,26 @@ private extension ScannerViewController {
         captureSession = nil
     }
     
-    func found(userId: String) {
-        let currentTimeStamp = Int64(Date().timeIntervalSince1970 * 1000)
+    func found(from userId: String) {
+        guard let attendanceTimeStamp = attendanceTimeStamp else { return }
+        let currentTimeStamp = Date().getTimeStamp()
         let isLate = currentTimeStamp > attendanceTimeStamp
         firebase.attendance(userId: userId, isLate: isLate, timeStamp: currentTimeStamp) { [weak self] result in
-            if result {
-                self?.showAlert(title: "출석 완료", message: nil) { [weak self] _ in
-                    if self?.captureSession?.isRunning == false {
-                        self?.captureSession.startRunning()
-                    }
-                }
-            } else {
-                self?.showAlert(title: "출석 실패", message: "QR 코드를 다시 스캔해주세요")
-            }
+            self?.processedAttendance(result: result)
+        }
+    }
+    
+    func processedAttendance(result: Bool) {
+        let title = result ? "출석 완료" : "출석 실패"
+        let message: String? = result ? nil : "QR 코드를 다시 스캔해주세요"
+        self.showAlert(title: title, message: message) { [weak self] _ in
+            self?.restartScanner()
+        }
+    }
+    
+    func restartScanner() {
+        if self.captureSession?.isRunning == false {
+            self.captureSession.startRunning()
         }
     }
     
@@ -142,7 +154,7 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(userId: stringValue)
+            found(from: stringValue)
         }
         
         if captureSession?.isRunning == true {

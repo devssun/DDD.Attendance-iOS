@@ -101,11 +101,7 @@ class Firebase {
             .child("attendance")
             .child("\(timeStamp)")
             .setValue(attendance, withCompletionBlock: { error, _ in
-                if error != nil {
-                    completion(false)
-                } else {
-                    completion(true)
-                }
+                completion(error == nil)
             })
     }
     

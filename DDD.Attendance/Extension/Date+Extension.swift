@@ -9,6 +9,9 @@
 import Foundation
 
 extension Date {
+    func getTimeStamp() -> Int64 {
+        return Int64(self.timeIntervalSince1970 * 1000)
+    }
     
     func toString(format: String = "yyyy-MM-dd") -> String {
         let formatter = DateFormatter()
@@ -17,7 +20,7 @@ extension Date {
         return formatter.string(from: self)
     }
     
-    func dateAndTimetoString(format: String = "yyyy-MM-dd HH:mm") -> String {
+    func dateAndTimetoString(format: String = "yyyy년 MM월 dd일 a hh:mm") -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.dateFormat = format

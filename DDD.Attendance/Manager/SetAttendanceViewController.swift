@@ -22,55 +22,66 @@ class SetAttendanceViewController: BaseViewController {
         return Storyboard.manager.viewController(SetAttendanceViewController.self)
     }
     
-    var selectedDate: String = "" {
+    private var selectedDate = Date() {
         didSet {
-            showDatePickerButton.setTitle(selectedDate, for: .normal)
+            showDatePickerButton.setTitle(selectedDate.dateAndTimetoString(), for: .normal)
+        }
+    }
+    
+    private var isSetTime: Bool = false {
+        didSet {
+            datePicker.isHidden = !isSetTime
+            setDateButton.isHidden = !isSetTime
         }
     }
 
     override func bindData() {
         super.bindData()
         // Do any additional setup after loading the view.
-        showDatePickerButton.then {
-            $0.addTarget(self,
-                         action: #selector(touchedShowDatePickerButton),
-                         for: .touchUpInside)
-        }
-        datePicker.then {
-            $0.addTarget(self,
-                         action: #selector(changedDatePicker(_:)),
-                         for: .valueChanged)
+    }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        showDatePickerButton
+            .reactive
+            .controlEvents(.touchUpInside)
+            .observeValues { [weak self] _ in
+                guard let `self` = self else { return }
+                self.isSetTime = !self.isSetTime
         }
         
-        openQRScannerButton.then {
-            $0.addTarget(self,
-                         action: #selector(touchedOpenQRScannerButton),
-                         for: .touchUpInside)
+        datePicker
+            .reactive
+            .controlEvents(.valueChanged)
+            .observeValues { [weak self] picker in
+                self?.selectedDate = picker.date
         }
-        setDateButton.then {
-            $0.addTarget(self,
-                         action: #selector(touchedSetDateButton),
-                         for: .touchUpInside)
+        
+        openQRScannerButton
+            .reactive
+            .controlEvents(.touchUpInside)
+            .observeValues { [weak self] _ in
+                self?.touchedOpenQRScannerButton()
+        }
+        
+        setDateButton
+            .reactive
+            .controlEvents(.touchUpInside)
+            .observeValues { [weak self] _ in
+                guard let `self` = self else { return }
+                self.isSetTime = false
+                self.attendanceTimeStamp = self.selectedDate.getTimeStamp()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isSetTime = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        selectedDate = Date().dateAndTimetoString(format: "yyyy년 MM월 dd일 a hh:mm")
-    }
-    
-    @objc private func touchedShowDatePickerButton(_ sender: UIButton) {
-        datePicker.isHidden = !datePicker.isHidden
-        setDateButton.isHidden = !setDateButton.isHidden
-    }
-    
-    @objc private func changedDatePicker(_ sender: UIDatePicker) {
-        selectedDate = sender.date.dateAndTimetoString(format: "yyyy년 MM월 dd일 a hh:mm")
-        attendanceTimeStamp = Int64(sender.date.timeIntervalSince1970 * 1000)
+        selectedDate = Date()
     }
     
     @objc private func touchedOpenQRScannerButton() {
@@ -79,11 +90,6 @@ class SetAttendanceViewController: BaseViewController {
             return
         }
         self.moveScannerViewController(attendanceTimeStamp: attendanceTimeStamp)
-    }
-    
-    @objc private func touchedSetDateButton() {
-        datePicker.isHidden = true
-        setDateButton.isHidden = true
     }
     
     @objc func moveScannerViewController(attendanceTimeStamp: Int64) {
