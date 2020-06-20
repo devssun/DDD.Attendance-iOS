@@ -91,6 +91,24 @@ class Firebase {
         }
     }
     
+    func attendance(userId: String, isLate: Bool, timeStamp: Int64, completion: @escaping(Bool) -> Void) {
+        let attendance: [String: String] = [
+            "result": isLate ? "1" : "0"
+        ]
+        database
+            .child("users")
+            .child(userId)
+            .child("attendance")
+            .child("\(timeStamp)")
+            .setValue(attendance, withCompletionBlock: { error, _ in
+                if error != nil {
+                    completion(false)
+                } else {
+                    completion(true)
+                }
+            })
+    }
+    
     func fetchCurriculumList(completion: @escaping ([Curriculum]?) -> Void) {
         guard let uid = manager.currentUser?.uid else {
             completion(nil)

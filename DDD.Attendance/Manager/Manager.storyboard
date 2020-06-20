@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hTq-ZN-rXw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set Attendance View Controller-->
+        <scene sceneID="OMn-e5-6XS">
+            <objects>
+                <viewController storyboardIdentifier="SetAttendanceViewController" id="hTq-ZN-rXw" customClass="SetAttendanceViewController" customModule="DDD_Attendance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ah3-w5-RbQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4J-g7-iYX">
+                                <rect key="frame" x="0.0" y="799" width="414" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="vnV-cR-kHo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="QR Code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="McM-yj-T1p">
+                                <rect key="frame" x="0.0" y="363" width="414" height="170.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 출석 시간은 몇 시 인가요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My7-9C-JgC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDu-jR-Mb5">
+                                        <rect key="frame" x="0.0" y="32.5" width="414" height="63"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFq-WR-cl2">
+                                                <rect key="frame" x="24" y="0.0" width="366" height="63"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="2020년 6월 20일 오후 4시 00분">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="iFq-WR-cl2" secondAttribute="trailing" constant="24" id="5Zb-m5-WdN"/>
+                                            <constraint firstItem="iFq-WR-cl2" firstAttribute="top" secondItem="XDu-jR-Mb5" secondAttribute="top" id="AZI-xo-WhQ"/>
+                                            <constraint firstAttribute="height" constant="63" id="Wg7-DZ-AyH"/>
+                                            <constraint firstItem="iFq-WR-cl2" firstAttribute="leading" secondItem="XDu-jR-Mb5" secondAttribute="leading" constant="24" id="hfw-QB-Ube"/>
+                                            <constraint firstAttribute="bottom" secondItem="iFq-WR-cl2" secondAttribute="bottom" id="tbD-mt-lzS"/>
+                                        </constraints>
+                                    </view>
+                                    <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-BP-wz7">
+                                        <rect key="frame" x="0.0" y="101" width="414" height="0.0"/>
+                                    </datePicker>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUk-d8-03V">
+                                        <rect key="frame" x="0.0" y="107.5" width="414" height="63"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5k-LG-15c">
+                                                <rect key="frame" x="24" y="0.0" width="366" height="63"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="✅확인">
+                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="x5k-LG-15c" secondAttribute="bottom" id="7U5-aG-shO"/>
+                                            <constraint firstItem="x5k-LG-15c" firstAttribute="leading" secondItem="rUk-d8-03V" secondAttribute="leading" constant="24" id="CWs-Iz-QoV"/>
+                                            <constraint firstAttribute="trailing" secondItem="x5k-LG-15c" secondAttribute="trailing" constant="24" id="MQm-t9-IkG"/>
+                                            <constraint firstAttribute="height" constant="63" id="OYP-qK-zKT"/>
+                                            <constraint firstItem="x5k-LG-15c" firstAttribute="top" secondItem="rUk-d8-03V" secondAttribute="top" id="qOQ-Kh-bpz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-Gh-3La">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e4J-g7-iYX" firstAttribute="leading" secondItem="WO0-cE-Tkt" secondAttribute="leading" id="35V-dg-qvA"/>
+                            <constraint firstItem="WO0-cE-Tkt" firstAttribute="trailing" secondItem="McM-yj-T1p" secondAttribute="trailing" id="GBS-UV-0us"/>
+                            <constraint firstItem="WO0-cE-Tkt" firstAttribute="trailing" secondItem="e4J-g7-iYX" secondAttribute="trailing" id="Imz-n1-hdO"/>
+                            <constraint firstItem="McM-yj-T1p" firstAttribute="centerY" secondItem="ah3-w5-RbQ" secondAttribute="centerY" id="NyT-J9-zV4"/>
+                            <constraint firstItem="QLd-Gh-3La" firstAttribute="top" secondItem="WO0-cE-Tkt" secondAttribute="bottom" id="Y5D-o0-EOA"/>
+                            <constraint firstAttribute="trailing" secondItem="QLd-Gh-3La" secondAttribute="trailing" id="esx-Ub-vF9"/>
+                            <constraint firstItem="e4J-g7-iYX" firstAttribute="bottom" secondItem="WO0-cE-Tkt" secondAttribute="bottom" id="ive-TF-bRc"/>
+                            <constraint firstItem="McM-yj-T1p" firstAttribute="leading" secondItem="ah3-w5-RbQ" secondAttribute="leading" id="qeH-WJ-WLr"/>
+                            <constraint firstAttribute="bottom" secondItem="QLd-Gh-3La" secondAttribute="bottom" id="tqd-hH-PDH"/>
+                            <constraint firstItem="QLd-Gh-3La" firstAttribute="leading" secondItem="ah3-w5-RbQ" secondAttribute="leading" id="wFy-5d-4bV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WO0-cE-Tkt"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="datePicker" destination="BeT-BP-wz7" id="GP6-21-Cwc"/>
+                        <outlet property="openQRScannerButton" destination="e4J-g7-iYX" id="lHM-Ik-hL3"/>
+                        <outlet property="setDateButton" destination="x5k-LG-15c" id="XxQ-GK-Sfr"/>
+                        <outlet property="showDatePickerButton" destination="iFq-WR-cl2" id="VCn-6R-akV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dG-yC-G49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2463768115942031" y="160.71428571428569"/>
+        </scene>
+    </scenes>
+</document>

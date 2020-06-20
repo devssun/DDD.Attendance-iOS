@@ -30,7 +30,7 @@ class LoginPopupViewController: BaseViewController {
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
             switch status {
             case .admin:
-                self?.moveScannerViewController()
+                self?.moveSetAttendanceViewController()
             case .default:
                 self?.moveHomeViewController()
             case .failure:
@@ -58,6 +58,12 @@ private extension LoginPopupViewController {
     func moveScannerViewController() {
         let scannerVC = ScannerViewController()
         let navigationVC = UINavigationController(rootViewController: scannerVC)
+        UIApplication.shared.keyWindow?.rootViewController = navigationVC
+    }
+    
+    func moveSetAttendanceViewController() {
+        let setAttendanceVC = SetAttendanceViewController.instantiateViewController()
+        let navigationVC = UINavigationController(rootViewController: setAttendanceVC)
         UIApplication.shared.keyWindow?.rootViewController = navigationVC
     }
     

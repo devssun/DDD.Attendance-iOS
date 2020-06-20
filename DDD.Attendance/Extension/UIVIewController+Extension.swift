@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     
     func showAlert(title: String,
-                   message: String,
+                   message: String?,
                    handler: ((UIAlertAction) -> Swift.Void)? = nil
     ) {
         DispatchQueue.main.async { [unowned self] in

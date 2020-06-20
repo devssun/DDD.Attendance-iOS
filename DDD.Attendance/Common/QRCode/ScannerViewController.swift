@@ -14,6 +14,7 @@ class ScannerViewController: BaseViewController {
     private var captureSession: AVCaptureSession!
     private var previewLayer: AVCaptureVideoPreviewLayer!
     private let firebase = Firebase()
+    var attendanceTimeStamp: Int64!
     
     override func bindData() {
         super.bindData()
@@ -30,9 +31,10 @@ class ScannerViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.setHidesBackButton(true, animated: false)
         navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .cancel,
                                                          target: self,
-                                                         action: #selector(signOut)), animated: true)
+                                                         action: #selector(outQRScanner)), animated: true)
         
         captureSession.startRunning()
     }
@@ -107,23 +109,24 @@ private extension ScannerViewController {
         captureSession = nil
     }
     
-    func found(code: String) {
-        showAlert(title: "출석 완료", message: code) { [weak self] _ in
-            if self?.captureSession?.isRunning == false {
-                self?.captureSession.startRunning()
+    func found(userId: String) {
+        let currentTimeStamp = Int64(Date().timeIntervalSince1970 * 1000)
+        let isLate = currentTimeStamp > attendanceTimeStamp
+        firebase.attendance(userId: userId, isLate: isLate, timeStamp: currentTimeStamp) { [weak self] result in
+            if result {
+                self?.showAlert(title: "출석 완료", message: nil) { [weak self] _ in
+                    if self?.captureSession?.isRunning == false {
+                        self?.captureSession.startRunning()
+                    }
+                }
+            } else {
+                self?.showAlert(title: "출석 실패", message: "QR 코드를 다시 스캔해주세요")
             }
         }
     }
     
-    @objc func signOut() {
-        firebase.signOut { [weak self] isSuccess in
-            if isSuccess {
-                let loginVC = LoginViewController.instantiateViewController()
-                UIApplication.shared.keyWindow?.rootViewController = loginVC
-            } else {
-                self?.showAlert(title: "로그아웃 실패", message: "로그아웃에 실패하였습니다.")
-            }
-        }
+    @objc func outQRScanner() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -139,7 +142,7 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(code: stringValue)
+            found(userId: stringValue)
         }
         
         if captureSession?.isRunning == true {
