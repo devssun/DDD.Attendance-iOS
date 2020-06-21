@@ -114,16 +114,16 @@ private extension ScannerViewController {
         captureSession = nil
     }
     
-    func found(from userId: String) {
+    func processedAttendance(from userId: String) {
         guard let attendanceTimeStamp = attendanceTimeStamp else { return }
         let currentTimeStamp = Date().getTimeStamp()
         let isLate = currentTimeStamp > attendanceTimeStamp
         firebase.attendance(userId: userId, isLate: isLate, timeStamp: currentTimeStamp) { [weak self] result in
-            self?.processedAttendance(result: result)
+            self?.showResult(result: result)
         }
     }
     
-    func processedAttendance(result: Bool) {
+    func showResult(result: Bool) {
         let title = result ? "출석 완료" : "출석 실패"
         let message: String? = result ? nil : "QR 코드를 다시 스캔해주세요"
         self.showAlert(title: title, message: message) { [weak self] _ in
@@ -154,7 +154,7 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            found(from: stringValue)
+            processedAttendance(from: stringValue)
         }
         
         if captureSession?.isRunning == true {
