@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions,completionHandler: {_, _ in })
         application.registerForRemoteNotifications()
-        
+        signOutIfNeeded()
         return true
     }
     
@@ -45,5 +45,20 @@ extension AppDelegate: MessagingDelegate {
         print("Firebase registration token: \(fcmToken)")
         let dataDict:[String: String] = ["token": fcmToken]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+    }
+}
+private extension AppDelegate {
+    func signOutIfNeeded() {
+        let userDefault = UserDefaults.standard
+        if userDefault.value(forKey: "wasOpendApp") == nil {
+            userDefault.set(true, forKey: "wasOpendApp")
+            Firebase().signOut { isSuccess in
+                if isSuccess {
+                    print("Success - Unauthenticate Firebase")
+                } else {
+                    print("Failure - Unauthenticate Firebase")
+                }
+            }
+        }
     }
 }
