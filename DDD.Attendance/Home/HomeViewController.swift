@@ -42,10 +42,10 @@ class HomeViewController: BaseViewController {
             $0.dataSource = dataSource
         }
         
-        profileButton.then {
-            $0.action = #selector(signOut)
-            $0.target = self
-        }
+//        profileButton.then {
+//            $0.action = #selector(signOut)
+//            $0.target = self
+//        }
     }
     
     override func bindStyle() {
