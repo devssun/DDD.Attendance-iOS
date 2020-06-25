@@ -17,6 +17,7 @@
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46481EA0249DF5E700F3DB02 /* Manager.storyboard */; };
 		46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */; };
+		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
 		BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */; };
 		BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
 		BC10146D232E24FF0096E962 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145F232E24FE0096E962 /* GTMSessionFetcher.framework */; };
@@ -124,6 +125,7 @@
 		4611919A249BA9170028D99F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46481EA0249DF5E700F3DB02 /* Manager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Manager.storyboard; sourceTree = "<group>"; };
 		46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAttendanceViewController.swift; sourceTree = "<group>"; };
+		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		BC0C4F4823744E4100DA85B0 /* FirebaseInAppMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInAppMessaging.framework; path = Carthage/Build/iOS/FirebaseInAppMessaging.framework; sourceTree = "<group>"; };
 		BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
 		BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Carthage/Build/iOS/Protobuf.framework; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE1B4122320054F001BB684 /* AttendanceListModel.swift */,
+				46AD886224A4DAFA0036B4AF /* BannerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */,
 				BC381F302349F4760040202D /* Firebase.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
+				46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
 				BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */,

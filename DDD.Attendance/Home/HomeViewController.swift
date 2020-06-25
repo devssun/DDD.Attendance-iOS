@@ -66,7 +66,9 @@ class HomeViewController: BaseViewController {
         reactive.prepareAccountViewController <~ viewModel.outputs.configureAccountView
             .sample(on: reactive.viewWillAppear)
         
-        reactive.loadDataSource <~ viewModel.outputs.fetchCurriculumList
+        reactive.loadBanner <~ viewModel.outputs.fetchBanner
+        
+        reactive.loadCurriculum <~ viewModel.outputs.fetchCurriculumList
     }
     
     override func viewDidLoad() {
@@ -77,6 +79,8 @@ class HomeViewController: BaseViewController {
         viewModel.inputs.generateQRCode()
         
         viewModel.inputs.remoteCurriculumList()
+        
+        viewModel.inputs.remoteBanner()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,9 +117,13 @@ private extension HomeViewController {
         bottomTriggerView.addGestureRecognizer(recognizer)
     }
     
-    func loadDataSource(with curriculumList: [Curriculum]) {
-        dataSource.load(from: "We suggest you to wear a colorful\nthe gray weather in Milan",
-                        with: curriculumList)
+    func loadBanner(with banner: Banner) {
+        dataSource.loadBanner(with: banner)
+        tableView.reloadData()
+    }
+    
+    func loadCurriculum(with curriculumList: [Curriculum]) {
+        dataSource.loadCurriculum(with: curriculumList)
         tableView.reloadData()
     }
     
@@ -152,9 +160,15 @@ extension Reactive where Base: HomeViewController {
         })
     }
     
-    var loadDataSource: BindingTarget<[Curriculum]> {
+    var loadCurriculum: BindingTarget<[Curriculum]> {
         return makeBindingTarget({ base, curriculum in
-            base.loadDataSource(with: curriculum)
+            base.loadCurriculum(with: curriculum)
+        })
+    }
+    
+    var loadBanner: BindingTarget<Banner> {
+        return makeBindingTarget ({ base, banner in
+            base.loadBanner(with: banner)
         })
     }
 }

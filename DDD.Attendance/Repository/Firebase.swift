@@ -153,8 +153,21 @@ class Firebase {
                                   index: offset + 1,
                                   isAttend: attendanceList[offset])
             }
-            print(results)
+//            print(results)
             completion(results)
+        }
+    }
+    
+    func fetchBanner(completion: @escaping(Banner?) -> Void) {
+        database.child("banner")
+            .observeSingleEvent(of: .value) { snapshot in
+                guard let value = snapshot.value, let result = value as? [String: String] else {
+                    completion(nil)
+                    return
+                }
+                
+                let banner = Banner(title: result["title"] ?? "", subTitle: result["subTitle"] ?? "")
+                completion(banner)
         }
     }
 }

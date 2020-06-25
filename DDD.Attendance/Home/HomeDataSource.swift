@@ -16,8 +16,7 @@ class HomeDataSource: BaseDataSource {
     }
     
     enum HeaderTitle {
-        static let welcome = "Welcome Back"
-        static let list = "Calendar List"
+        static let list = "4기 커리큘럼 리스트"
     }
     
     override func configureCell(tableCell cell: UITableViewCell, withValue value: Any) {
@@ -33,9 +32,12 @@ class HomeDataSource: BaseDataSource {
         }
     }
     
-    func load(from welcomeData: String, with curriculumList: [Curriculum]) {
-        appendRow(value: HeaderTitle.welcome, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
-        appendRow(value: welcomeData, cellClass: WelcomeCell.self, toSection: Section.welcome.rawValue)
+    func loadBanner(with banner: Banner) {
+        appendRow(value: banner.title, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
+        appendRow(value: banner.subTitle, cellClass: WelcomeCell.self, toSection: Section.welcome.rawValue)
+    }
+    
+    func loadCurriculum(with curriculumList: [Curriculum]) {
         appendRow(value: HeaderTitle.list, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
         appendSection(values: curriculumList, cellClass: AttendanceListCell.self)
     }

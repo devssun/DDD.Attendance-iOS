@@ -14,6 +14,8 @@ protocol HomeViewModelInputs {
     func generateQRCode()
     
     func remoteCurriculumList()
+    
+    func remoteBanner()
 }
 
 protocol HomeViewModelOutputs {
@@ -21,6 +23,8 @@ protocol HomeViewModelOutputs {
     var configureAccountView: Signal<AccountModel, Never> { get }
     
     var fetchCurriculumList: Signal<[Curriculum], Never> { get }
+    
+    var fetchBanner: Signal<Banner, Never> { get }
 }
 
 protocol HomeViewModelTypes {
@@ -35,6 +39,7 @@ class HomeViewModel {
     private let firebase: Firebase
     private let accountModelProperty = MutableProperty<AccountModel?>(nil)
     private let curriculumListProperty = MutableProperty<[Curriculum]?>(nil)
+    private let bannerProperty = MutableProperty<Banner?>(nil)
     
     init(firebase: Firebase = Firebase()) {
         self.firebase = firebase
@@ -62,6 +67,12 @@ extension HomeViewModel: HomeViewModelInputs {
             self?.curriculumListProperty.value = curriculum
         }
     }
+    
+    func remoteBanner() {
+        firebase.fetchBanner { [weak self] banner in
+            self?.bannerProperty.value = banner
+        }
+    }
 }
 
 extension HomeViewModel: HomeViewModelOutputs {
@@ -73,5 +84,9 @@ extension HomeViewModel: HomeViewModelOutputs {
     
     var fetchCurriculumList: Signal<[Curriculum], Never> {
         return curriculumListProperty.signal.skipNil()
+    }
+    
+    var fetchBanner: Signal<Banner, Never> {
+        return bannerProperty.signal.skipNil()
     }
 }
