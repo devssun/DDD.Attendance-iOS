@@ -23,7 +23,7 @@ class HomeDataSource: BaseDataSource {
         switch (cell, value) {
         case let (cell as HomeHeaderCell, value as String):
             cell.configureWith(value: value)
-        case let (cell as WelcomeCell, value as String):
+        case let (cell as WelcomeCell, value as Banner):
             cell.configureWith(value: value)
         case let (cell as AttendanceListCell, value as Curriculum):
             cell.configureWith(value: value)
@@ -34,7 +34,7 @@ class HomeDataSource: BaseDataSource {
     
     func loadBanner(with banner: Banner) {
         appendRow(value: banner.title, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
-        appendRow(value: banner.subTitle, cellClass: WelcomeCell.self, toSection: Section.welcome.rawValue)
+        appendRow(value: banner, cellClass: WelcomeCell.self, toSection: Section.welcome.rawValue)
     }
     
     func loadCurriculum(with curriculumList: [Curriculum]) {

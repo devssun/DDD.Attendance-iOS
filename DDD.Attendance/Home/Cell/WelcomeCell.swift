@@ -15,7 +15,12 @@ class WelcomeCell: UITableViewCell, BaseCell {
     @IBOutlet private weak var subjectLabel: UILabel!
     @IBOutlet private weak var welcomeImageView: UIImageView!
     
-    func configureWith(value: String) {
-        subjectLabel.text = value
+    func configureWith(value: Banner) {
+        subjectLabel.text = value.subTitle
+        if let imageData = value.image {
+            welcomeImageView.image = UIImage(data: imageData)
+        } else {
+            welcomeImageView.image = #imageLiteral(resourceName: "mainTemporaryBanner")
+        }
     }
 }

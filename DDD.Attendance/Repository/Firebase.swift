@@ -133,7 +133,14 @@ class Firebase {
                     return
                 }
                 
-                let banner = Banner(title: result["title"] ?? "", subTitle: result["subTitle"] ?? "")
+                guard let url = URL(string: "gs://ddd-project-a6eb3.appspot.com/banner/banner.png") else {
+                    return
+                }
+                
+                let data = try? Data(contentsOf: url)
+                let banner = Banner(title: result["title"] ?? "",
+                                    subTitle: result["subTitle"] ?? "",
+                                    image: data)
                 completion(banner)
         }
     }
