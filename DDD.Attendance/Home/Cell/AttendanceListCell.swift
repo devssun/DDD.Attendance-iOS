@@ -26,6 +26,6 @@ class AttendanceListCell: UITableViewCell, BaseCell {
     func configureWith(value: Curriculum) {
         attendanceTitleLabel.text = "디디디 커리큘럼 \(value.index)번째 \n" + value.title
         attendanceTimeStampLabel.text = value.date
-        attendanceImageView.image = value.isAttend ? #imageLiteral(resourceName: "btnCheck") : #imageLiteral(resourceName: "btnCheckGray")
+        attendanceImageView.image = value.isDone ? #imageLiteral(resourceName: "btnCheck") : #imageLiteral(resourceName: "btnCheckGray")
     }
 }

@@ -78,9 +78,9 @@ class HomeViewController: BaseViewController {
         
         viewModel.inputs.generateQRCode()
         
-        viewModel.inputs.remoteCurriculumList()
-        
         viewModel.inputs.remoteBanner()
+        
+        viewModel.inputs.remoteCurriculumList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
