@@ -137,10 +137,17 @@ class Firebase {
                     return
                 }
                 
-                let data = try? Data(contentsOf: url)
+                var imageData: Data?
+                do {
+                    imageData = try Data(contentsOf: url)
+                } catch {
+                    print(error.localizedDescription)
+                    imageData = nil
+                }
+                
                 let banner = Banner(title: result["title"] ?? "",
                                     subTitle: result["subTitle"] ?? "",
-                                    image: data)
+                                    imageData: imageData)
                 completion(banner)
         }
     }

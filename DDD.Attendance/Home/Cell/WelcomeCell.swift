@@ -17,7 +17,7 @@ class WelcomeCell: UITableViewCell, BaseCell {
     
     func configureWith(value: Banner) {
         subjectLabel.text = value.subTitle
-        if let imageData = value.image {
+        if let imageData = value.imageData {
             welcomeImageView.image = UIImage(data: imageData)
         } else {
             welcomeImageView.image = #imageLiteral(resourceName: "mainTemporaryBanner")
