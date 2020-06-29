@@ -17,6 +17,8 @@
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46481EA0249DF5E700F3DB02 /* Manager.storyboard */; };
 		46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */; };
+		4655F1E024AA116000AC6BE5 /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */; };
+		4655F1E124AA116000AC6BE5 /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4655F1DF24AA116000AC6BE5 /* Onboarding2.json */; };
 		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
 		BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */; };
 		BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
@@ -66,8 +68,6 @@
 		BCDE47502379A990009CEAC2 /* Curriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE474F2379A990009CEAC2 /* Curriculum.swift */; };
 		BCDE47532379BD97009CEAC2 /* CodableFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDE47512379BD97009CEAC2 /* CodableFirebase.framework */; };
 		BCDE47542379BD97009CEAC2 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDE47522379BD97009CEAC2 /* Lottie.framework */; };
-		BCDE47572379BED0009CEAC2 /* onBoarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = BCDE47552379BECF009CEAC2 /* onBoarding1.json */; };
-		BCDE47582379BED0009CEAC2 /* onBoarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = BCDE47562379BED0009CEAC2 /* onBoarding2.json */; };
 		BCE1B3BB231BB68D001BB684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */; };
 		BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3C1231BB68F001BB684 /* Assets.xcassets */; };
 		BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE1B3C3231BB68F001BB684 /* LaunchScreen.storyboard */; };
@@ -125,6 +125,8 @@
 		4611919A249BA9170028D99F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46481EA0249DF5E700F3DB02 /* Manager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Manager.storyboard; sourceTree = "<group>"; };
 		46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAttendanceViewController.swift; sourceTree = "<group>"; };
+		4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Onboarding1.json; path = ../../../../Downloads/Onboarding_iOS/Onboarding1.json; sourceTree = "<group>"; };
+		4655F1DF24AA116000AC6BE5 /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Onboarding2.json; path = ../../../../Downloads/Onboarding_iOS/Onboarding2.json; sourceTree = "<group>"; };
 		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		BC0C4F4823744E4100DA85B0 /* FirebaseInAppMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInAppMessaging.framework; path = Carthage/Build/iOS/FirebaseInAppMessaging.framework; sourceTree = "<group>"; };
 		BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
@@ -179,8 +181,6 @@
 		BCDE474F2379A990009CEAC2 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
 		BCDE47512379BD97009CEAC2 /* CodableFirebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableFirebase.framework; path = Carthage/Build/iOS/CodableFirebase.framework; sourceTree = "<group>"; };
 		BCDE47522379BD97009CEAC2 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
-		BCDE47552379BECF009CEAC2 /* onBoarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onBoarding1.json; sourceTree = "<group>"; };
-		BCDE47562379BED0009CEAC2 /* onBoarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onBoarding2.json; sourceTree = "<group>"; };
 		BCE1B3B7231BB68D001BB684 /* DDD.Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDD.Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE1B3BA231BB68D001BB684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE1B3C1231BB68F001BB684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -378,8 +378,8 @@
 		BCE1B3B9231BB68D001BB684 /* DDD.Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				BCDE47552379BECF009CEAC2 /* onBoarding1.json */,
-				BCDE47562379BED0009CEAC2 /* onBoarding2.json */,
+				4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */,
+				4655F1DF24AA116000AC6BE5 /* Onboarding2.json */,
 				BC0C4F4F23746EEF00DA85B0 /* DDD.Attendance.entitlements */,
 				BC381F2D2349F4600040202D /* Repository */,
 				BCE1B3F8231BE6D5001BB684 /* Common */,
@@ -611,18 +611,18 @@
 				BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */,
 				BC3E50C0232A5F8B00B56EBF /* StepThreeView.xib in Resources */,
 				BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */,
-				BCDE47582379BED0009CEAC2 /* onBoarding2.json in Resources */,
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
 				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
+				4655F1E024AA116000AC6BE5 /* Onboarding1.json in Resources */,
 				BC1014932333D9BB0096E962 /* HomeHeaderCell.xib in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
 				BCE1B3F7231BE689001BB684 /* AccountView.xib in Resources */,
+				4655F1E124AA116000AC6BE5 /* Onboarding2.json in Resources */,
 				4611919B249BA9170028D99F /* GoogleService-Info.plist in Resources */,
 				BC3E50C4232A5FBC00B56EBF /* StepFourView.xib in Resources */,
-				BCDE47572379BED0009CEAC2 /* onBoarding1.json in Resources */,
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
 				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
@@ -858,7 +858,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -887,7 +887,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -19,10 +19,10 @@ class LoginViewController: BaseViewController {
     
     private let transition = LoginTransitionCoordinator()
     private let dataSource = LoginDataSource()
-    private let posterModels = [PosterModel(poster: "onBoarding1",
+    private let posterModels = [PosterModel(poster: "Onboarding1",
                                             title: "간편한 출석체크",
                                             description: "QR코드를 통한 본인 인증으로\n5초면 출석체크 완료!"),
-                                PosterModel(poster: "onBoarding2",
+                                PosterModel(poster: "Onboarding2",
                                             title: "스터디 일정 체크",
                                             description: "세션 날짜와 장소, 시간대까지\n이제 앱에서 바로 체크하세요 :)!")]
     private var pageControl: CHIPageControlAji?
