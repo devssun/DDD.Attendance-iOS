@@ -58,7 +58,7 @@ extension HomeViewModel: HomeViewModelInputs {
     func generateQRCode() {
         guard let uid = firebase.manager.currentUser?.uid else { return }
         accountModelProperty.value = AccountModel(userID: uid,
-                                                  period: "See the details",
+                                                  period: "출석체크 QR코드",
                                                   qrcode: QRCodeController.generate(from: uid) ?? UIImage())
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAp-UB-Cw5">
-                        <rect key="frame" x="0.0" y="0.0" width="281" height="41.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="281" height="67.5"/>
                         <attributedString key="attributedText">
                             <fragment>
                                 <string key="content">We suggest you to wear a colorful 
@@ -39,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainTemporaryBanner" translatesAutoresizingMaskIntoConstraints="NO" id="lhP-55-OI3">
-                        <rect key="frame" x="17.5" y="73.5" width="246" height="318.5"/>
+                        <rect key="frame" x="17.5" y="99.5" width="246" height="318.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="lhP-55-OI3" secondAttribute="height" multiplier="247:320" id="3XS-M4-ubs"/>
                         </constraints>
@@ -47,7 +47,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="lhP-55-OI3" firstAttribute="top" secondItem="SAp-UB-Cw5" secondAttribute="bottom" constant="32" id="4cY-bG-HCQ"/>
-                    <constraint firstAttribute="bottom" secondItem="lhP-55-OI3" secondAttribute="bottom" constant="26" id="HJ9-YS-QBf"/>
+                    <constraint firstAttribute="bottom" secondItem="lhP-55-OI3" secondAttribute="bottom" id="HJ9-YS-QBf"/>
                     <constraint firstItem="lhP-55-OI3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="O5R-6u-83h"/>
                     <constraint firstItem="SAp-UB-Cw5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="X26-Su-21o"/>
                     <constraint firstItem="SAp-UB-Cw5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dHN-ti-rkr"/>
