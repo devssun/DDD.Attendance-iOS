@@ -9,6 +9,7 @@
 import CodableFirebase
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseStorage
 
 class Firebase {
     
@@ -126,6 +127,9 @@ class Firebase {
     }
     
     func fetchBanner(completion: @escaping(Banner?) -> Void) {
+        let storage = Storage.storage()
+        let pathReference = storage.reference(withPath: "banner/banner.png")
+        
         database.child("banner")
             .observeSingleEvent(of: .value) { snapshot in
                 guard let value = snapshot.value, let result = value as? [String: String] else {
@@ -133,22 +137,13 @@ class Firebase {
                     return
                 }
                 
-                guard let url = URL(string: "gs://ddd-project-a6eb3.appspot.com/banner/banner.png") else {
-                    return
+                pathReference.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                    let imageData = error != nil ? nil : data
+                    let banner = Banner(title: result["title"] ?? "",
+                                        subTitle: result["subTitle"] ?? "",
+                                        imageData: imageData)
+                    completion(banner)
                 }
-                
-                var imageData: Data?
-                do {
-                    imageData = try Data(contentsOf: url)
-                } catch {
-                    print(error.localizedDescription)
-                    imageData = nil
-                }
-                
-                let banner = Banner(title: result["title"] ?? "",
-                                    subTitle: result["subTitle"] ?? "",
-                                    imageData: imageData)
-                completion(banner)
         }
     }
 }

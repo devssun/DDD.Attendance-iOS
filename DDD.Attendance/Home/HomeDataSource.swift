@@ -38,7 +38,7 @@ class HomeDataSource: BaseDataSource {
     }
     
     func loadCurriculum(with curriculumList: [Curriculum]) {
-        appendRow(value: HeaderTitle.list, cellClass: HomeHeaderCell.self, toSection: Section.welcome.rawValue)
+        appendRow(value: HeaderTitle.list, cellClass: HomeHeaderCell.self, toSection: Section.attendance.rawValue)
         appendSection(values: curriculumList, cellClass: AttendanceListCell.self)
     }
 }
