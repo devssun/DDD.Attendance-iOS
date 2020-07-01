@@ -42,16 +42,16 @@ class Firebase {
                 completion(nil)
                 return
             }
-            var attendance = [String: Bool]()
-            (0..<10).forEach {
-                attendance.updateValue(false, forKey: "\($0)")
-            }
+//            var attendance = [String: Bool]()
+//            (0..<10).forEach {
+//                attendance.updateValue(false, forKey: "\($0)")
+//            }
             let userData: [String: Any] = [
                 "email": user.email,
                 "name": user.name,
                 "position": user.position,
                 "isManager": false,
-                "attendance": attendance
+                "attendance": []
             ]
             Database.database().reference().child("users").child(value.user.uid).setValue(userData)
             completion(value)
