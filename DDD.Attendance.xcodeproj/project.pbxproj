@@ -13,6 +13,7 @@
 		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
 		4626117224ACCBC0006D8EC8 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464B32EC24AB415800793872 /* PushKit.framework */; };
+		462FDFD624ACD978003DF1AA /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7E4AB3235F5C7700A314DA /* FirebaseStorage.framework */; };
 		46337A7A249A697E00AF4FA4 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; };
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46481EA0249DF5E700F3DB02 /* Manager.storyboard */; };
@@ -103,19 +104,6 @@
 		E571F77A2324345400816C04 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571F7792324345400816C04 /* UIView+Extension.swift */; };
 		E571F77C23243D7600816C04 /* HomeTransitionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571F77B23243D7600816C04 /* HomeTransitionCoordinator.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		46337A7C249A697E00AF4FA4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		204FC78E236084D100AE693A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -239,6 +227,7 @@
 				BC101478232E25DF0096E962 /* libc++.tbd in Frameworks */,
 				BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */,
 				4626117224ACCBC0006D8EC8 /* PushKit.framework in Frameworks */,
+				462FDFD624ACD978003DF1AA /* FirebaseStorage.framework in Frameworks */,
 				BC101470232E24FF0096E962 /* FirebaseAuth.framework in Frameworks */,
 				BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */,
 				BC101476232E24FF0096E962 /* FirebaseAnalytics.framework in Frameworks */,
@@ -558,7 +547,6 @@
 				BCE1B3B4231BB68D001BB684 /* Frameworks */,
 				BCE1B3B5231BB68D001BB684 /* Resources */,
 				BCE1B3DC231BB85E001BB684 /* Carthage */,
-				46337A7C249A697E00AF4FA4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
