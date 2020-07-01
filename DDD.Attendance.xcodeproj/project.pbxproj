@@ -12,11 +12,12 @@
 		20570323232E439900103A3E /* PositionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20570322232E439900103A3E /* PositionCardView.swift */; };
 		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
-		4611919B249BA9170028D99F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4611919A249BA9170028D99F /* GoogleService-Info.plist */; };
+		4626117224ACCBC0006D8EC8 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464B32EC24AB415800793872 /* PushKit.framework */; };
 		46337A7A249A697E00AF4FA4 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; };
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46481EA0249DF5E700F3DB02 /* Manager.storyboard */; };
 		46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */; };
+		464B32F124AB44E400793872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 464B32F024AB44E400793872 /* GoogleService-Info.plist */; };
 		4655F1E024AA116000AC6BE5 /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */; };
 		4655F1E124AA116000AC6BE5 /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4655F1DF24AA116000AC6BE5 /* Onboarding2.json */; };
 		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
@@ -122,9 +123,10 @@
 		20570322232E439900103A3E /* PositionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCardView.swift; sourceTree = "<group>"; };
 		2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		20B81DFA232D54E20081D341 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
-		4611919A249BA9170028D99F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46481EA0249DF5E700F3DB02 /* Manager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Manager.storyboard; sourceTree = "<group>"; };
 		46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAttendanceViewController.swift; sourceTree = "<group>"; };
+		464B32EC24AB415800793872 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		464B32F024AB44E400793872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Onboarding1.json; path = ../../../../Downloads/Onboarding_iOS/Onboarding1.json; sourceTree = "<group>"; };
 		4655F1DF24AA116000AC6BE5 /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Onboarding2.json; path = ../../../../Downloads/Onboarding_iOS/Onboarding2.json; sourceTree = "<group>"; };
 		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				BC10147A232E25E80096E962 /* libsqlite3.tbd in Frameworks */,
 				BC101478232E25DF0096E962 /* libc++.tbd in Frameworks */,
 				BC10146E232E24FF0096E962 /* FirebaseDatabase.framework in Frameworks */,
+				4626117224ACCBC0006D8EC8 /* PushKit.framework in Frameworks */,
 				BC101470232E24FF0096E962 /* FirebaseAuth.framework in Frameworks */,
 				BC10146F232E24FF0096E962 /* FirebaseCore.framework in Frameworks */,
 				BC101476232E24FF0096E962 /* FirebaseAnalytics.framework in Frameworks */,
@@ -394,7 +397,7 @@
 				BCE1B3C1231BB68F001BB684 /* Assets.xcassets */,
 				BCE1B3C3231BB68F001BB684 /* LaunchScreen.storyboard */,
 				BCE1B3C6231BB68F001BB684 /* Info.plist */,
-				4611919A249BA9170028D99F /* GoogleService-Info.plist */,
+				464B32F024AB44E400793872 /* GoogleService-Info.plist */,
 			);
 			path = DDD.Attendance;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 		BCE1B3D5231BB858001BB684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				464B32EC24AB415800793872 /* PushKit.framework */,
 				BCDE47512379BD97009CEAC2 /* CodableFirebase.framework */,
 				BCDE47522379BD97009CEAC2 /* Lottie.framework */,
 				BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */,
@@ -619,9 +623,9 @@
 				BC1014932333D9BB0096E962 /* HomeHeaderCell.xib in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
+				464B32F124AB44E400793872 /* GoogleService-Info.plist in Resources */,
 				BCE1B3F7231BE689001BB684 /* AccountView.xib in Resources */,
 				4655F1E124AA116000AC6BE5 /* Onboarding2.json in Resources */,
-				4611919B249BA9170028D99F /* GoogleService-Info.plist in Resources */,
 				BC3E50C4232A5FBC00B56EBF /* StepFourView.xib in Resources */,
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
 				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
@@ -859,7 +863,7 @@
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -890,7 +894,7 @@
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
