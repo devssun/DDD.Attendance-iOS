@@ -13,6 +13,7 @@
 		2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */; };
 		20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B81DFA232D54E20081D341 /* RoundedTextField.swift */; };
 		4626117224ACCBC0006D8EC8 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464B32EC24AB415800793872 /* PushKit.framework */; };
+		462EF76424B9B9590009768C /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462EF76324B9B9590009768C /* ImageScrollViewController.swift */; };
 		462FDFD624ACD978003DF1AA /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7E4AB3235F5C7700A314DA /* FirebaseStorage.framework */; };
 		46337A7A249A697E00AF4FA4 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4D23746C8900DA85B0 /* Protobuf.framework */; };
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
@@ -111,6 +112,7 @@
 		20570322232E439900103A3E /* PositionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCardView.swift; sourceTree = "<group>"; };
 		2074DB1C2348C6BE007D7377 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		20B81DFA232D54E20081D341 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		462EF76324B9B9590009768C /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		46481EA0249DF5E700F3DB02 /* Manager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Manager.storyboard; sourceTree = "<group>"; };
 		46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAttendanceViewController.swift; sourceTree = "<group>"; };
 		464B32EC24AB415800793872 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
@@ -412,6 +414,7 @@
 				BCE1B3F0231BE576001BB684 /* HomeDataSource.swift */,
 				BCE1B3F2231BE57F001BB684 /* HomeViewModel.swift */,
 				E571F77B23243D7600816C04 /* HomeTransitionCoordinator.swift */,
+				462EF76324B9B9590009768C /* ImageScrollViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */,
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
 				BC8863FA234E36FE0031C7F1 /* PosterCell.swift in Sources */,
+				462EF76424B9B9590009768C /* ImageScrollViewController.swift in Sources */,
 				E571F76A2324033B00816C04 /* PresentingViewAnimator.swift in Sources */,
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
 				BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */,

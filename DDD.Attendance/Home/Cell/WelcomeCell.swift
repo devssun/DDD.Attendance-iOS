@@ -22,5 +22,18 @@ class WelcomeCell: UITableViewCell, BaseCell {
         } else {
             welcomeImageView.image = #imageLiteral(resourceName: "mainTemporaryBanner")
         }
+        
+        welcomeImageView.isUserInteractionEnabled = true
+        welcomeImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapImageView)))
     }
+    
+    @objc private func tapImageView() {
+        NotificationCenter.default.post(name: .tapImageViewNotification,
+                                        object: nil,
+                                        userInfo: ["image": welcomeImageView.image])
+    }
+}
+
+extension Notification.Name {
+    static let tapImageViewNotification = Notification.Name("tapImageViewNotification")
 }

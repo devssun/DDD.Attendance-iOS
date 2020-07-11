@@ -51,5 +51,49 @@
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="-47.544642857142854"/>
         </scene>
+        <!--Image Scroll View Controller-->
+        <scene sceneID="PRv-QZ-285">
+            <objects>
+                <viewController storyboardIdentifier="ImageScrollViewController" id="akY-BD-7ZL" customClass="ImageScrollViewController" customModule="DDD_Attendance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VrZ-JB-3Jg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="sRm-Zr-jjC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c70-gX-uss">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="c70-gX-uss" secondAttribute="trailing" id="9L8-Qc-JPi"/>
+                                    <constraint firstItem="c70-gX-uss" firstAttribute="top" secondItem="sRm-Zr-jjC" secondAttribute="top" id="DDQ-1v-idc"/>
+                                    <constraint firstItem="c70-gX-uss" firstAttribute="height" secondItem="sRm-Zr-jjC" secondAttribute="height" id="Lhq-gf-iaN"/>
+                                    <constraint firstItem="c70-gX-uss" firstAttribute="width" secondItem="sRm-Zr-jjC" secondAttribute="width" id="Svo-yg-HNO"/>
+                                    <constraint firstItem="c70-gX-uss" firstAttribute="leading" secondItem="sRm-Zr-jjC" secondAttribute="leading" id="tbR-uj-7hv"/>
+                                    <constraint firstAttribute="bottom" secondItem="c70-gX-uss" secondAttribute="bottom" id="ung-zA-FjJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="opq-fh-4XC" firstAttribute="bottom" secondItem="sRm-Zr-jjC" secondAttribute="bottom" id="a3g-Vb-2bJ"/>
+                            <constraint firstItem="sRm-Zr-jjC" firstAttribute="leading" secondItem="opq-fh-4XC" secondAttribute="leading" id="adQ-T7-38T"/>
+                            <constraint firstItem="sRm-Zr-jjC" firstAttribute="top" secondItem="opq-fh-4XC" secondAttribute="top" id="d9F-DS-Nmc"/>
+                            <constraint firstItem="opq-fh-4XC" firstAttribute="trailing" secondItem="sRm-Zr-jjC" secondAttribute="trailing" id="m0w-n8-Nid"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="opq-fh-4XC"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="c70-gX-uss" id="fCu-PF-2yR"/>
+                        <outlet property="scrollView" destination="sRm-Zr-jjC" id="x3s-BK-ceC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKK-Q0-g7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2155" y="-48"/>
+        </scene>
     </scenes>
 </document>

@@ -41,6 +41,10 @@ class HomeViewController: BaseViewController {
             $0.dataSource = dataSource
         }
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(tapImageView),
+                                               name: .tapImageViewNotification,
+                                               object: nil)
 //        profileButton.then {
 //            $0.action = #selector(signOut)
 //            $0.target = self
@@ -101,6 +105,14 @@ class HomeViewController: BaseViewController {
 
 // MARK: - Private
 private extension HomeViewController {
+    
+    @objc private func tapImageView(_ noti: Notification) {
+        let imageScrollVC = ImageScrollViewController.instantiateViewController()
+        imageScrollVC.modalPresentationStyle = .fullScreen
+        let image = noti.userInfo?["image"] as? UIImage
+        imageScrollVC.zoomImage = image
+        self.navigationController?.pushViewController(imageScrollVC, animated: true)
+    }
     
     func setupAccountView(by accountData: AccountModel) {
        bottomTriggerView.configure(by: accountData)
