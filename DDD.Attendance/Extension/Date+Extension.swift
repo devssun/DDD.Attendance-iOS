@@ -13,6 +13,10 @@ extension Date {
         return Int64(self.timeIntervalSince1970 * 1000)
     }
     
+    func timeStampToString(timeStamp: Int64) -> Date {
+        return Date(timeIntervalSince1970: TimeInterval(timeStamp / 1000))
+    }
+    
     func toString(format: String = "yyyy-MM-dd") -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
