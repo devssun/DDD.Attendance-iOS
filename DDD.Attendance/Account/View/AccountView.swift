@@ -21,7 +21,7 @@ class AccountView: BaseView {
         lb.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
         lb.numberOfLines = 0
         lb.text = "해당 QR코드를\n스탭에게 제시해주세요"
-        lb.textColor = .white
+        lb.textColor = .black
         return lb
     }()
     
@@ -34,7 +34,7 @@ class AccountView: BaseView {
         qrcodeImageview.then {
             $0.layer.cornerRadius = $0.frame.height / 4
             $0.layer.borderWidth = 1.0
-            $0.layer.borderColor = UIColor.white.cgColor
+            $0.layer.borderColor = UIColor.black.cgColor
         }
         
         qrcodeImageview.snp.makeConstraints {

@@ -19,8 +19,8 @@
 		46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46481EA0249DF5E700F3DB02 /* Manager.storyboard */; };
 		46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */; };
 		464B32F124AB44E400793872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 464B32F024AB44E400793872 /* GoogleService-Info.plist */; };
-		4655F1E024AA116000AC6BE5 /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */; };
-		4655F1E124AA116000AC6BE5 /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4655F1DF24AA116000AC6BE5 /* Onboarding2.json */; };
+		4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A124B9B546005DCD5A /* Onboarding1.json */; };
+		4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A224B9B546005DCD5A /* Onboarding2.json */; };
 		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
 		BC0C4F4B2374521600DA85B0 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */; };
 		BC0C4F4C23746C8900DA85B0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC10145D232E24FE0096E962 /* FirebaseInstanceID.framework */; };
@@ -115,8 +115,8 @@
 		46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAttendanceViewController.swift; sourceTree = "<group>"; };
 		464B32EC24AB415800793872 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		464B32F024AB44E400793872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Onboarding1.json; path = ../../../../Downloads/Onboarding_iOS/Onboarding1.json; sourceTree = "<group>"; };
-		4655F1DF24AA116000AC6BE5 /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Onboarding2.json; path = ../../../../Downloads/Onboarding_iOS/Onboarding2.json; sourceTree = "<group>"; };
+		4678E3A124B9B546005DCD5A /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding1.json; sourceTree = "<group>"; };
+		4678E3A224B9B546005DCD5A /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding2.json; sourceTree = "<group>"; };
 		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		BC0C4F4823744E4100DA85B0 /* FirebaseInAppMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInAppMessaging.framework; path = Carthage/Build/iOS/FirebaseInAppMessaging.framework; sourceTree = "<group>"; };
 		BC0C4F4A2374521600DA85B0 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
@@ -370,8 +370,8 @@
 		BCE1B3B9231BB68D001BB684 /* DDD.Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				4655F1DE24AA115F00AC6BE5 /* Onboarding1.json */,
-				4655F1DF24AA116000AC6BE5 /* Onboarding2.json */,
+				4678E3A124B9B546005DCD5A /* Onboarding1.json */,
+				4678E3A224B9B546005DCD5A /* Onboarding2.json */,
 				BC0C4F4F23746EEF00DA85B0 /* DDD.Attendance.entitlements */,
 				BC381F2D2349F4600040202D /* Repository */,
 				BCE1B3F8231BE6D5001BB684 /* Common */,
@@ -604,16 +604,16 @@
 				BC3E50C0232A5F8B00B56EBF /* StepThreeView.xib in Resources */,
 				BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */,
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
+				4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */,
 				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */,
+				4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
-				4655F1E024AA116000AC6BE5 /* Onboarding1.json in Resources */,
 				BC1014932333D9BB0096E962 /* HomeHeaderCell.xib in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
 				BCE1B4112320034F001BB684 /* AttendanceListCell.xib in Resources */,
 				464B32F124AB44E400793872 /* GoogleService-Info.plist in Resources */,
 				BCE1B3F7231BE689001BB684 /* AccountView.xib in Resources */,
-				4655F1E124AA116000AC6BE5 /* Onboarding2.json in Resources */,
 				BC3E50C4232A5FBC00B56EBF /* StepFourView.xib in Resources */,
 				BC3E50BA232A5F6B00B56EBF /* StepOneView.xib in Resources */,
 				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
