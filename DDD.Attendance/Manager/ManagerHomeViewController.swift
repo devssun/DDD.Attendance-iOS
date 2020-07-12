@@ -32,6 +32,7 @@ class ManagerHomeViewController: BaseViewController {
             $0.tableFooterView = UIView(frame: .zero)
             $0.separatorStyle = .none
             $0.dataSource = dataSource
+            $0.delegate = self
         }
     }
     
@@ -54,5 +55,36 @@ class ManagerHomeViewController: BaseViewController {
         // Do any additional setup after loading the view.
         dataSource.load(from: menuModels)
         tableView.reloadData()
+    }
+}
+
+extension ManagerHomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            moveSetAttendanceViewController()
+        case 1:
+            print("팀원 검색 화면 이동")
+        case 2:
+            signOut()
+        default:
+            break
+        }
+    }
+    
+    private func moveSetAttendanceViewController() {
+        let setAttendanceVC = SetAttendanceViewController.instantiateViewController()
+        self.navigationController?.pushViewController(setAttendanceVC, animated: true)
+    }
+    
+    private func signOut() {
+        Firebase().signOut { [weak self] isSuccess in
+            if isSuccess {
+                let loginVC = LoginViewController.instantiateViewController()
+                UIApplication.shared.keyWindow?.rootViewController = loginVC
+            } else {
+                self?.showAlert(title: "로그아웃 실패", message: "로그아웃에 실패하였습니다.")
+            }
+        }
     }
 }
