@@ -146,4 +146,25 @@ class Firebase {
                 }
         }
     }
+    
+    func getUser(name userName: String, completion: @escaping([String: Any]?) -> Void) {
+        database
+            .child("users")
+            .observeSingleEvent(of: .value, with: { snapshot in
+                guard
+                    let value = snapshot.value,
+                    let result = value as? [String: Any] else {
+                        return
+                }
+                
+                for result in result.values {
+                    if let user = result as? [String: Any], let name = user["name"] as? String {
+                        if userName == name {
+                            completion(user)
+                            return
+                        }
+                    }
+                }
+            })
+    }
 }
