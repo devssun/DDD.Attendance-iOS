@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hTq-ZN-rXw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pD8-TO-XFD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,6 +8,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Manager Home View Controller-->
+        <scene sceneID="fL0-b0-Nx2">
+            <objects>
+                <viewController storyboardIdentifier="ManagerHomeViewController" id="pD8-TO-XFD" customClass="ManagerHomeViewController" customModule="DDD_Attendance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQB-M7-HYw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ⓒ 2020 DDD, Inc All Rights Reserved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eae-s6-rdk">
+                                <rect key="frame" x="101.5" y="811" width="211" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.64313725490196072" green="0.66666666666666663" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D0X-4D-da6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="K29-4y-qY5" firstAttribute="bottom" secondItem="eae-s6-rdk" secondAttribute="bottom" constant="36" id="FW6-68-fCv"/>
+                            <constraint firstItem="eae-s6-rdk" firstAttribute="centerX" secondItem="MQB-M7-HYw" secondAttribute="centerX" id="Jq3-0g-CNC"/>
+                            <constraint firstItem="D0X-4D-da6" firstAttribute="leading" secondItem="K29-4y-qY5" secondAttribute="leading" id="Osp-4h-2na"/>
+                            <constraint firstItem="eae-s6-rdk" firstAttribute="top" secondItem="D0X-4D-da6" secondAttribute="bottom" id="dMR-5j-YTt"/>
+                            <constraint firstItem="D0X-4D-da6" firstAttribute="top" secondItem="K29-4y-qY5" secondAttribute="top" id="egP-cN-emP"/>
+                            <constraint firstItem="D0X-4D-da6" firstAttribute="trailing" secondItem="K29-4y-qY5" secondAttribute="trailing" id="nc2-8V-eXX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K29-4y-qY5"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="D0X-4D-da6" id="1DG-jb-bcT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOf-ko-5Xd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-934.78260869565224" y="160.71428571428569"/>
+        </scene>
         <!--Set Attendance View Controller-->
         <scene sceneID="OMn-e5-6XS">
             <objects>
@@ -64,7 +102,7 @@
                                         </constraints>
                                     </view>
                                     <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-BP-wz7">
-                                        <rect key="frame" x="0.0" y="101" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="101.5" width="414" height="0.0"/>
                                     </datePicker>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUk-d8-03V">
                                         <rect key="frame" x="0.0" y="107.5" width="414" height="63"/>

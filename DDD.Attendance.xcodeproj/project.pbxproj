@@ -19,6 +19,11 @@
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46481EA0249DF5E700F3DB02 /* Manager.storyboard */; };
 		46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */; };
+		4648F77724BB16040084B2A2 /* ManagerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F77624BB16040084B2A2 /* ManagerHomeViewController.swift */; };
+		4648F77F24BB19CF0084B2A2 /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */; };
+		4648F78024BB19CF0084B2A2 /* HomeMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */; };
+		4648F78324BB1AEC0084B2A2 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F78224BB1AEC0084B2A2 /* MenuModel.swift */; };
+		4648F78524BB1D410084B2A2 /* ManagerHomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */; };
 		464B32F124AB44E400793872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 464B32F024AB44E400793872 /* GoogleService-Info.plist */; };
 		4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A124B9B546005DCD5A /* Onboarding1.json */; };
 		4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A224B9B546005DCD5A /* Onboarding2.json */; };
@@ -115,6 +120,11 @@
 		462EF76324B9B9590009768C /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		46481EA0249DF5E700F3DB02 /* Manager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Manager.storyboard; sourceTree = "<group>"; };
 		46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAttendanceViewController.swift; sourceTree = "<group>"; };
+		4648F77624BB16040084B2A2 /* ManagerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerHomeViewController.swift; sourceTree = "<group>"; };
+		4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCell.swift; sourceTree = "<group>"; };
+		4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuCell.xib; sourceTree = "<group>"; };
+		4648F78224BB1AEC0084B2A2 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerHomeDataSource.swift; sourceTree = "<group>"; };
 		464B32EC24AB415800793872 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		464B32F024AB44E400793872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4678E3A124B9B546005DCD5A /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding1.json; sourceTree = "<group>"; };
@@ -259,10 +269,31 @@
 		46481E9F249DF5A600F3DB02 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4648F78124BB1AE10084B2A2 /* Model */,
+				4648F77824BB17A40084B2A2 /* Cell */,
 				46481EA0249DF5E700F3DB02 /* Manager.storyboard */,
 				46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */,
+				4648F77624BB16040084B2A2 /* ManagerHomeViewController.swift */,
+				4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		4648F77824BB17A40084B2A2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */,
+				4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4648F78124BB1AE10084B2A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4648F78224BB1AEC0084B2A2 /* MenuModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BC101487232E2D020096E962 /* View */ = {
@@ -605,6 +636,7 @@
 			files = (
 				BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */,
 				BC3E50C0232A5F8B00B56EBF /* StepThreeView.xib in Resources */,
+				4648F78024BB19CF0084B2A2 /* HomeMenuCell.xib in Resources */,
 				BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */,
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
 				4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */,
@@ -666,6 +698,7 @@
 			files = (
 				E571F767232402D200816C04 /* ReuseableView.swift in Sources */,
 				E571F77C23243D7600816C04 /* HomeTransitionCoordinator.swift in Sources */,
+				4648F78324BB1AEC0084B2A2 /* MenuModel.swift in Sources */,
 				BCE1B3ED231BE383001BB684 /* BaseDataSource.swift in Sources */,
 				BC3E50B5232A5F0100B56EBF /* SignUpViewController.swift in Sources */,
 				BCE1B3F3231BE57F001BB684 /* HomeViewModel.swift in Sources */,
@@ -673,6 +706,7 @@
 				46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */,
 				BC381F302349F4760040202D /* Firebase.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
+				4648F77724BB16040084B2A2 /* ManagerHomeViewController.swift in Sources */,
 				46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
@@ -696,6 +730,7 @@
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
 				BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */,
 				BCE1B3E5231BE069001BB684 /* BaseView.swift in Sources */,
+				4648F78524BB1D410084B2A2 /* ManagerHomeDataSource.swift in Sources */,
 				BC3E50BE232A5F8000B56EBF /* StepTwoView.swift in Sources */,
 				BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */,
 				BCE1B3CF231BB75E001BB684 /* BaseViewController.swift in Sources */,
@@ -714,6 +749,7 @@
 				BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
+				4648F77F24BB19CF0084B2A2 /* HomeMenuCell.swift in Sources */,
 				2057031F232E2B0200103A3E /* SignUpButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
