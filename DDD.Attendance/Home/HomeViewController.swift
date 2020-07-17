@@ -109,8 +109,8 @@ private extension HomeViewController {
     @objc private func tapImageView(_ noti: Notification) {
         let imageScrollVC = ImageScrollViewController.instantiateViewController()
         imageScrollVC.modalPresentationStyle = .fullScreen
-        let image = noti.userInfo?["image"] as? UIImage
-        imageScrollVC.zoomImage = image
+        guard let image = noti.userInfo?["image"] as? UIImage else { return }
+        imageScrollVC.update(to: image)
         self.navigationController?.pushViewController(imageScrollVC, animated: true)
     }
     

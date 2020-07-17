@@ -12,7 +12,7 @@ class ImageScrollViewController: BaseViewController {
     @IBOutlet fileprivate weak var imageView: UIImageView!
     @IBOutlet fileprivate weak var scrollView: UIScrollView!
     
-    var zoomImage: UIImage?
+    private var zoomImage: UIImage?
     
     static func instantiateViewController() -> ImageScrollViewController {
         return Storyboard.home.viewController(ImageScrollViewController.self)
@@ -27,6 +27,10 @@ class ImageScrollViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         imageView.image = zoomImage
+    }
+    
+    func update(to zoomImage: UIImage) {
+        self.zoomImage = zoomImage
     }
 }
 
