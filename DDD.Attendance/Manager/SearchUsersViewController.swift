@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 import ReactiveSwift
 
 class SearchUsersViewController: BaseViewController {
@@ -14,7 +15,12 @@ class SearchUsersViewController: BaseViewController {
     private var searchBar = UISearchBar()
     @IBOutlet private weak var tableView: UITableView!
     
+    private let viewModel = SearchUsersViewModel()
     private let dataSource = SearchUsersDataSource()
+    private let testModels = [AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 0),
+                              AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 1),
+                              AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 0),
+                              AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 1)]
 
     static func instantiateViewController() -> SearchUsersViewController {
         return Storyboard.manager.viewController(SearchUsersViewController.self)
@@ -43,6 +49,14 @@ class SearchUsersViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        dataSource.load(from: testModels)
+        tableView.reloadData()
+    }
+}
+
+private extension SearchUsersViewController {
+    func loadStatus(with statusList: [AttendanceStatusModel]) {
+        dataSource.loadStatus(with: statusList)
         tableView.reloadData()
     }
 }

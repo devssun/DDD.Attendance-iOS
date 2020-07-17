@@ -31,6 +31,7 @@
 		4654354E24C1F81100541E14 /* AttendanceStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */; };
 		4654354F24C1F81100541E14 /* AttendanceStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */; };
 		4654355224C1FA0300541E14 /* AttendanceStatusHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */; };
+		4654355424C2020000541E14 /* AttendanceStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654355324C2020000541E14 /* AttendanceStatusModel.swift */; };
 		4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A124B9B546005DCD5A /* Onboarding1.json */; };
 		4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A224B9B546005DCD5A /* Onboarding2.json */; };
 		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
@@ -139,6 +140,7 @@
 		4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusCell.swift; sourceTree = "<group>"; };
 		4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceStatusCell.xib; sourceTree = "<group>"; };
 		4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusHeader.swift; sourceTree = "<group>"; };
+		4654355324C2020000541E14 /* AttendanceStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusModel.swift; sourceTree = "<group>"; };
 		4678E3A124B9B546005DCD5A /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding1.json; sourceTree = "<group>"; };
 		4678E3A224B9B546005DCD5A /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding2.json; sourceTree = "<group>"; };
 		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				4648F78224BB1AEC0084B2A2 /* MenuModel.swift */,
+				4654355324C2020000541E14 /* AttendanceStatusModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
+				4654355424C2020000541E14 /* AttendanceStatusModel.swift in Sources */,
 				BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */,
 				20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */,
 				BCDE47502379A990009CEAC2 /* Curriculum.swift in Sources */,

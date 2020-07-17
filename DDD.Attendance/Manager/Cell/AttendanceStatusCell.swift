@@ -28,7 +28,20 @@ class AttendanceStatusCell: UITableViewCell, BaseCell {
         // Initialization code
     }
     
-    func configureWith(value: String) {
-        
+    func configureWith(value: AttendanceStatusModel) {
+        switch value.position {
+        case .Backend:
+            positionImageView.image = UIImage(named: "imgAttendanceCheckServer")
+        case .iOS:
+            positionImageView.image = UIImage(named: "imgAttendanceCheckIos")
+        case .And:
+            positionImageView.image = UIImage(named: "imgAttendanceCheckAndroid")
+        case .Designer:
+            positionImageView.image = UIImage(named: "imgAttendanceCheckDesigner")
+        case .None:
+            break
+        }
+        attendanceDateLabel.text = value.date
+        statusLabel.text = value.status == 0 ? "출석" : "지각"
     }
 }
