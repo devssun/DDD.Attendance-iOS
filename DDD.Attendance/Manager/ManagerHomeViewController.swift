@@ -64,7 +64,7 @@ extension ManagerHomeViewController: UITableViewDelegate {
         case 0:
             moveSetAttendanceViewController()
         case 1:
-            print("팀원 검색 화면 이동")
+            moveSearchUsersViewController()
         case 2:
             signOut()
         default:
@@ -74,6 +74,11 @@ extension ManagerHomeViewController: UITableViewDelegate {
     
     private func moveSetAttendanceViewController() {
         let setAttendanceVC = SetAttendanceViewController.instantiateViewController()
+        self.navigationController?.pushViewController(setAttendanceVC, animated: true)
+    }
+    
+    private func moveSearchUsersViewController() {
+        let setAttendanceVC = SearchUsersViewController.instantiateViewController()
         self.navigationController?.pushViewController(setAttendanceVC, animated: true)
     }
     

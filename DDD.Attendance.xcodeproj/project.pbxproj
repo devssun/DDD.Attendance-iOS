@@ -25,6 +25,12 @@
 		4648F78324BB1AEC0084B2A2 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F78224BB1AEC0084B2A2 /* MenuModel.swift */; };
 		4648F78524BB1D410084B2A2 /* ManagerHomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */; };
 		464B32F124AB44E400793872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 464B32F024AB44E400793872 /* GoogleService-Info.plist */; };
+		4654354724C1F63000541E14 /* SearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354624C1F63000541E14 /* SearchUsersViewController.swift */; };
+		4654354924C1F7B500541E14 /* SearchUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354824C1F7B500541E14 /* SearchUsersDataSource.swift */; };
+		4654354B24C1F7C100541E14 /* SearchUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354A24C1F7C100541E14 /* SearchUsersViewModel.swift */; };
+		4654354E24C1F81100541E14 /* AttendanceStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */; };
+		4654354F24C1F81100541E14 /* AttendanceStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */; };
+		4654355224C1FA0300541E14 /* AttendanceStatusHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */; };
 		4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A124B9B546005DCD5A /* Onboarding1.json */; };
 		4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A224B9B546005DCD5A /* Onboarding2.json */; };
 		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
@@ -127,6 +133,12 @@
 		4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerHomeDataSource.swift; sourceTree = "<group>"; };
 		464B32EC24AB415800793872 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		464B32F024AB44E400793872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4654354624C1F63000541E14 /* SearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewController.swift; sourceTree = "<group>"; };
+		4654354824C1F7B500541E14 /* SearchUsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersDataSource.swift; sourceTree = "<group>"; };
+		4654354A24C1F7C100541E14 /* SearchUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewModel.swift; sourceTree = "<group>"; };
+		4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusCell.swift; sourceTree = "<group>"; };
+		4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceStatusCell.xib; sourceTree = "<group>"; };
+		4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusHeader.swift; sourceTree = "<group>"; };
 		4678E3A124B9B546005DCD5A /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding1.json; sourceTree = "<group>"; };
 		4678E3A224B9B546005DCD5A /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding2.json; sourceTree = "<group>"; };
 		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
@@ -269,11 +281,15 @@
 		46481E9F249DF5A600F3DB02 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4654355024C1F9F200541E14 /* View */,
 				4648F78124BB1AE10084B2A2 /* Model */,
 				4648F77824BB17A40084B2A2 /* Cell */,
 				46481EA0249DF5E700F3DB02 /* Manager.storyboard */,
 				46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */,
 				4648F77624BB16040084B2A2 /* ManagerHomeViewController.swift */,
+				4654354624C1F63000541E14 /* SearchUsersViewController.swift */,
+				4654354824C1F7B500541E14 /* SearchUsersDataSource.swift */,
+				4654354A24C1F7C100541E14 /* SearchUsersViewModel.swift */,
 				4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */,
 			);
 			path = Manager;
@@ -283,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */,
+				4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */,
+				4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */,
 				4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */,
 			);
 			path = Cell;
@@ -294,6 +312,14 @@
 				4648F78224BB1AEC0084B2A2 /* MenuModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4654355024C1F9F200541E14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BC101487232E2D020096E962 /* View */ = {
@@ -654,6 +680,7 @@
 				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
 				E571F77723241F5300816C04 /* Account.storyboard in Resources */,
+				4654354F24C1F81100541E14 /* AttendanceStatusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +730,7 @@
 				BC3E50B5232A5F0100B56EBF /* SignUpViewController.swift in Sources */,
 				BCE1B3F3231BE57F001BB684 /* HomeViewModel.swift in Sources */,
 				BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */,
+				4654355224C1FA0300541E14 /* AttendanceStatusHeader.swift in Sources */,
 				46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */,
 				BC381F302349F4760040202D /* Firebase.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
@@ -721,6 +749,7 @@
 				204FC78F236084D100AE693A /* UserModel.swift in Sources */,
 				E571F77A2324345400816C04 /* UIView+Extension.swift in Sources */,
 				BC3E50C2232A5F9B00B56EBF /* StepThreeView.swift in Sources */,
+				4654354724C1F63000541E14 /* SearchUsersViewController.swift in Sources */,
 				BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */,
 				2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */,
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
@@ -730,6 +759,7 @@
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
 				BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */,
 				BCE1B3E5231BE069001BB684 /* BaseView.swift in Sources */,
+				4654354E24C1F81100541E14 /* AttendanceStatusCell.swift in Sources */,
 				4648F78524BB1D410084B2A2 /* ManagerHomeDataSource.swift in Sources */,
 				BC3E50BE232A5F8000B56EBF /* StepTwoView.swift in Sources */,
 				BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */,
@@ -738,6 +768,8 @@
 				BC1014982333DD4E0096E962 /* WelcomeCell.swift in Sources */,
 				E571F76C2324075300816C04 /* DismissingViewAnimator.swift in Sources */,
 				BCE1B3F1231BE576001BB684 /* HomeDataSource.swift in Sources */,
+				4654354B24C1F7C100541E14 /* SearchUsersViewModel.swift in Sources */,
+				4654354924C1F7B500541E14 /* SearchUsersDataSource.swift in Sources */,
 				BC1014922333D9BB0096E962 /* HomeHeaderCell.swift in Sources */,
 				20570323232E439900103A3E /* PositionCardView.swift in Sources */,
 				BCE1B4132320054F001BB684 /* AttendanceListModel.swift in Sources */,
