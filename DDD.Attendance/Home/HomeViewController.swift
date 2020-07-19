@@ -41,10 +41,6 @@ class HomeViewController: BaseViewController {
             $0.dataSource = dataSource
         }
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(tapImageView),
-                                               name: .tapImageViewNotification,
-                                               object: nil)
 //        profileButton.then {
 //            $0.action = #selector(signOut)
 //            $0.target = self
@@ -72,6 +68,11 @@ class HomeViewController: BaseViewController {
         reactive.loadBanner <~ viewModel.outputs.fetchBanner
         
         reactive.loadCurriculum <~ viewModel.outputs.fetchCurriculumList
+        
+        dataSource.imageTappedHandler = { [weak self] image in
+            guard let image = image else { return }
+            self?.tappedImageViewHandler(to: image)
+        }
     }
     
     override func viewDidLoad() {
@@ -106,11 +107,10 @@ class HomeViewController: BaseViewController {
 // MARK: - Private
 private extension HomeViewController {
     
-    @objc private func tapImageView(_ noti: Notification) {
+    func tappedImageViewHandler(to image: UIImage) {
         let imageScrollVC = ImageScrollViewController.instantiateViewController()
         imageScrollVC.modalPresentationStyle = .fullScreen
-        let image = noti.userInfo?["image"] as? UIImage
-        imageScrollVC.zoomImage = image
+        imageScrollVC.update(to: image)
         self.navigationController?.pushViewController(imageScrollVC, animated: true)
     }
     
