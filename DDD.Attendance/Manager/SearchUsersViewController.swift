@@ -32,6 +32,8 @@ class SearchUsersViewController: BaseViewController {
         tableView.then {
             $0.register(UINib(nibName: AttendanceStatusCell.defaultReusableId, bundle: nil),
                         forCellReuseIdentifier: AttendanceStatusCell.defaultReusableId)
+            $0.register(UINib(nibName: NameHeaderCell.defaultReusableId, bundle: nil),
+                        forCellReuseIdentifier: NameHeaderCell.defaultReusableId)
             $0.tableFooterView = UIView(frame: .zero)
             $0.dataSource = dataSource
         }

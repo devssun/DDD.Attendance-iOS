@@ -32,6 +32,8 @@
 		4654354F24C1F81100541E14 /* AttendanceStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */; };
 		4654355224C1FA0300541E14 /* AttendanceStatusHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */; };
 		4654355424C2020000541E14 /* AttendanceStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654355324C2020000541E14 /* AttendanceStatusModel.swift */; };
+		466B86BF24C475FE00855C94 /* NameHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B86BD24C475FE00855C94 /* NameHeaderCell.swift */; };
+		466B86C024C475FE00855C94 /* NameHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 466B86BE24C475FE00855C94 /* NameHeaderCell.xib */; };
 		4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A124B9B546005DCD5A /* Onboarding1.json */; };
 		4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A224B9B546005DCD5A /* Onboarding2.json */; };
 		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
@@ -141,6 +143,8 @@
 		4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceStatusCell.xib; sourceTree = "<group>"; };
 		4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusHeader.swift; sourceTree = "<group>"; };
 		4654355324C2020000541E14 /* AttendanceStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusModel.swift; sourceTree = "<group>"; };
+		466B86BD24C475FE00855C94 /* NameHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeaderCell.swift; sourceTree = "<group>"; };
+		466B86BE24C475FE00855C94 /* NameHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameHeaderCell.xib; sourceTree = "<group>"; };
 		4678E3A124B9B546005DCD5A /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding1.json; sourceTree = "<group>"; };
 		4678E3A224B9B546005DCD5A /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding2.json; sourceTree = "<group>"; };
 		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
@@ -301,6 +305,8 @@
 			isa = PBXGroup;
 			children = (
 				4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */,
+				466B86BD24C475FE00855C94 /* NameHeaderCell.swift */,
+				466B86BE24C475FE00855C94 /* NameHeaderCell.xib */,
 				4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */,
 				4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */,
 				4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */,
@@ -672,6 +678,7 @@
 				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */,
 				4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */,
+				466B86C024C475FE00855C94 /* NameHeaderCell.xib in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
 				BC1014932333D9BB0096E962 /* HomeHeaderCell.xib in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
@@ -737,6 +744,7 @@
 				46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */,
 				BC381F302349F4760040202D /* Firebase.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
+				466B86BF24C475FE00855C94 /* NameHeaderCell.swift in Sources */,
 				4648F77724BB16040084B2A2 /* ManagerHomeViewController.swift in Sources */,
 				46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
