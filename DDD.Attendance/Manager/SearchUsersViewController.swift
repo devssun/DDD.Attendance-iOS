@@ -12,7 +12,7 @@ import ReactiveSwift
 
 class SearchUsersViewController: BaseViewController {
     
-    private var searchBar = UISearchBar()
+    private var searchController = UISearchController()
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel = SearchUsersViewModel()
@@ -37,6 +37,13 @@ class SearchUsersViewController: BaseViewController {
             $0.tableFooterView = UIView(frame: .zero)
             $0.dataSource = dataSource
         }
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "이름 입력"
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
     }
     
     override func bindViewModel() {
