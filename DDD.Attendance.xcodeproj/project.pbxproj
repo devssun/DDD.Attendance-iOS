@@ -935,7 +935,7 @@
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -947,7 +947,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -967,7 +967,7 @@
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -979,7 +979,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
