@@ -17,10 +17,10 @@ class SearchUsersViewController: BaseViewController {
     
     private let viewModel = SearchUsersViewModel()
     private let dataSource = SearchUsersDataSource()
-    private let testModels = [AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 0),
-                              AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 1),
-                              AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 0),
-                              AttendanceStatusModel(position: .iOS, name: "최혜선", date: "2020.07.04", status: 1)]
+    private let testModels = [AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 0),
+                              AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 1),
+                              AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 0),
+                              AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 1)]
 
     static func instantiateViewController() -> SearchUsersViewController {
         return Storyboard.manager.viewController(SearchUsersViewController.self)

@@ -40,12 +40,12 @@ class PositionCardView: UIControl {
             return position.rawValue
         }
         set(index) {
-            position = Position(rawValue: index) ?? .None
+            position = Position(rawValue: index) ?? .none
             updateView()
         }
     }
     
-    var position: Position = .None
+    var position: Position = .none
     
     private var textLabel: UILabel = {
         let textLabel = UILabel()
@@ -102,16 +102,16 @@ class PositionCardView: UIControl {
         }
 
         switch position {
-        case .Designer:
+        case .designer:
             textLabel.text = "Designer"
             imageView.image = UIImage(named: "signup_position_design")
-        case .And:
+        case .and:
             textLabel.text = "Android Dev"
             imageView.image = UIImage(named: "signup_position_and")
-        case .iOS:
+        case .ios:
             textLabel.text = "iOS Dev"
             imageView.image = UIImage(named: "signup_position_ios")
-        case .Backend:
+        case .backend:
             textLabel.text = "Backend Dev"
             imageView.image = UIImage(named: "signup_position_backend")
         default:
