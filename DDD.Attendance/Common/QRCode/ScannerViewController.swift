@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-import SnapKit
 
 class ScannerViewController: BaseViewController {
 
@@ -60,10 +59,8 @@ class ScannerViewController: BaseViewController {
         }
         
         self.view.addSubview(descriptionLabel)
-        descriptionLabel.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.centerX.equalToSuperview()
-        }
+        descriptionLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        descriptionLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         captureSession.startRunning()
     }
     
