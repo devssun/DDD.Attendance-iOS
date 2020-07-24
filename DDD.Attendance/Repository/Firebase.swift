@@ -148,6 +148,12 @@ class Firebase {
     }
     
     func getUser(name userName: String, completion: @escaping([String: Any]?) -> Void) {
+        let group = DispatchGroup.init()
+        let queue = DispatchQueue.global()
+        
+        var attendanceResult = [String: Any]()
+        
+        group.enter()
         database
             .child("users")
             .observeSingleEvent(of: .value, with: { snapshot in
@@ -160,11 +166,25 @@ class Firebase {
                 for result in result.values {
                     if let user = result as? [String: Any], let name = user["name"] as? String {
                         if userName == name {
-                            completion(user)
+                            print(user)
+                            attendanceResult = user
+//                            completion(user)
+                            group.leave()
                             return
                         }
                     }
                 }
             })
+        
+        group.notify(queue: queue) {
+            // ["1593839349962": ["result": 1], "1595048369858": ["result": 0]]
+            // TODO: 1. timestamp - date 형식으로 변경
+            // TODO: 2. 1 / 0 값
+            // TODO: 3. 출석 데이터를 배열에 넣는다
+//            let a = attendanceResult["attendance"] as? [String: [String: Any]]
+            
+            let jsonData = try? JSONSerialization.data(withJSONObject: attendanceResult, options: .prettyPrinted)
+            let decoded = try? JSONDecoder().decode(AttendanceStatusModel.self, from: jsonData!)
+        }
     }
 }

@@ -17,10 +17,6 @@ class SearchUsersViewController: BaseViewController {
     
     private let viewModel = SearchUsersViewModel()
     private let dataSource = SearchUsersDataSource()
-    private let testModels = [AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 0),
-                              AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 1),
-                              AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 0),
-                              AttendanceStatusModel(position: .ios, name: "최혜선", date: "2020.07.04", status: 1)]
 
     static func instantiateViewController() -> SearchUsersViewController {
         return Storyboard.manager.viewController(SearchUsersViewController.self)
@@ -41,6 +37,7 @@ class SearchUsersViewController: BaseViewController {
         searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "이름 입력"
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -58,14 +55,26 @@ class SearchUsersViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        dataSource.load(from: testModels)
-        tableView.reloadData()
+        viewModel.remoteAttendanceStatus(name: "장진혁")
     }
 }
 
 private extension SearchUsersViewController {
     func loadStatus(with statusList: [AttendanceStatusModel]) {
         dataSource.loadStatus(with: statusList)
+        tableView.reloadData()
+    }
+}
+
+extension SearchUsersViewController: UISearchBarDelegate {
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        guard let searchName = searchBar.text else { return true }
+        viewModel.remoteAttendanceStatus(name: searchName)
+        return true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        dataSource.clearValues()
         tableView.reloadData()
     }
 }

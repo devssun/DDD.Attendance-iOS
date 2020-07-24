@@ -17,7 +17,7 @@ enum SignUpStep: Int {
     case Complete
 }
 
-enum Position: Int {
+enum Position: Int, Codable {
     case none = -1
     case designer
     case and
