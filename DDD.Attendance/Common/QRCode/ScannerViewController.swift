@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SnapKit
 
 class ScannerViewController: BaseViewController {
 
@@ -22,7 +23,6 @@ class ScannerViewController: BaseViewController {
     
     private var descriptionLabel: UILabel = {
        let lb = UILabel()
-        lb.translatesAutoresizingMaskIntoConstraints = false
         lb.textAlignment = .center
         lb.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
         lb.numberOfLines = 0
@@ -59,8 +59,10 @@ class ScannerViewController: BaseViewController {
         }
         
         self.view.addSubview(descriptionLabel)
-        descriptionLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        descriptionLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        descriptionLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
+        }
         captureSession.startRunning()
     }
     
