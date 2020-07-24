@@ -11,6 +11,12 @@ import ReactiveSwift
 
 class ManagerHomeViewController: BaseViewController {
     
+    enum ManagerMenu: Int {
+        case scan
+        case search
+        case signout
+    }
+    
     @IBOutlet fileprivate weak var tableView: UITableView!
     
     private let dataSource = ManagerHomeDataSource()
@@ -60,15 +66,15 @@ class ManagerHomeViewController: BaseViewController {
 
 extension ManagerHomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            moveSetAttendanceViewController()
-        case 1:
-            moveSearchUsersViewController()
-        case 2:
-            signOut()
-        default:
-            break
+        if let menu = ManagerMenu(rawValue: indexPath.row) {
+            switch menu {
+            case .scan:
+                moveSetAttendanceViewController()
+            case .search:
+                moveSearchUsersViewController()
+            case .signout:
+                signOut()
+            }
         }
     }
     
