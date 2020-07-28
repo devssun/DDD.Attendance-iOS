@@ -28,9 +28,9 @@ class AttendanceStatusCell: UITableViewCell, BaseCell {
         // Initialization code
     }
     
-    func configureWith(value: AttendanceStatusModel) {
-//        positionImageView.image = value.position.logoImage
-//        attendanceDateLabel.text = value.date
-//        statusLabel.text = value.status == 0 ? "출석" : "지각"
+    func configureWith(value: Attendance) {
+        attendanceDateLabel.text = value.time
+        statusLabel.text = value.result.result.title
+        statusLabel.textColor = value.result.result.textColor
     }
 }

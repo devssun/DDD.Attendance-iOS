@@ -14,7 +14,7 @@ protocol SearchUsersViewModelInputs {
 }
 
 protocol SearchUsersViewModelOutputs {
-    var fetchAttendanceStatus: Signal<[String: Any], Never> { get }
+    var fetchAttendanceStatus: Signal<AttendanceStatusModel, Never> { get }
 }
 
 protocol SearchUsersViewModelTypes {
@@ -25,7 +25,7 @@ protocol SearchUsersViewModelTypes {
 
 class SearchUsersViewModel {
     private let firebase: Firebase
-    private let userProperty = MutableProperty<[String: Any]?>(nil)
+    private let userProperty = MutableProperty<AttendanceStatusModel?>(nil)
     
     init(firebase: Firebase = Firebase()) {
         self.firebase = firebase
@@ -40,14 +40,19 @@ extension SearchUsersViewModel: SearchUsersViewModelTypes {
 
 extension SearchUsersViewModel: SearchUsersViewModelInputs {
     func remoteAttendanceStatus(name userName: String) {
-        firebase.getUser(name: userName) { [weak self] result in
-            self?.userProperty.value = result
+        firebase.getUser(name: userName) { [weak self] (result: APIAttendanceResult<AttendanceStatusModel>) in
+            switch result {
+            case .success(let result):
+                self?.userProperty.value = result
+            case .failure(let error):
+                print("사용자 검색 에러 - \(error)")
+            }
         }
     }
 }
 
 extension SearchUsersViewModel: SearchUsersViewModelOutputs {
-    var fetchAttendanceStatus: Signal<[String: Any], Never> {
+    var fetchAttendanceStatus: Signal<AttendanceStatusModel, Never> {
         return userProperty.signal.skipNil()
     }
 }

@@ -55,26 +55,39 @@ class SearchUsersViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        viewModel.remoteAttendanceStatus(name: "장진혁")
+        reactive.loadAttendanceStatus <~ viewModel.outputs.fetchAttendanceStatus
     }
 }
 
 private extension SearchUsersViewController {
-    func loadStatus(with statusList: [AttendanceStatusModel]) {
+    func loadStatus(with statusList: AttendanceStatusModel) {
+        guard statusList.attendance != nil else {
+            showAlert(title: "DDD", message: "출석 데이터가 없습니다.")
+            return
+        }
+        dataSource.clearValues()
         dataSource.loadStatus(with: statusList)
         tableView.reloadData()
     }
 }
 
-extension SearchUsersViewController: UISearchBarDelegate {
+extension SearchUsersViewController: UISearchBarDelegate, UISearchTextFieldDelegate {
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         guard let searchName = searchBar.text else { return true }
-        viewModel.remoteAttendanceStatus(name: searchName)
+        viewModel.inputs.remoteAttendanceStatus(name: searchName)
         return true
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         dataSource.clearValues()
         tableView.reloadData()
+    }
+}
+
+extension Reactive where Base: SearchUsersViewController {
+    var loadAttendanceStatus: BindingTarget<AttendanceStatusModel> {
+        return makeBindingTarget { base, attendance in
+            base.loadStatus(with: attendance)
+        }
     }
 }

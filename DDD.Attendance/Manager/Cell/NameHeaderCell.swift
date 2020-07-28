@@ -12,9 +12,11 @@ class NameHeaderCell: UITableViewCell, BaseCell {
 
     static var defaultReusableId: String = "NameHeaderCell"
     
+    @IBOutlet private weak var positionImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
-    func configureWith(value: String) {
-        titleLabel.text = value
+    func configureWith(value: AttendanceStatusModel) {
+        titleLabel.text = "\(value.name) (\(value.attendance?.count ?? 0)/8)"
+        positionImageView.image = value.position.logoImage
     }
 }

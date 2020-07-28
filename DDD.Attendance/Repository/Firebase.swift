@@ -147,13 +147,7 @@ class Firebase {
         }
     }
     
-    func getUser(name userName: String, completion: @escaping([String: Any]?) -> Void) {
-        let group = DispatchGroup.init()
-        let queue = DispatchQueue.global()
-        
-        var attendanceResult = [String: Any]()
-        
-        group.enter()
+    func getUser<T: Decodable>(name userName: String, completion: @escaping(APIAttendanceResult<T>) -> Void) {
         database
             .child("users")
             .observeSingleEvent(of: .value, with: { snapshot in
@@ -163,28 +157,22 @@ class Firebase {
                         return
                 }
                 
-                for result in result.values {
-                    if let user = result as? [String: Any], let name = user["name"] as? String {
-                        if userName == name {
-                            print(user)
-                            attendanceResult = user
-//                            completion(user)
-                            group.leave()
-                            return
-                        }
+                let targetUser = result.values
+                    .compactMap { ($0 as? [String: Any]) }
+                    .first(where: { ($0["name"] as? String) == userName })
+                
+                if let targetUser = targetUser {
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: targetUser, options: .prettyPrinted)
+                        let decoded = try JSONDecoder().decode(AttendanceStatusModel.self, from: jsonData)
+                        completion(.success(decoded))
+                    } catch {
+                        completion(.failure(.data))
                     }
+                } else {
+                    print("not found user")
+                    completion(.failure(.data))
                 }
             })
-        
-        group.notify(queue: queue) {
-            // ["1593839349962": ["result": 1], "1595048369858": ["result": 0]]
-            // TODO: 1. timestamp - date 형식으로 변경
-            // TODO: 2. 1 / 0 값
-            // TODO: 3. 출석 데이터를 배열에 넣는다
-//            let a = attendanceResult["attendance"] as? [String: [String: Any]]
-            
-            let jsonData = try? JSONSerialization.data(withJSONObject: attendanceResult, options: .prettyPrinted)
-            let decoded = try? JSONDecoder().decode(AttendanceStatusModel.self, from: jsonData!)
-        }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -20,14 +20,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-TF-KHY">
                         <rect key="frame" x="0.0" y="0.0" width="434" height="50"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgAttendanceCheckAndroid" translatesAutoresizingMaskIntoConstraints="NO" id="g18-Bb-Pio">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgAttendanceCheckAndroid" translatesAutoresizingMaskIntoConstraints="NO" id="g18-Bb-Pio">
                                 <rect key="frame" x="16" y="10.5" width="29" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g18-Bb-Pio" secondAttribute="height" multiplier="29:29" id="QPN-Fd-Uau"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbB-Nm-07C">
-                                <rect key="frame" x="59" y="14.5" width="42" height="21"/>
+                                <rect key="frame" x="16" y="14.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,9 +43,9 @@
                         <constraints>
                             <constraint firstItem="eec-Pb-Vil" firstAttribute="centerY" secondItem="fjc-TF-KHY" secondAttribute="centerY" id="2dh-rK-4rA"/>
                             <constraint firstItem="g18-Bb-Pio" firstAttribute="leading" secondItem="fjc-TF-KHY" secondAttribute="leading" constant="16" id="B2c-IW-aie"/>
+                            <constraint firstItem="DbB-Nm-07C" firstAttribute="leading" secondItem="g18-Bb-Pio" secondAttribute="leading" id="GWW-zJ-vfC"/>
                             <constraint firstAttribute="trailing" secondItem="eec-Pb-Vil" secondAttribute="trailing" constant="15" id="ZIw-EI-AwQ"/>
                             <constraint firstItem="DbB-Nm-07C" firstAttribute="centerY" secondItem="g18-Bb-Pio" secondAttribute="centerY" id="iCe-TI-ZW9"/>
-                            <constraint firstItem="DbB-Nm-07C" firstAttribute="leading" secondItem="g18-Bb-Pio" secondAttribute="trailing" constant="14" id="och-94-pjg"/>
                             <constraint firstItem="g18-Bb-Pio" firstAttribute="centerY" secondItem="fjc-TF-KHY" secondAttribute="centerY" id="u3U-Rc-MTA"/>
                         </constraints>
                     </view>
