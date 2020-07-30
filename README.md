@@ -7,18 +7,8 @@
 - Carthage
 
 2. 라이브러리
-- ReactiveCocoa
-- Alamofire
-- SnapKit
-- CHIPageControl
-- NVActivityIndicator
-- Device
-- lottie-ios
-- CodableFirevase
-- TextFieldEffects
-- Firebase ([https://firebaseopensource.com/projects/firebase/firebase-ios-sdk/carthage/](https://firebaseopensource.com/projects/firebase/firebase-ios-sdk/carthage/))
-
 - 라이브러리 버전 정보
+- Firebase는 링크에서 carthage 용 라이브러리 버전 확인  ([https://firebaseopensource.com/projects/firebase/firebase-ios-sdk/carthage/](https://firebaseopensource.com/projects/firebase/firebase-ios-sdk/carthage/))
 ```
 github "ReactiveCocoa/ReactiveCocoa" ~> 10.0
 github "Alamofire/Alamofire" "5.2.1"
@@ -35,3 +25,5 @@ binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseDatabaseBinary.js
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json" == 6.14.0
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseStorageBinary.json" == 6.14.0
 ```
+
+3. 화면 Flow
