@@ -27,3 +27,6 @@ binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseStorageBinary.jso
 ```
 
 3. 화면 Flow
+<img src="https://github.com/devssun/DDD.Attendance-iOS/blob/develop/DDD%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%8E%E1%85%A6%E1%86%A8%20%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%ABFlow.png"/>
+
+[DDD출첵 화면Flow.gliffy](https://github.com/devssun/DDD.Attendance-iOS/blob/develop/DDD%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%8E%E1%85%A6%E1%86%A8%20%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%ABFlow.gliffy)
