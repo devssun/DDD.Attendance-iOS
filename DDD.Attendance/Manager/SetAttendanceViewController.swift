@@ -76,6 +76,7 @@ class SetAttendanceViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker.locale = Locale(identifier: "ko_KR")
         isSetTime = false
     }
     

@@ -8,13 +8,27 @@
 
 import UIKit
 import AVFoundation
+import SnapKit
 
 class ScannerViewController: BaseViewController {
 
     private var captureSession: AVCaptureSession!
     private var previewLayer: AVCaptureVideoPreviewLayer!
     private let firebase = Firebase()
-    var attendanceTimeStamp: Int64?
+    var attendanceTimeStamp: Int64? {
+        didSet {
+            descriptionLabel.text = "설정한 출석체크 시간은 \n\(Date().timeStampToString(timeStamp: attendanceTimeStamp ?? 0).dateAndTimetoString())입니다."
+        }
+    }
+    
+    private var descriptionLabel: UILabel = {
+       let lb = UILabel()
+        lb.textAlignment = .center
+        lb.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
+        lb.numberOfLines = 0
+        lb.textColor = .black
+        return lb
+    }()
     
     override func bindData() {
         super.bindData()
@@ -42,6 +56,12 @@ class ScannerViewController: BaseViewController {
                 self?.navigationController?.popViewController(animated: true)
             }
             return
+        }
+        
+        self.view.addSubview(descriptionLabel)
+        descriptionLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
         }
         captureSession.startRunning()
     }

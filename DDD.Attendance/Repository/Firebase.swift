@@ -146,4 +146,33 @@ class Firebase {
                 }
         }
     }
+    
+    func getUser<T: Decodable>(name userName: String, completion: @escaping(APIAttendanceResult<T>) -> Void) {
+        database
+            .child("users")
+            .observeSingleEvent(of: .value, with: { snapshot in
+                guard
+                    let value = snapshot.value,
+                    let result = value as? [String: Any] else {
+                        return
+                }
+                
+                let targetUser = result.values
+                    .compactMap { ($0 as? [String: Any]) }
+                    .first(where: { ($0["name"] as? String) == userName })
+                
+                if let targetUser = targetUser {
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: targetUser, options: .prettyPrinted)
+                        let decoded = try JSONDecoder().decode(AttendanceStatusModel.self, from: jsonData)
+                        completion(.success(decoded))
+                    } catch {
+                        completion(.failure(.data))
+                    }
+                } else {
+                    print("not found user")
+                    completion(.failure(.data))
+                }
+            })
+    }
 }

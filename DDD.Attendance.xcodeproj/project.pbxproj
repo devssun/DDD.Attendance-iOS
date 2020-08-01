@@ -19,7 +19,21 @@
 		46337A7D249A697F00AF4FA4 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3E50C9232A973D00B56EBF /* TextFieldEffects.framework */; };
 		46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46481EA0249DF5E700F3DB02 /* Manager.storyboard */; };
 		46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */; };
+		4648F77724BB16040084B2A2 /* ManagerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F77624BB16040084B2A2 /* ManagerHomeViewController.swift */; };
+		4648F77F24BB19CF0084B2A2 /* HomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */; };
+		4648F78024BB19CF0084B2A2 /* HomeMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */; };
+		4648F78324BB1AEC0084B2A2 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F78224BB1AEC0084B2A2 /* MenuModel.swift */; };
+		4648F78524BB1D410084B2A2 /* ManagerHomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */; };
 		464B32F124AB44E400793872 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 464B32F024AB44E400793872 /* GoogleService-Info.plist */; };
+		4654354724C1F63000541E14 /* SearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354624C1F63000541E14 /* SearchUsersViewController.swift */; };
+		4654354924C1F7B500541E14 /* SearchUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354824C1F7B500541E14 /* SearchUsersDataSource.swift */; };
+		4654354B24C1F7C100541E14 /* SearchUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354A24C1F7C100541E14 /* SearchUsersViewModel.swift */; };
+		4654354E24C1F81100541E14 /* AttendanceStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */; };
+		4654354F24C1F81100541E14 /* AttendanceStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */; };
+		4654355224C1FA0300541E14 /* AttendanceStatusHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */; };
+		4654355424C2020000541E14 /* AttendanceStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654355324C2020000541E14 /* AttendanceStatusModel.swift */; };
+		466B86BF24C475FE00855C94 /* NameHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B86BD24C475FE00855C94 /* NameHeaderCell.swift */; };
+		466B86C024C475FE00855C94 /* NameHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 466B86BE24C475FE00855C94 /* NameHeaderCell.xib */; };
 		4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A124B9B546005DCD5A /* Onboarding1.json */; };
 		4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4678E3A224B9B546005DCD5A /* Onboarding2.json */; };
 		46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD886224A4DAFA0036B4AF /* BannerModel.swift */; };
@@ -115,8 +129,22 @@
 		462EF76324B9B9590009768C /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		46481EA0249DF5E700F3DB02 /* Manager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Manager.storyboard; sourceTree = "<group>"; };
 		46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAttendanceViewController.swift; sourceTree = "<group>"; };
+		4648F77624BB16040084B2A2 /* ManagerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerHomeViewController.swift; sourceTree = "<group>"; };
+		4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCell.swift; sourceTree = "<group>"; };
+		4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuCell.xib; sourceTree = "<group>"; };
+		4648F78224BB1AEC0084B2A2 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerHomeDataSource.swift; sourceTree = "<group>"; };
 		464B32EC24AB415800793872 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		464B32F024AB44E400793872 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4654354624C1F63000541E14 /* SearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewController.swift; sourceTree = "<group>"; };
+		4654354824C1F7B500541E14 /* SearchUsersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersDataSource.swift; sourceTree = "<group>"; };
+		4654354A24C1F7C100541E14 /* SearchUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewModel.swift; sourceTree = "<group>"; };
+		4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusCell.swift; sourceTree = "<group>"; };
+		4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceStatusCell.xib; sourceTree = "<group>"; };
+		4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusHeader.swift; sourceTree = "<group>"; };
+		4654355324C2020000541E14 /* AttendanceStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceStatusModel.swift; sourceTree = "<group>"; };
+		466B86BD24C475FE00855C94 /* NameHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeaderCell.swift; sourceTree = "<group>"; };
+		466B86BE24C475FE00855C94 /* NameHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameHeaderCell.xib; sourceTree = "<group>"; };
 		4678E3A124B9B546005DCD5A /* Onboarding1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding1.json; sourceTree = "<group>"; };
 		4678E3A224B9B546005DCD5A /* Onboarding2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding2.json; sourceTree = "<group>"; };
 		46AD886224A4DAFA0036B4AF /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
@@ -259,10 +287,48 @@
 		46481E9F249DF5A600F3DB02 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				4654355024C1F9F200541E14 /* View */,
+				4648F78124BB1AE10084B2A2 /* Model */,
+				4648F77824BB17A40084B2A2 /* Cell */,
 				46481EA0249DF5E700F3DB02 /* Manager.storyboard */,
 				46481EA2249DF80100F3DB02 /* SetAttendanceViewController.swift */,
+				4648F77624BB16040084B2A2 /* ManagerHomeViewController.swift */,
+				4654354624C1F63000541E14 /* SearchUsersViewController.swift */,
+				4654354824C1F7B500541E14 /* SearchUsersDataSource.swift */,
+				4654354A24C1F7C100541E14 /* SearchUsersViewModel.swift */,
+				4648F78424BB1D410084B2A2 /* ManagerHomeDataSource.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		4648F77824BB17A40084B2A2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4648F77D24BB19CF0084B2A2 /* HomeMenuCell.swift */,
+				466B86BD24C475FE00855C94 /* NameHeaderCell.swift */,
+				466B86BE24C475FE00855C94 /* NameHeaderCell.xib */,
+				4654354C24C1F81100541E14 /* AttendanceStatusCell.swift */,
+				4654354D24C1F81100541E14 /* AttendanceStatusCell.xib */,
+				4648F77E24BB19CF0084B2A2 /* HomeMenuCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4648F78124BB1AE10084B2A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4648F78224BB1AEC0084B2A2 /* MenuModel.swift */,
+				4654355324C2020000541E14 /* AttendanceStatusModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4654355024C1F9F200541E14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4654355124C1FA0300541E14 /* AttendanceStatusHeader.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BC101487232E2D020096E962 /* View */ = {
@@ -605,12 +671,14 @@
 			files = (
 				BC3E50AE232A5E4600B56EBF /* Login.storyboard in Resources */,
 				BC3E50C0232A5F8B00B56EBF /* StepThreeView.xib in Resources */,
+				4648F78024BB19CF0084B2A2 /* HomeMenuCell.xib in Resources */,
 				BCE1B3C5231BB68F001BB684 /* LaunchScreen.storyboard in Resources */,
 				BC3E50BC232A5F7500B56EBF /* StepTwoView.xib in Resources */,
 				4678E3A324B9B546005DCD5A /* Onboarding1.json in Resources */,
 				BC101489232E2D110096E962 /* LoginPopupView.xib in Resources */,
 				46481EA1249DF5E700F3DB02 /* Manager.storyboard in Resources */,
 				4678E3A424B9B546005DCD5A /* Onboarding2.json in Resources */,
+				466B86C024C475FE00855C94 /* NameHeaderCell.xib in Resources */,
 				BC3E50B3232A5EF600B56EBF /* SignUp.storyboard in Resources */,
 				BC1014932333D9BB0096E962 /* HomeHeaderCell.xib in Resources */,
 				BCE1B3C2231BB68F001BB684 /* Assets.xcassets in Resources */,
@@ -622,6 +690,7 @@
 				BC1014992333DD4E0096E962 /* WelcomeCell.xib in Resources */,
 				BCE1B3D2231BB79D001BB684 /* Home.storyboard in Resources */,
 				E571F77723241F5300816C04 /* Account.storyboard in Resources */,
+				4654354F24C1F81100541E14 /* AttendanceStatusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,16 +735,21 @@
 			files = (
 				E571F767232402D200816C04 /* ReuseableView.swift in Sources */,
 				E571F77C23243D7600816C04 /* HomeTransitionCoordinator.swift in Sources */,
+				4648F78324BB1AEC0084B2A2 /* MenuModel.swift in Sources */,
 				BCE1B3ED231BE383001BB684 /* BaseDataSource.swift in Sources */,
 				BC3E50B5232A5F0100B56EBF /* SignUpViewController.swift in Sources */,
 				BCE1B3F3231BE57F001BB684 /* HomeViewModel.swift in Sources */,
 				BC10148D232E32810096E962 /* LoginTransitionCoordinator.swift in Sources */,
+				4654355224C1FA0300541E14 /* AttendanceStatusHeader.swift in Sources */,
 				46481EA3249DF80100F3DB02 /* SetAttendanceViewController.swift in Sources */,
 				BC381F302349F4760040202D /* Firebase.swift in Sources */,
 				E571F76E2324085C00816C04 /* InteractiveAnimator.swift in Sources */,
+				466B86BF24C475FE00855C94 /* NameHeaderCell.swift in Sources */,
+				4648F77724BB16040084B2A2 /* ManagerHomeViewController.swift in Sources */,
 				46AD886324A4DAFA0036B4AF /* BannerModel.swift in Sources */,
 				BC3E50C8232A6D6C00B56EBF /* Optional+Extension.swift in Sources */,
 				BCE1B3F5231BE67A001BB684 /* AccountView.swift in Sources */,
+				4654355424C2020000541E14 /* AttendanceStatusModel.swift in Sources */,
 				BC886403235C6FD60031C7F1 /* Date+Extension.swift in Sources */,
 				20B81DFB232D54E20081D341 /* RoundedTextField.swift in Sources */,
 				BCDE47502379A990009CEAC2 /* Curriculum.swift in Sources */,
@@ -687,6 +761,7 @@
 				204FC78F236084D100AE693A /* UserModel.swift in Sources */,
 				E571F77A2324345400816C04 /* UIView+Extension.swift in Sources */,
 				BC3E50C2232A5F9B00B56EBF /* StepThreeView.swift in Sources */,
+				4654354724C1F63000541E14 /* SearchUsersViewController.swift in Sources */,
 				BC3E50B0232A5E5600B56EBF /* LoginViewController.swift in Sources */,
 				2074DB1D2348C6BE007D7377 /* SignUpViewModel.swift in Sources */,
 				E571F77423241D3300816C04 /* AccountViewController.swift in Sources */,
@@ -696,6 +771,8 @@
 				BCE1B3EF231BE39C001BB684 /* BaseCell.swift in Sources */,
 				BC10148B232E2D1C0096E962 /* LoginPopupView.swift in Sources */,
 				BCE1B3E5231BE069001BB684 /* BaseView.swift in Sources */,
+				4654354E24C1F81100541E14 /* AttendanceStatusCell.swift in Sources */,
+				4648F78524BB1D410084B2A2 /* ManagerHomeDataSource.swift in Sources */,
 				BC3E50BE232A5F8000B56EBF /* StepTwoView.swift in Sources */,
 				BC886401235B5BA00031C7F1 /* UIVIewController+Extension.swift in Sources */,
 				BCE1B3CF231BB75E001BB684 /* BaseViewController.swift in Sources */,
@@ -703,6 +780,8 @@
 				BC1014982333DD4E0096E962 /* WelcomeCell.swift in Sources */,
 				E571F76C2324075300816C04 /* DismissingViewAnimator.swift in Sources */,
 				BCE1B3F1231BE576001BB684 /* HomeDataSource.swift in Sources */,
+				4654354B24C1F7C100541E14 /* SearchUsersViewModel.swift in Sources */,
+				4654354924C1F7B500541E14 /* SearchUsersDataSource.swift in Sources */,
 				BC1014922333D9BB0096E962 /* HomeHeaderCell.swift in Sources */,
 				20570323232E439900103A3E /* PositionCardView.swift in Sources */,
 				BCE1B4132320054F001BB684 /* AttendanceListModel.swift in Sources */,
@@ -714,6 +793,7 @@
 				BC8863FF23561B590031C7F1 /* LoginPopupViewModel.swift in Sources */,
 				BCE1B3D4231BB7BC001BB684 /* HomeViewController.swift in Sources */,
 				BCE1B3FB231BE6E9001BB684 /* QRCodeController.swift in Sources */,
+				4648F77F24BB19CF0084B2A2 /* HomeMenuCell.swift in Sources */,
 				2057031F232E2B0200103A3E /* SignUpButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -855,7 +935,7 @@
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -867,7 +947,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -887,7 +967,7 @@
 				CODE_SIGN_ENTITLEMENTS = DDD.Attendance/DDD.Attendance.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = B4JRVGF6UQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -899,7 +979,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",

@@ -17,25 +17,40 @@ enum SignUpStep: Int {
     case Complete
 }
 
-enum Position: Int {
-    case None = -1
-    case Designer
-    case And
-    case iOS
-    case Backend
+enum Position: Int, Codable {
+    case none = -1
+    case designer
+    case and
+    case ios
+    case backend
     
     var name: String {
         switch self {
-        case .Designer:
+        case .designer:
             return "Designer"
-        case .And:
+        case .and:
             return "AOS"
-        case .iOS:
+        case .ios:
             return "iOS"
-        case .Backend:
+        case .backend:
             return "BackEnd"
         default:
             return ""
+        }
+    }
+    
+    var logoImage: UIImage? {
+        switch self {
+        case .designer:
+            return UIImage(named: "imgAttendanceCheckDesigner")
+        case .and:
+            return UIImage(named: "imgAttendanceCheckAndroid")
+        case .ios:
+            return UIImage(named: "imgAttendanceCheckIos")
+        case .backend:
+            return UIImage(named: "imgAttendanceCheckServer")
+        default:
+            return UIImage()
         }
     }
 }
@@ -46,7 +61,7 @@ class SignUpViewModel {
     let lastName = MutableProperty<String?>(nil)
     let email = MutableProperty<String?>(nil)
     let password = MutableProperty<String?>(nil)
-    let position = MutableProperty<Position>(.None)
+    let position = MutableProperty<Position>(.none)
     let step = MutableProperty<SignUpStep>(.StepOne)
     
     // Outputs
@@ -79,7 +94,7 @@ class SignUpViewModel {
     }()
     
     lazy private(set) var stepThreeBtnEnabledSignal: SignalProducer<Bool, Never> = { [unowned self] in
-       return self.position.producer.map { $0 != .None }
+       return self.position.producer.map { $0 != .none }
     }()
     
     lazy private(set) var validationResultSignal: SignalProducer<UIColor, Never> = { [unowned self] in
